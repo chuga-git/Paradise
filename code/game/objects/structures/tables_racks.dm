@@ -438,7 +438,7 @@
 	. = ..()
 	if(HAS_TRAIT(src, TRAIT_OIL_SLICKED))
 		slippery = initial(slippery)
-		remove_atom_colour(FIXED_COLOUR_PRIORITY)
+		remove_atom_color(FIXED_COLOR_PRIORITY)
 		REMOVE_TRAIT(src, TRAIT_OIL_SLICKED, "potion")
 
 /*
@@ -544,9 +544,9 @@
 	qdel(src)
 
 /obj/structure/table/glass/narsie_act()
-	color = NARSIE_WINDOW_COLOUR
+	color = NARSIE_WINDOW_COLOR
 	for(var/obj/item/shard/S in debris)
-		S.color = NARSIE_WINDOW_COLOUR
+		S.color = NARSIE_WINDOW_COLOR
 
 /obj/structure/table/glass/plasma
 	name = "plasma glass table"

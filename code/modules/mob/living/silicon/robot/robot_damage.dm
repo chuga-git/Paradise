@@ -70,11 +70,11 @@
 		if(C.installed)
 			rval += C
 	return rval
-///Returns the armour component for a borg, or false if its missing or broken
-/mob/living/silicon/robot/proc/get_armour()
+///Returns the armor component for a borg, or false if its missing or broken
+/mob/living/silicon/robot/proc/get_armor()
 	if(!LAZYLEN(components))
 		return FALSE
-	var/datum/robot_component/C = components["armour"]
+	var/datum/robot_component/C = components["armor"]
 	if(C && C.installed)
 		return C
 	return FALSE
@@ -109,7 +109,7 @@
 	if(!LAZYLEN(components))
 		return
 
-	var/datum/robot_component/armour/A = get_armour()
+	var/datum/robot_component/armor/A = get_armor()
 	if(A)
 		A.take_damage(brute, burn, sharp, updating_health)
 		return
@@ -145,7 +145,7 @@
 
 	var/list/datum/robot_component/parts = get_damageable_components()
 
-	var/datum/robot_component/armour/A = get_armour()
+	var/datum/robot_component/armor/A = get_armor()
 	if(A)
 		A.take_damage(brute, burn, sharp)
 		updatehealth()

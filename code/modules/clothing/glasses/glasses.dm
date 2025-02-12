@@ -375,7 +375,7 @@
 
 /obj/item/clothing/glasses/sunglasses/noir/proc/toggle_noir(mob/user)
 	color_view = color_view ? null : MATRIX_GREYSCALE //Toggles between null and grayscale, with null being the default option.
-	user.update_client_colour()
+	user.update_client_color()
 
 /obj/item/clothing/glasses/sunglasses/yeah
 	name = "agreeable glasses"

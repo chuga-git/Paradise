@@ -1043,7 +1043,7 @@
 			var/overdose_message = pick("You're seeing red!", "Your heartbeat thunders in your ears!", "Your veins writhe under your skin!")
 			to_chat(H, "<span class='danger'>[overdose_message]</span>")
 			H.adjustBruteLoss(6)
-			if(H.client?.prefs.colourblind_mode == COLOURBLIND_MODE_NONE)
+			if(H.client?.prefs.colorblind_mode == COLORBLIND_MODE_NONE)
 				H.client.color = "red"
 				addtimer(VARSET_CALLBACK(H.client, color, ""), 6 SECONDS)
 	return list(0, update_flags)

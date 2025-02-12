@@ -171,7 +171,7 @@
 		else
 			return 'icons/mob/screen_midnight.dmi'
 
-//colour formats
+//color formats
 /proc/rgb2hsl(red, green, blue)
 	red /= 255;green /= 255;blue /= 255;
 	var/max = max(red,green,blue)

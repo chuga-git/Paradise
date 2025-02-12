@@ -18,19 +18,19 @@
 
 	var/list/output_players = list()
 
-	// Now go over it again to apply colours.
+	// Now go over it again to apply colors.
 	for(var/player in ckeys)
 		var/client/C = GLOB.directory[ckey(player)]
 		if(!C)
 			// This should NEVER happen, but better to be safe
 			continue
-		// Get the colour
-		var/colour = client2rankcolour(C)
+		// Get the color
+		var/color = client2rankcolor(C)
 		var/output = "[player]"
 		if(C.holder)
 			output = "<b>[output]</b>"
-		if(colour)
-			output = "<font color='[colour]'>[output]</font>"
+		if(color)
+			output = "<font color='[color]'>[output]</font>"
 
 		output_players += output
 
@@ -113,9 +113,9 @@
 
 	for(var/client/C in GLOB.admins)
 		var/list/line = list()
-		var/rank_colour = client2rankcolour(C)
-		if(rank_colour)
-			line += "<font color='[rank_colour]'><b>[C]</b></font> is a [C.holder.rank]"
+		var/rank_color = client2rankcolor(C)
+		if(rank_color)
+			line += "<font color='[rank_color]'><b>[C]</b></font> is a [C.holder.rank]"
 		else
 			line += "<b>[C]</b> is a [C.holder.rank]"
 

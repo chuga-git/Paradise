@@ -72,10 +72,10 @@
 		var/our_color
 		if(prob(rarechance))
 			our_color = pick(carp_colors_rare)
-			add_atom_colour(carp_colors_rare[our_color], FIXED_COLOUR_PRIORITY)
+			add_atom_color(carp_colors_rare[our_color], FIXED_COLOR_PRIORITY)
 		else
 			our_color = pick(carp_colors)
-			add_atom_colour(carp_colors[our_color], FIXED_COLOUR_PRIORITY)
+			add_atom_color(carp_colors[our_color], FIXED_COLOR_PRIORITY)
 		regenerate_icons()
 
 /mob/living/simple_animal/hostile/carp/proc/add_carp_overlay()

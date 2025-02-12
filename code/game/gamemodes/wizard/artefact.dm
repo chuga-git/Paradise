@@ -235,7 +235,7 @@
 	in_use = FALSE
 	if(QDELETED(user))
 		return
-	user.remove_atom_colour(ADMIN_COLOUR_PRIORITY, COLOR_BLUE)
+	user.remove_atom_color(ADMIN_COLOR_PRIORITY, COLOR_BLUE)
 	REMOVE_TRAIT(user, SCRYING, SCRYING_ORB)
 
 /obj/item/scrying/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
@@ -743,7 +743,7 @@ GLOBAL_LIST_EMPTY(multiverse)
 	if(living_skeletons < max_skeletons)
 		return TRUE
 
-//Funny gimmick, skeletons always seem to wear roman/ancient armour
+//Funny gimmick, skeletons always seem to wear roman/ancient armor
 //Voodoo Zombie Pirates added for paradise
 ///Udate the mobs species and gear
 /obj/item/necromantic_stone/proc/equip_skeleton(mob/living/carbon/human/victim)
@@ -801,11 +801,11 @@ GLOBAL_LIST_EMPTY(multiverse)
 	var/list/anime_hair =list("Odango", "Kusanagi Hair", "Pigtails", "Hime Cut", "Floorlength Braid", "Ombre", "Twincurls", "Twincurls 2")
 	victim.change_hair(pick(anime_hair))
 
-	var/list/anime_hair_colours = list(list(216, 192, 120),
+	var/list/anime_hair_colors = list(list(216, 192, 120),
 	list(140,170,74),list(0,0,0))
 
-	var/list/chosen_colour = pick(anime_hair_colours)
-	victim.change_hair_color(chosen_colour[1], chosen_colour[2], chosen_colour[3])
+	var/list/chosen_color = pick(anime_hair_colors)
+	victim.change_hair_color(chosen_color[1], chosen_color[2], chosen_color[3])
 
 	victim.update_dna()
 	victim.update_body()

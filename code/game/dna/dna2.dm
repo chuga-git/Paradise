@@ -120,21 +120,21 @@ GLOBAL_LIST_EMPTY(bad_blocks)
 	head_traits_to_dna(character, head)
 	eye_color_to_dna(eyes_organ)
 
-	SetUIValueRange(DNA_UI_SKIN_R,		color2R(character.skin_colour),			255,	1)
-	SetUIValueRange(DNA_UI_SKIN_G,		color2G(character.skin_colour),			255,	1)
-	SetUIValueRange(DNA_UI_SKIN_B,		color2B(character.skin_colour),			255,	1)
+	SetUIValueRange(DNA_UI_SKIN_R,		color2R(character.skin_color),			255,	1)
+	SetUIValueRange(DNA_UI_SKIN_G,		color2G(character.skin_color),			255,	1)
+	SetUIValueRange(DNA_UI_SKIN_B,		color2B(character.skin_color),			255,	1)
 
-	SetUIValueRange(DNA_UI_HEAD_MARK_R,	color2R(character.m_colours["head"]),	255,	1)
-	SetUIValueRange(DNA_UI_HEAD_MARK_G,	color2G(character.m_colours["head"]),	255,	1)
-	SetUIValueRange(DNA_UI_HEAD_MARK_B,	color2B(character.m_colours["head"]),	255,	1)
+	SetUIValueRange(DNA_UI_HEAD_MARK_R,	color2R(character.m_colors["head"]),	255,	1)
+	SetUIValueRange(DNA_UI_HEAD_MARK_G,	color2G(character.m_colors["head"]),	255,	1)
+	SetUIValueRange(DNA_UI_HEAD_MARK_B,	color2B(character.m_colors["head"]),	255,	1)
 
-	SetUIValueRange(DNA_UI_BODY_MARK_R,	color2R(character.m_colours["body"]),	255,	1)
-	SetUIValueRange(DNA_UI_BODY_MARK_G,	color2G(character.m_colours["body"]),	255,	1)
-	SetUIValueRange(DNA_UI_BODY_MARK_B,	color2B(character.m_colours["body"]),	255,	1)
+	SetUIValueRange(DNA_UI_BODY_MARK_R,	color2R(character.m_colors["body"]),	255,	1)
+	SetUIValueRange(DNA_UI_BODY_MARK_G,	color2G(character.m_colors["body"]),	255,	1)
+	SetUIValueRange(DNA_UI_BODY_MARK_B,	color2B(character.m_colors["body"]),	255,	1)
 
-	SetUIValueRange(DNA_UI_TAIL_MARK_R,	color2R(character.m_colours["tail"]),	255,	1)
-	SetUIValueRange(DNA_UI_TAIL_MARK_G,	color2G(character.m_colours["tail"]),	255,	1)
-	SetUIValueRange(DNA_UI_TAIL_MARK_B,	color2B(character.m_colours["tail"]),	255,	1)
+	SetUIValueRange(DNA_UI_TAIL_MARK_R,	color2R(character.m_colors["tail"]),	255,	1)
+	SetUIValueRange(DNA_UI_TAIL_MARK_G,	color2G(character.m_colors["tail"]),	255,	1)
+	SetUIValueRange(DNA_UI_TAIL_MARK_B,	color2B(character.m_colors["tail"]),	255,	1)
 
 	SetUIValueRange(DNA_UI_SKIN_TONE,	35-character.s_tone,	220,	1) // Value can be negative.
 

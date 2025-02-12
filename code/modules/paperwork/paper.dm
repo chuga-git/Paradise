@@ -769,7 +769,7 @@
 
 /obj/item/paper/listening_post_report_6
 	name = "Report 06 - URGENT"
-	info = {"<b>URGENT:</b> An Aussec Armoury freighter has suffered an engine failure near the edge of the system, dropping out of hyperspace.
+	info = {"<b>URGENT:</b> An Aussec Armory freighter has suffered an engine failure near the edge of the system, dropping out of hyperspace.
 	<br><br>
 	Escorts will be absent until they can retrace path. Limited window to execute raiding operations."}
 

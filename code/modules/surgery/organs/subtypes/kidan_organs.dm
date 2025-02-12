@@ -18,7 +18,7 @@
 	parent_organ = "groin"
 	slot = "lantern"
 	actions_types = list(/datum/action/item_action/organ_action/toggle)
-	var/colour
+	var/color
 	var/glowing = 0
 
 /obj/item/organ/internal/lantern/ui_action_click()
@@ -45,11 +45,11 @@
 
 		var/new_light = calculate_glow(KIDAN_LANTERN_LIGHT)
 
-		if(!colour)																		//this should never happen in theory
-			colour = BlendRGB(owner.m_colours["body"], owner.m_colours["head"], 0.65)	//then again im pretty bad at theoretics
+		if(!color)																		//this should never happen in theory
+			color = BlendRGB(owner.m_colors["body"], owner.m_colors["head"], 0.65)	//then again im pretty bad at theoretics
 
 		if(new_light != glowing)
-			owner.set_light(new_light, l_color = colour)
+			owner.set_light(new_light, l_color = color)
 			glowing = new_light
 
 	return
@@ -67,12 +67,12 @@
 		to_chat(owner, "<span class='warning'>You're too hungry to be bioluminescent!</span>")
 		return FALSE
 
-	if(!colour)
-		colour = BlendRGB(owner.m_colours["head"], owner.m_colours["body"], 0.65)
+	if(!color)
+		color = BlendRGB(owner.m_colors["head"], owner.m_colors["body"], 0.65)
 
 	if(!glowing)
 		var/light = calculate_glow(KIDAN_LANTERN_LIGHT)
-		owner.set_light(light, l_color = colour)
+		owner.set_light(light, l_color = color)
 		glowing = light
 		return 1
 
@@ -100,8 +100,8 @@
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 
-		if(!colour)								//if its removed before used save the color
-			colour = BlendRGB(H.m_colours["body"], H.m_colours["head"], 0.65)
+		if(!color)								//if its removed before used save the color
+			color = BlendRGB(H.m_colors["body"], H.m_colors["head"], 0.65)
 
 		if(glowing)
 			toggle_biolum(1)

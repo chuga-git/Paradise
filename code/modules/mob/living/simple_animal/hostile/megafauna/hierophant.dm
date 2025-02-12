@@ -47,7 +47,7 @@ Difficulty: Hard
 	icon = 'icons/mob/lavaland/hierophant_new.dmi'
 	faction = list("boss") //asteroid mobs? get that shit out of my beautiful square house
 	speak_emote = list("preaches")
-	armour_penetration_percentage = 100 //It does 15 damage / only attacks when enraged
+	armor_penetration_percentage = 100 //It does 15 damage / only attacks when enraged
 	melee_damage_lower = 15
 	melee_damage_upper = 15
 	speed = 10
@@ -82,8 +82,8 @@ Difficulty: Hard
 	var/list/kill_phrases = list("Wsyvgi sj irivkc xettih. Vitemvmrk...", "Irivkc wsyvgi jsyrh. Vitemvmrk...", "Jyip jsyrh. Egxmzexmrk vitemv gcgpiw...", "Kix fiex. Liepmrk...")
 	var/list/target_phrases = list("Xevkix psgexih.", "Iriqc jsyrh.", "Eguymvih xevkix.")
 	var/list/stored_nearby = list() // stores people nearby the hierophant when it enters the death animation
-	///If the hiero has changed colour, stop the rays animation.
-	var/colour_shifting = FALSE
+	///If the hiero has changed color, stop the rays animation.
+	var/color_shifting = FALSE
 
 /mob/living/simple_animal/hostile/megafauna/hierophant/Initialize(mapload)
 	. = ..()
@@ -224,7 +224,7 @@ Difficulty: Hard
 		visible_message("<span class='hierophant'>\"Mx ampp rsx iwgeti.\"</span>")
 		var/oldcolor = color
 		animate(src, color = "#660099", time = 6)
-		colour_shifting = TRUE
+		color_shifting = TRUE
 		remove_filter("rays")
 		SLEEP_CHECK_DEATH(6)
 		while(!QDELETED(target) && blink_counter)
@@ -236,8 +236,8 @@ Difficulty: Hard
 			blinking = TRUE
 			SLEEP_CHECK_DEATH(4 + target_slowness)
 		animate(src, color = oldcolor, time = 8)
-		colour_shifting = FALSE
-		addtimer(CALLBACK(src, TYPE_PROC_REF(/atom, update_atom_colour)), 8)
+		color_shifting = FALSE
+		addtimer(CALLBACK(src, TYPE_PROC_REF(/atom, update_atom_color)), 8)
 		SLEEP_CHECK_DEATH(8)
 		blinking = FALSE
 	else
@@ -249,7 +249,7 @@ Difficulty: Hard
 	blinking = TRUE
 	var/oldcolor = color
 	animate(src, color = "#660099", time = 6)
-	colour_shifting = TRUE
+	color_shifting = TRUE
 	remove_filter("rays")
 	SLEEP_CHECK_DEATH(6)
 	while(!QDELETED(target) && cross_counter)
@@ -260,8 +260,8 @@ Difficulty: Hard
 			INVOKE_ASYNC(src, PROC_REF(blasts), target, GLOB.diagonals)
 		SLEEP_CHECK_DEATH(6 + target_slowness)
 	animate(src, color = oldcolor, time = 8)
-	colour_shifting = FALSE
-	addtimer(CALLBACK(src, TYPE_PROC_REF(/atom, update_atom_colour)), 8)
+	color_shifting = FALSE
+	addtimer(CALLBACK(src, TYPE_PROC_REF(/atom, update_atom_color)), 8)
 	SLEEP_CHECK_DEATH(8)
 	blinking = FALSE
 
@@ -272,7 +272,7 @@ Difficulty: Hard
 	blinking = TRUE
 	var/oldcolor = color
 	animate(src, color = "#660099", time = 6)
-	colour_shifting = TRUE
+	color_shifting = TRUE
 	remove_filter("rays")
 	SLEEP_CHECK_DEATH(6)
 	var/list/targets = ListTargets()
@@ -291,8 +291,8 @@ Difficulty: Hard
 		SLEEP_CHECK_DEATH(8 + target_slowness)
 	chaser_cooldown = world.time + initial(chaser_cooldown)
 	animate(src, color = oldcolor, time = 8)
-	colour_shifting = FALSE
-	addtimer(CALLBACK(src, TYPE_PROC_REF(/atom, update_atom_colour)), 8)
+	color_shifting = FALSE
+	addtimer(CALLBACK(src, TYPE_PROC_REF(/atom, update_atom_color)), 8)
 	SLEEP_CHECK_DEATH(8)
 	blinking = FALSE
 
@@ -422,7 +422,7 @@ Difficulty: Hard
 
 /mob/living/simple_animal/hostile/megafauna/hierophant/Life()
 	. = ..()
-	if(enraged && !colour_shifting)
+	if(enraged && !color_shifting)
 		var/new_filter = isnull(get_filter("ray"))
 		ray_filter_helper(1, 40, "#660099", 6, 20, 16)
 		if(new_filter)

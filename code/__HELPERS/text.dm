@@ -501,7 +501,7 @@
 		text = replacetext(text, "\[syndielogo\]", 	"")
 
 	if(istype(P, /obj/item/toy/crayon))
-		text = "<font face=\"[crayonfont]\" color=[P ? P.colour : "black"]><b>[text]</b></font>"
+		text = "<font face=\"[crayonfont]\" color=[P ? P.color : "black"]><b>[text]</b></font>"
 	else 	// They are using "not a crayon" - formatting is OK and such
 		text = replacetext(text, "\[*\]",		"<li>")
 		text = replacetext(text, "\[hr\]",		"<HR>")
@@ -522,7 +522,7 @@
 		text = replacetext(text, "\[station\]", "[SSmapping.map_datum.fluff_name]")
 		if(!no_font)
 			if(P)
-				text = "<font face=\"[deffont]\" color=[P ? P.colour : "black"]>[text]</font>"
+				text = "<font face=\"[deffont]\" color=[P ? P.color : "black"]>[text]</font>"
 			else
 				text = "<font face=\"[deffont]\">[text]</font>"
 
@@ -717,18 +717,18 @@
 		. += .(rest)
 
 /**
-  * Proc to generate a "rank colour" from a client
+  * Proc to generate a "rank color" from a client
   *
   * This takes the client and looks at various factors in order, such as patreon status, staff rank, and more
   * Arguments:
   * * C - The client were looking up
   */
-/proc/client2rankcolour(client/C)
+/proc/client2rankcolor(client/C)
 	// First check if end user is an admin
 	if(C.holder)
-		if(C.holder.rank in GLOB.configuration.admin.rank_colour_map)
-			// Return their rank colour if they are in here
-			return GLOB.configuration.admin.rank_colour_map[C.holder.rank]
+		if(C.holder.rank in GLOB.configuration.admin.rank_color_map)
+			// Return their rank color if they are in here
+			return GLOB.configuration.admin.rank_color_map[C.holder.rank]
 
 	// If they arent an admin, see if they are a patreon. Just accept any level
 	if(C.donator_level)

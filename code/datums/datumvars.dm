@@ -92,7 +92,7 @@
 
 /client/vv_get_dropdown()
 	. = list()
-	.["Manipulate Colour Matrix"] = "byond://?_src_=vars;manipcolours=[UID()]"
+	.["Manipulate Color Matrix"] = "byond://?_src_=vars;manipcolors=[UID()]"
 	. += "---"
 	.["Call Proc"] = "byond://?_src_=vars;proc_call=[UID()]"
 	.["Mark Object"] = "byond://?_src_=vars;mark_object=[UID()]"
@@ -1268,17 +1268,17 @@
 			return
 		src.debug_variables(DAT)
 
-	if(href_list["manipcolours"])
+	if(href_list["manipcolors"])
 		if(!check_rights(R_DEBUG))
 			return
 
-		var/datum/target = locateUID(href_list["manipcolours"])
+		var/datum/target = locateUID(href_list["manipcolors"])
 		if(!(isatom(target) || isclient(target)))
 			to_chat(usr, "This can only be used on atoms and clients")
 			return
 
-		message_admins("[key_name_admin(usr)] is manipulating the colour matrix for [target]")
-		var/datum/ui_module/colour_matrix_tester/CMT = new(target=target)
+		message_admins("[key_name_admin(usr)] is manipulating the color matrix for [target]")
+		var/datum/ui_module/color_matrix_tester/CMT = new(target=target)
 		CMT.ui_interact(usr)
 
 	if(href_list["grantdeadchatcontrol"])

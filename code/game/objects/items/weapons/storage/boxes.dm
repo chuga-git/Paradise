@@ -1206,8 +1206,8 @@
 	w_class = WEIGHT_CLASS_GIGANTIC
 
 /obj/item/storage/box/wizard/hardsuit
-	name = "battlemage armour bundle"
-	desc = "This box contains a bundle of Battlemage Armour."
+	name = "battlemage armor bundle"
+	desc = "This box contains a bundle of Battlemage Armor."
 	icon_state = "wizard_box"
 
 /obj/item/storage/box/wizard/hardsuit/populate_contents()

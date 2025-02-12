@@ -25,5 +25,5 @@
 		sleep(5)
 	if(QDELETED(user))
 		return
-	user.remove_atom_colour(ADMIN_COLOUR_PRIORITY, COLOR_BLUE)
+	user.remove_atom_color(ADMIN_COLOR_PRIORITY, COLOR_BLUE)
 	REMOVE_TRAIT(user, SCRYING, SCRYING_ORB)

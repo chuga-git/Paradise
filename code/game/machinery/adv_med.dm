@@ -362,7 +362,7 @@
 		occupantData["intOrgan"] = intOrganData
 
 		occupantData["blind"] = HAS_TRAIT(occupant, TRAIT_BLIND)
-		occupantData["colourblind"] = HAS_TRAIT(occupant, TRAIT_COLORBLIND)
+		occupantData["colorblind"] = HAS_TRAIT(occupant, TRAIT_COLORBLIND)
 		occupantData["nearsighted"] = HAS_TRAIT(occupant, TRAIT_NEARSIGHT)
 
 	data["occupant"] = occupantData

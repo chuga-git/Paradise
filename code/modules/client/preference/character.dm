@@ -14,27 +14,27 @@
 	var/socks = "Nude"						//socks type
 	var/backbag = GBACKPACK					//backpack type
 	var/ha_style = "None"					//Head accessory style
-	var/hacc_colour = "#000000"				//Head accessory colour. If this line looks badly indented in vscode, its because of the shitty colour square
+	var/hacc_color = "#000000"				//Head accessory color. If this line looks badly indented in vscode, its because of the shitty color square
 	var/list/m_styles = list(
 		"head" = "None",
 		"body" = "None",
 		"tail" = "None",
 		"wing" = "None"
 		)			//Marking styles.
-	var/list/m_colours = list(
+	var/list/m_colors = list(
 		"head" = "#000000",
 		"body" = "#000000",
 		"tail" = "#000000"
-		)		//Marking colours.
+		)		//Marking colors.
 	var/h_style = "Bald"				//Hair type
-	var/h_colour = "#000000"			//Hair color
-	var/h_sec_colour = "#000000"		//Secondary hair color
+	var/h_color = "#000000"			//Hair color
+	var/h_sec_color = "#000000"		//Secondary hair color
 	var/f_style = "Shaved"				//Facial hair type
-	var/f_colour = "#000000"			//Facial hair color
-	var/f_sec_colour = "#000000"		//Secondary facial hair color
+	var/f_color = "#000000"			//Facial hair color
+	var/f_sec_color = "#000000"		//Secondary facial hair color
 	var/s_tone = 0						//Skin tone
-	var/s_colour = "#000000"			//Skin color
-	var/e_colour = "#000000"			//Eye color
+	var/s_color = "#000000"			//Skin color
+	var/e_color = "#000000"			//Eye color
 	var/alt_head = "None"				//Alt head style.
 	var/species = "Human"
 	/// Used for DNA species to allow select species to imitate / morph into different species.
@@ -104,7 +104,7 @@
 	var/h_grad_style = "None"
 	var/h_grad_offset_x = 0
 	var/h_grad_offset_y = 0
-	var/h_grad_colour = "#000000"
+	var/h_grad_color = "#000000"
 	var/h_grad_alpha = 255
 	/// Custom emote text ("name" = "emote text")
 	var/list/custom_emotes = list()
@@ -123,7 +123,7 @@
 	var/playertitlelist
 	var/gearlist
 
-	var/markingcolourslist = list2params(m_colours)
+	var/markingcolorslist = list2params(m_colors)
 	var/markingstyleslist = list2params(m_styles)
 	if(length(organ_data))
 		organ_list = list2params(organ_data)
@@ -152,20 +152,20 @@
 					age=:age,
 					species=:species,
 					language=:language,
-					hair_colour=:h_colour,
-					secondary_hair_colour=:h_sec_colour,
-					facial_hair_colour=:f_colour,
-					secondary_facial_hair_colour=:f_sec_colour,
+					hair_color=:h_color,
+					secondary_hair_color=:h_sec_color,
+					facial_hair_color=:f_color,
+					secondary_facial_hair_color=:f_sec_color,
 					skin_tone=:s_tone,
-					skin_colour=:s_colour,
-					marking_colours=:markingcolourslist,
-					head_accessory_colour=:hacc_colour,
+					skin_color=:s_color,
+					marking_colors=:markingcolorslist,
+					head_accessory_color=:hacc_color,
 					hair_style_name=:h_style,
 					facial_style_name=:f_style,
 					marking_styles=:markingstyleslist,
 					head_accessory_style_name=:ha_style,
 					alt_head_name=:alt_head,
-					eye_colour=:e_colour,
+					eye_color=:e_color,
 					underwear=:underwear,
 					undershirt=:undershirt,
 					backbag=:backbag,
@@ -198,7 +198,7 @@
 					autohiss=:autohiss_mode,
 					hair_gradient=:h_grad_style,
 					hair_gradient_offset=:h_grad_offset,
-					hair_gradient_colour=:h_grad_colour,
+					hair_gradient_color=:h_grad_color,
 					hair_gradient_alpha=:h_grad_alpha,
 					custom_emotes=:custom_emotes,
 					runechat_color=:runechat_color,
@@ -217,20 +217,20 @@
 						"age" = age,
 						"species" = species,
 						"language" = language,
-						"h_colour" = h_colour,
-						"h_sec_colour" = h_sec_colour,
-						"f_colour" = f_colour,
-						"f_sec_colour" = f_sec_colour,
+						"h_color" = h_color,
+						"h_sec_color" = h_sec_color,
+						"f_color" = f_color,
+						"f_sec_color" = f_sec_color,
 						"s_tone" = s_tone,
-						"s_colour" = s_colour,
-						"markingcolourslist" = markingcolourslist,
-						"hacc_colour" = hacc_colour,
+						"s_color" = s_color,
+						"markingcolorslist" = markingcolorslist,
+						"hacc_color" = hacc_color,
 						"h_style" = h_style,
 						"f_style" = f_style,
 						"markingstyleslist" = markingstyleslist,
 						"ha_style" = ha_style,
 						"alt_head" = (alt_head ? alt_head : ""), // This it intentional. It wont work without it!
-						"e_colour" = e_colour,
+						"e_color" = e_color,
 						"underwear" = underwear,
 						"undershirt" = undershirt,
 						"backbag" = backbag,
@@ -263,7 +263,7 @@
 						"autohiss_mode" = autohiss_mode,
 						"h_grad_style" = h_grad_style,
 						"h_grad_offset" = "[h_grad_offset_x],[h_grad_offset_y]",
-						"h_grad_colour" = h_grad_colour,
+						"h_grad_color" = h_grad_color,
 						"h_grad_alpha" = h_grad_alpha,
 						"custom_emotes" = json_encode(custom_emotes),
 						"runechat_color" = runechat_color,
@@ -287,17 +287,17 @@
 	var/datum/db_query/query = SSdbcore.NewQuery({"
 		INSERT INTO characters (ckey, slot, OOC_Notes, real_name, name_is_always_random, gender,
 			age, species, language,
-			hair_colour, secondary_hair_colour,
-			facial_hair_colour, secondary_facial_hair_colour,
-			skin_tone, skin_colour,
-			marking_colours,
-			head_accessory_colour,
+			hair_color, secondary_hair_color,
+			facial_hair_color, secondary_facial_hair_color,
+			skin_tone, skin_color,
+			marking_colors,
+			head_accessory_color,
 			hair_style_name,
 			facial_style_name,
 			marking_styles,
 			head_accessory_style_name,
 			alt_head_name,
-			eye_colour,
+			eye_color,
 			underwear, undershirt,
 			backbag, b_type, alternate_option,
 			job_support_high, job_support_med, job_support_low,
@@ -310,21 +310,21 @@
 			player_alt_titles,
 			disabilities, organ_data, rlimb_data, nanotrasen_relation, physique, height, speciesprefs,
 			socks, body_accessory, gear, autohiss,
-			hair_gradient, hair_gradient_offset, hair_gradient_colour, hair_gradient_alpha, custom_emotes, runechat_color, cyborg_brain_type, body_type, pda_ringtone, species_subtype)
+			hair_gradient, hair_gradient_offset, hair_gradient_color, hair_gradient_alpha, custom_emotes, runechat_color, cyborg_brain_type, body_type, pda_ringtone, species_subtype)
 		VALUES
 			(:ckey, :slot, :metadata, :name, :be_random_name, :gender,
 			:age, :species, :language,
-			:h_colour, :h_sec_colour,
-			:f_colour, :f_sec_colour,
-			:s_tone, :s_colour,
-			:markingcolourslist,
-			:hacc_colour,
+			:h_color, :h_sec_color,
+			:f_color, :f_sec_color,
+			:s_tone, :s_color,
+			:markingcolorslist,
+			:hacc_color,
 			:h_style,
 			:f_style,
 			:markingstyleslist,
 			:ha_style,
 			:alt_head,
-			:e_colour,
+			:e_color,
 			:underwear, :undershirt,
 			:backbag, :b_type, :alternate_option,
 			:job_support_high, :job_support_med, :job_support_low,
@@ -337,7 +337,7 @@
 			:playertitlelist,
 			:disabilities, :organ_list, :rlimb_list, :nanotrasen_relation, :physique, :height, :speciesprefs,
 			:socks, :body_accessory, :gearlist, :autohiss_mode,
-			:h_grad_style, :h_grad_offset, :h_grad_colour, :h_grad_alpha, :custom_emotes, :runechat_color, :cyborg_brain_type, :body_type, :pda_ringtone, :species_subtype)
+			:h_grad_style, :h_grad_offset, :h_grad_color, :h_grad_alpha, :custom_emotes, :runechat_color, :cyborg_brain_type, :body_type, :pda_ringtone, :species_subtype)
 	"}, list(
 		// This has too many params for anyone to look at this without going insae
 		"ckey" = C.ckey,
@@ -350,20 +350,20 @@
 		"age" = age,
 		"species" = species,
 		"language" = language,
-		"h_colour" = h_colour,
-		"h_sec_colour" = h_sec_colour,
-		"f_colour" = f_colour,
-		"f_sec_colour" = f_sec_colour,
+		"h_color" = h_color,
+		"h_sec_color" = h_sec_color,
+		"f_color" = f_color,
+		"f_sec_color" = f_sec_color,
 		"s_tone" = s_tone,
-		"s_colour" = s_colour,
-		"markingcolourslist" = markingcolourslist,
-		"hacc_colour" = hacc_colour,
+		"s_color" = s_color,
+		"markingcolorslist" = markingcolorslist,
+		"hacc_color" = hacc_color,
 		"h_style" = h_style,
 		"f_style" = f_style,
 		"markingstyleslist" = markingstyleslist,
 		"ha_style" = ha_style,
 		"alt_head" = (alt_head ? alt_head : "None"), // bane of my fucking life
-		"e_colour" = e_colour,
+		"e_color" = e_color,
 		"underwear" = underwear,
 		"undershirt" = undershirt,
 		"backbag" = backbag,
@@ -396,7 +396,7 @@
 		"autohiss_mode" = autohiss_mode,
 		"h_grad_style" = h_grad_style,
 		"h_grad_offset" = "[h_grad_offset_x],[h_grad_offset_y]",
-		"h_grad_colour" = h_grad_colour,
+		"h_grad_color" = h_grad_color,
 		"h_grad_alpha" = h_grad_alpha,
 		"custom_emotes" = json_encode(custom_emotes),
 		"runechat_color" = runechat_color,
@@ -427,20 +427,20 @@
 	age = text2num(query.item[5])
 	species = query.item[6]
 	language = query.item[7]
-	h_colour = query.item[8]
-	h_sec_colour = query.item[9]
-	f_colour = query.item[10]
-	f_sec_colour = query.item[11]
+	h_color = query.item[8]
+	h_sec_color = query.item[9]
+	f_color = query.item[10]
+	f_sec_color = query.item[11]
 	s_tone = text2num(query.item[12])
-	s_colour = query.item[13]
-	m_colours = params2list(query.item[14])
-	hacc_colour = query.item[15]
+	s_color = query.item[13]
+	m_colors = params2list(query.item[14])
+	hacc_color = query.item[15]
 	h_style = query.item[16]
 	f_style = query.item[17]
 	m_styles = params2list(query.item[18])
 	ha_style = query.item[19]
 	alt_head = query.item[20]
-	e_colour = query.item[21]
+	e_color = query.item[21]
 	underwear = query.item[22]
 	undershirt = query.item[23]
 	backbag = query.item[24]
@@ -488,7 +488,7 @@
 	// Index [50] is the slot
 	h_grad_style = query.item[51]
 	h_grad_offset_x = query.item[52] // parsed down below
-	h_grad_colour = query.item[53]
+	h_grad_color = query.item[53]
 	h_grad_alpha = query.item[54]
 	var/custom_emotes_tmp = query.item[55]
 	runechat_color = query.item[56]
@@ -535,17 +535,17 @@
 	be_random_name	= sanitize_integer(be_random_name, 0, 1, initial(be_random_name))
 	gender			= sanitize_gender(gender, FALSE)
 	age				= sanitize_integer(age, SP.min_age, SP.max_age, initial(age))
-	h_colour		= sanitize_hexcolor(h_colour)
-	h_sec_colour	= sanitize_hexcolor(h_sec_colour)
-	f_colour		= sanitize_hexcolor(f_colour)
-	f_sec_colour	= sanitize_hexcolor(f_sec_colour)
+	h_color		= sanitize_hexcolor(h_color)
+	h_sec_color	= sanitize_hexcolor(h_sec_color)
+	f_color		= sanitize_hexcolor(f_color)
+	f_sec_color	= sanitize_hexcolor(f_sec_color)
 	s_tone			= sanitize_integer(s_tone, -185, 34, initial(s_tone))
-	s_colour		= sanitize_hexcolor(s_colour)
+	s_color		= sanitize_hexcolor(s_color)
 
-	for(var/marking_location in m_colours)
-		m_colours[marking_location] = sanitize_hexcolor(m_colours[marking_location], DEFAULT_MARKING_COLOURS[marking_location])
+	for(var/marking_location in m_colors)
+		m_colors[marking_location] = sanitize_hexcolor(m_colors[marking_location], DEFAULT_MARKING_COLORS[marking_location])
 
-	hacc_colour		= sanitize_hexcolor(hacc_colour)
+	hacc_color		= sanitize_hexcolor(hacc_color)
 	h_style			= sanitize_inlist(h_style, GLOB.hair_styles_public_list, initial(h_style))
 	f_style			= sanitize_inlist(f_style, GLOB.facial_hair_styles_list, initial(f_style))
 
@@ -554,7 +554,7 @@
 
 	ha_style		= sanitize_inlist(ha_style, GLOB.head_accessory_styles_list, initial(ha_style))
 	alt_head		= sanitize_inlist(alt_head, GLOB.alt_heads_list, initial(alt_head))
-	e_colour		= sanitize_hexcolor(e_colour)
+	e_color		= sanitize_hexcolor(e_color)
 	underwear		= sanitize_text(underwear, initial(underwear))
 	undershirt		= sanitize_text(undershirt, initial(undershirt))
 	backbag			= sanitize_text(backbag, initial(backbag))
@@ -580,7 +580,7 @@
 	if(length(expl) == 2)
 		h_grad_offset_x = text2num(expl[1]) || 0
 		h_grad_offset_y = text2num(expl[2]) || 0
-	h_grad_colour = sanitize_hexcolor(h_grad_colour)
+	h_grad_color = sanitize_hexcolor(h_grad_color)
 	h_grad_alpha = sanitize_integer(h_grad_alpha, 0, 255, initial(h_grad_alpha))
 	loadout_gear = sanitize_json(loadout_gear)
 	custom_emotes_tmp = sanitize_json(custom_emotes_tmp)
@@ -637,16 +637,16 @@
 		randomize_hair_color("facial")
 	if(S.bodyflags & HAS_HEAD_ACCESSORY)
 		ha_style = random_head_accessory(species)
-		hacc_colour = randomize_skin_color(1)
+		hacc_color = randomize_skin_color(1)
 	if(S.bodyflags & HAS_HEAD_MARKINGS)
 		m_styles["head"] = random_marking_style("head", species, robohead, null, alt_head)
-		m_colours["head"] = randomize_skin_color(1)
+		m_colors["head"] = randomize_skin_color(1)
 	if(S.bodyflags & HAS_BODY_MARKINGS)
 		m_styles["body"] = random_marking_style("body", species)
-		m_colours["body"] = randomize_skin_color(1)
+		m_colors["body"] = randomize_skin_color(1)
 	if(S.bodyflags & HAS_TAIL_MARKINGS) //Species with tail markings.
 		m_styles["tail"] = random_marking_style("tail", species, null, body_accessory)
-		m_colours["tail"] = randomize_skin_color(1)
+		m_colors["tail"] = randomize_skin_color(1)
 	if(!(S.bodyflags & ALL_RPARTS))
 		randomize_eyes_color()
 	if(S.bodyflags & HAS_SKIN_COLOR)
@@ -659,7 +659,7 @@
 
 /datum/character_save/proc/randomize_hair_color(target = "hair")
 	if(prob (75) && target == "facial") // Chance to inherit hair color
-		f_colour = h_colour
+		f_color = h_color
 		return
 
 	var/red
@@ -707,9 +707,9 @@
 
 	switch(target)
 		if("hair")
-			h_colour = rgb(red, green, blue)
+			h_color = rgb(red, green, blue)
 		if("facial")
-			f_colour = rgb(red, green, blue)
+			f_color = rgb(red, green, blue)
 
 /datum/character_save/proc/randomize_eyes_color()
 	var/red
@@ -755,7 +755,7 @@
 	green = max(min(green + rand (-25, 25), 255), 0)
 	blue = max(min(blue + rand (-25, 25), 255), 0)
 
-	e_colour = rgb(red, green, blue)
+	e_color = rgb(red, green, blue)
 
 /datum/character_save/proc/randomize_skin_color(pass_on)
 	var/red
@@ -804,7 +804,7 @@
 	if(pass_on)
 		return rgb(red, green, blue)
 	else
-		s_colour = rgb(red, green, blue)
+		s_color = rgb(red, green, blue)
 
 /datum/character_save/proc/blend_backpack(icon/clothes_s, backbag, satchel, backpack="backpack")
 	switch(backbag)
@@ -834,8 +834,8 @@
 	var/icon/icobase
 	var/datum/species/current_species = GLOB.all_species[species]
 
-	//Icon-based species colour.
-	var/coloured_tail
+	//Icon-based species color.
+	var/colored_tail
 	if(current_species)
 		var/mob/living/carbon/human/fake/H = new
 		H.dna.species = current_species
@@ -848,7 +848,7 @@
 			H.s_tone = s_tone
 			H.dna.species.updatespeciescolor(H, 0) //The mob's species wasn't set, so it's almost certainly different than the character's species at the moment. Thus, we need to be owner-insensitive.
 			if(H.dna.species.bodyflags & HAS_TAIL)
-				coloured_tail = H.tail ? H.tail : H.dna.species.tail
+				colored_tail = H.tail ? H.tail : H.dna.species.tail
 		icobase = current_species.icobase
 		qdel(H)
 	else
@@ -884,11 +884,11 @@
 			continue
 		if(istype(current_species, /datum/species/slime) && current_species.species_subtype != "None") // Applies to limbs that are not robotic.
 			bodypart.GrayScale()
-			bodypart.Blend("[s_colour]DC", ICON_AND) //DC = 220 alpha.
+			bodypart.Blend("[s_color]DC", ICON_AND) //DC = 220 alpha.
 		else
 			// Skin color
 			if(current_species && (current_species.bodyflags & HAS_SKIN_COLOR))
-				bodypart.Blend(s_colour, ICON_ADD)
+				bodypart.Blend(s_color, ICON_ADD)
 			// Skin tone
 			if(current_species && (current_species.bodyflags & HAS_SKIN_TONE))
 				if(s_tone >= 0)
@@ -919,21 +919,21 @@
 					underlay = new(icon, "[icon_state]_BEHIND")
 		else if(current_species.bodyflags & HAS_TAIL)
 			icon = "icons/effects/species.dmi"
-			if(coloured_tail)
-				icon_state = "[coloured_tail]_s"
+			if(colored_tail)
+				icon_state = "[colored_tail]_s"
 			else
 				icon_state = "[current_species.tail]_s"
 
 		if(icon)
 			var/icon/temp = new(icon, icon_state)
 			if(current_species.bodyflags & HAS_SKIN_COLOR)
-				temp.Blend(s_colour, blend_mode)
+				temp.Blend(s_color, blend_mode)
 			if(current_species.bodyflags & HAS_TAIL_MARKINGS)
 				var/tail_marking = m_styles["tail"]
 				var/datum/sprite_accessory/body_markings/BM = GLOB.marking_styles_list[tail_marking]
 				if(BM)
 					var/icon/t_marking_s = new(BM.icon, "[BM.icon_state]_s")
-					t_marking_s.Blend(m_colours["tail"], ICON_ADD)
+					t_marking_s.Blend(m_colors["tail"], ICON_ADD)
 					temp.Blend(t_marking_s, ICON_OVERLAY)
 
 			// Body accessory has an underlay, add it too.
@@ -951,14 +951,14 @@
 			var/datum/sprite_accessory/body_marking_style = GLOB.marking_styles_list[body_marking]
 			if(body_marking_style && body_marking_style.species_allowed)
 				var/icon/b_marking_s = new/icon("icon" = body_marking_style.icon, "icon_state" = "[body_marking_style.icon_state]_s")
-				b_marking_s.Blend(m_colours["body"], ICON_ADD)
+				b_marking_s.Blend(m_colors["body"], ICON_ADD)
 				preview_icon.Blend(b_marking_s, ICON_OVERLAY)
 		if(current_species.bodyflags & HAS_HEAD_MARKINGS) //Head markings.
 			var/head_marking = m_styles["head"]
 			var/datum/sprite_accessory/head_marking_style = GLOB.marking_styles_list[head_marking]
 			if(head_marking_style && head_marking_style.species_allowed)
 				var/icon/h_marking_s = new/icon("icon" = head_marking_style.icon, "icon_state" = "[head_marking_style.icon_state]_s")
-				h_marking_s.Blend(m_colours["head"], ICON_ADD)
+				h_marking_s.Blend(m_colors["head"], ICON_ADD)
 				preview_icon.Blend(h_marking_s, ICON_OVERLAY)
 
 	var/icon/hands_icon = icon(preview_icon)
@@ -967,7 +967,7 @@
 	var/icon/face_s = new/icon("icon" = 'icons/mob/human_face.dmi', "icon_state" = "bald_s")
 	if(!(current_species.bodyflags & NO_EYES))
 		var/icon/eyes_s = new/icon("icon" = 'icons/mob/human_face.dmi', "icon_state" = current_species ? current_species.eyes : "eyes_s")
-		eyes_s.Blend(e_colour, ICON_ADD)
+		eyes_s.Blend(e_color, ICON_ADD)
 		face_s.Blend(eyes_s, ICON_OVERLAY)
 
 
@@ -975,9 +975,9 @@
 	if(hair_style)
 		var/icon/hair_s = new/icon("icon" = hair_style.icon, "icon_state" = "[hair_style.icon_state]_s")
 		if(current_species.name == "Slime People") // whee I am part of the problem
-			hair_s.Blend("[s_colour]A0", ICON_ADD)
-		else if(hair_style.do_colouration)
-			hair_s.Blend(h_colour, ICON_ADD)
+			hair_s.Blend("[s_color]A0", ICON_ADD)
+		else if(hair_style.do_coloration)
+			hair_s.Blend(h_color, ICON_ADD)
 
 		var/datum/sprite_accessory/hair_gradient/gradient = GLOB.hair_gradients_list[h_grad_style]
 		if(gradient)
@@ -987,14 +987,14 @@
 			if(h_grad_offset_y)
 				grad_s.Shift(NORTH, h_grad_offset_y)
 			grad_s.Blend(hair_s, ICON_ADD)
-			grad_s.MapColors(COLOR_BLACK, COLOR_BLACK, COLOR_BLACK, h_grad_colour)
+			grad_s.MapColors(COLOR_BLACK, COLOR_BLACK, COLOR_BLACK, h_grad_color)
 			grad_s.ChangeOpacity(h_grad_alpha / 255)
 			hair_s.Blend(grad_s, ICON_OVERLAY)
 
 		if(hair_style.secondary_theme)
 			var/icon/hair_secondary_s = new/icon("icon" = hair_style.icon, "icon_state" = "[hair_style.icon_state]_[hair_style.secondary_theme]_s")
-			if(!hair_style.no_sec_colour && hair_style.do_colouration)
-				hair_secondary_s.Blend(h_sec_colour, ICON_ADD)
+			if(!hair_style.no_sec_color && hair_style.do_coloration)
+				hair_secondary_s.Blend(h_sec_color, ICON_ADD)
 			hair_s.Blend(hair_secondary_s, ICON_OVERLAY)
 
 		face_s.Blend(hair_s, ICON_OVERLAY)
@@ -1004,21 +1004,21 @@
 		var/datum/sprite_accessory/head_accessory_style = GLOB.head_accessory_styles_list[ha_style]
 		if(head_accessory_style && head_accessory_style.species_allowed)
 			var/icon/head_accessory_s = new/icon("icon" = head_accessory_style.icon, "icon_state" = "[head_accessory_style.icon_state]_s")
-			head_accessory_s.Blend(hacc_colour, ICON_ADD)
+			head_accessory_s.Blend(hacc_color, ICON_ADD)
 			face_s.Blend(head_accessory_s, ICON_OVERLAY)
 
 	var/datum/sprite_accessory/facial_hair_style = GLOB.facial_hair_styles_list[f_style]
 	if(facial_hair_style && facial_hair_style.species_allowed)
 		var/icon/facial_s = new/icon("icon" = facial_hair_style.icon, "icon_state" = "[facial_hair_style.icon_state]_s")
 		if(current_species.name == "Slime People") // whee I am part of the problem
-			facial_s.Blend("[s_colour]A0", ICON_ADD)
-		else if(facial_hair_style.do_colouration)
-			facial_s.Blend(f_colour, ICON_ADD)
+			facial_s.Blend("[s_color]A0", ICON_ADD)
+		else if(facial_hair_style.do_coloration)
+			facial_s.Blend(f_color, ICON_ADD)
 
 		if(facial_hair_style.secondary_theme)
 			var/icon/facial_secondary_s = new/icon("icon" = facial_hair_style.icon, "icon_state" = "[facial_hair_style.icon_state]_[facial_hair_style.secondary_theme]_s")
-			if(!facial_hair_style.no_sec_colour && facial_hair_style.do_colouration)
-				facial_secondary_s.Blend(f_sec_colour, ICON_ADD)
+			if(!facial_hair_style.no_sec_color && facial_hair_style.do_coloration)
+				facial_secondary_s.Blend(f_sec_color, ICON_ADD)
 			facial_s.Blend(facial_secondary_s, ICON_OVERLAY)
 
 		face_s.Blend(facial_s, ICON_OVERLAY)
@@ -1688,7 +1688,7 @@
 	if(CAN_WINGDINGS in S.species_traits)
 		HTML += ShowDisabilityState(user, DISABILITY_FLAG_WINGDINGS, "Speak in Wingdings")
 	HTML += ShowDisabilityState(user, DISABILITY_FLAG_NEARSIGHTED, "Nearsighted")
-	HTML += ShowDisabilityState(user, DISABILITY_FLAG_COLOURBLIND, "Colourblind")
+	HTML += ShowDisabilityState(user, DISABILITY_FLAG_COLORBLIND, "Colorblind")
 	HTML += ShowDisabilityState(user, DISABILITY_FLAG_BLIND, "Blind")
 	HTML += ShowDisabilityState(user, DISABILITY_FLAG_DEAF, "Deaf")
 	HTML += ShowDisabilityState(user, DISABILITY_FLAG_MUTE, "Mute")
@@ -1879,13 +1879,13 @@
 	//Head-specific
 	var/obj/item/organ/external/head/H = character.get_organ("head")
 
-	H.hair_colour = h_colour
+	H.hair_color = h_color
 
-	H.sec_hair_colour = h_sec_colour
+	H.sec_hair_color = h_sec_color
 
-	H.facial_colour = f_colour
+	H.facial_color = f_color
 
-	H.sec_facial_colour = f_sec_colour
+	H.sec_facial_color = f_sec_color
 
 	H.h_style = h_style
 	H.f_style = f_style
@@ -1895,11 +1895,11 @@
 	H.h_grad_style = h_grad_style
 	H.h_grad_offset_x = h_grad_offset_x
 	H.h_grad_offset_y = h_grad_offset_y
-	H.h_grad_colour = h_grad_colour
+	H.h_grad_color = h_grad_color
 	H.h_grad_alpha = h_grad_alpha
 	//End of head-specific.
 
-	character.skin_colour = s_colour
+	character.skin_color = s_color
 
 	character.s_tone = s_tone
 
@@ -1939,10 +1939,10 @@
 	character.socks = socks
 
 	if(character.dna.species.bodyflags & HAS_HEAD_ACCESSORY)
-		H.headacc_colour = hacc_colour
+		H.headacc_color = hacc_color
 		H.ha_style = ha_style
 	if(character.dna.species.bodyflags & HAS_MARKINGS)
-		character.m_colours = m_colours
+		character.m_colors = m_colors
 		character.m_styles = m_styles
 
 	if(body_accessory)
@@ -1956,8 +1956,8 @@
 			message_admins("[key_name_admin(character)] has spawned with their gender as neuter. Please notify coders.")
 			character.change_gender(PLURAL)
 
-	character.change_eye_color(e_colour, skip_icons = TRUE)
-	character.original_eye_color = e_colour
+	character.change_eye_color(e_color, skip_icons = TRUE)
+	character.original_eye_color = e_color
 	character.dna.flavor_text = flavor_text
 
 	// Runechat Color
@@ -1981,9 +1981,9 @@
 		character.dna.SetSEState(GLOB.deafblock, TRUE, TRUE)
 		character.dna.default_blocks.Add(GLOB.deafblock)
 
-	if(disabilities & DISABILITY_FLAG_COLOURBLIND)
-		character.dna.SetSEState(GLOB.colourblindblock, TRUE, TRUE)
-		character.dna.default_blocks.Add(GLOB.colourblindblock)
+	if(disabilities & DISABILITY_FLAG_COLORBLIND)
+		character.dna.SetSEState(GLOB.colorblindblock, TRUE, TRUE)
+		character.dna.default_blocks.Add(GLOB.colorblindblock)
 
 	if(disabilities & DISABILITY_FLAG_MUTE)
 		character.dna.SetSEState(GLOB.muteblock, TRUE, TRUE)

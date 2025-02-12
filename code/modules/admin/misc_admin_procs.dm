@@ -261,7 +261,7 @@ GLOBAL_VAR_INIT(disable_explosions, FALSE)
 				<A href='byond://?_src_=holder;simplemake=ian;mob=[M.UID()]'>Ian</A> |
 				<A href='byond://?_src_=holder;simplemake=crab;mob=[M.UID()]'>Crab</A> |
 				<A href='byond://?_src_=holder;simplemake=coffee;mob=[M.UID()]'>Coffee</A> |
-				\[ Construct: <A href='byond://?_src_=holder;simplemake=constructarmoured;mob=[M.UID()]'>Armoured</A> ,
+				\[ Construct: <A href='byond://?_src_=holder;simplemake=constructarmored;mob=[M.UID()]'>Armored</A> ,
 				<A href='byond://?_src_=holder;simplemake=constructbuilder;mob=[M.UID()]'>Builder</A> ,
 				<A href='byond://?_src_=holder;simplemake=constructwraith;mob=[M.UID()]'>Wraith</A> \]
 				<A href='byond://?_src_=holder;simplemake=shade;mob=[M.UID()]'>Shade</A>

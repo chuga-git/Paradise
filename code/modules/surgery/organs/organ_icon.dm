@@ -21,26 +21,26 @@
 
 	icobase = new_icobase ? new_icobase : icobase
 
-/obj/item/organ/external/proc/sync_colour_to_human(mob/living/carbon/human/H)
+/obj/item/organ/external/proc/sync_color_to_human(mob/living/carbon/human/H)
 	if(is_robotic() && !istype(dna.species, /datum/species/machine)) //machine people get skin color
 		return
 	if(dna.species && H.dna.species && dna.species.name != H.dna.species.name)
 		return
 	if(dna.unique_enzymes != H.dna.unique_enzymes) // This isn't MY arm
 		if(!(H.dna.species.bodyflags & HAS_ICON_SKIN_TONE))
-			sync_colour_to_dna()
+			sync_color_to_dna()
 			return
 	if(!isnull(H.s_tone) && ((H.dna.species.bodyflags & HAS_SKIN_TONE) || (H.dna.species.bodyflags & HAS_ICON_SKIN_TONE)))
 		s_col = null
 		s_tone = H.s_tone
 	if(H.dna.species.bodyflags & HAS_SKIN_COLOR)
 		s_tone = null
-		s_col = H.skin_colour
+		s_col = H.skin_color
 	if(H.dna.species.bodyflags & HAS_ICON_SKIN_TONE)
 		var/obj/item/organ/external/chest/C = H.get_organ("chest")
 		change_organ_icobase(C.icobase)
 
-/obj/item/organ/external/proc/sync_colour_to_dna()
+/obj/item/organ/external/proc/sync_color_to_dna()
 	if(is_robotic())
 		return
 	if(!isnull(dna.GetUIValue(DNA_UI_SKIN_TONE)) && ((dna.species.bodyflags & HAS_SKIN_TONE) || (dna.species.bodyflags & HAS_ICON_SKIN_TONE)))
@@ -50,10 +50,10 @@
 		s_tone = null
 		s_col = rgb(dna.GetUIValue(DNA_UI_SKIN_R), dna.GetUIValue(DNA_UI_SKIN_G), dna.GetUIValue(DNA_UI_SKIN_B))
 
-/obj/item/organ/external/head/sync_colour_to_human(mob/living/carbon/human/H)
+/obj/item/organ/external/head/sync_color_to_human(mob/living/carbon/human/H)
 	..()
 	var/obj/item/organ/internal/eyes/eyes = owner.get_int_organ(/obj/item/organ/internal/eyes)//owner.internal_bodyparts_by_name["eyes"]
-	if(eyes) eyes.update_colour()
+	if(eyes) eyes.update_color()
 
 /obj/item/organ/external/proc/get_icon(skeletal)
 	// Kasparrov, you monster
@@ -110,8 +110,8 @@
 		var/datum/sprite_accessory/head_marking_style = GLOB.marking_styles_list[head_marking]
 		if(head_marking_style && head_marking_style.species_allowed && (dna.species.sprite_sheet_name in head_marking_style.species_allowed) && head_marking_style.marking_location == "head")
 			var/icon/h_marking_s = new /icon("icon" = head_marking_style.icon, "icon_state" = "[head_marking_style.icon_state]_s")
-			if(head_marking_style.do_colouration)
-				h_marking_s.Blend(owner.m_colours["head"], ICON_ADD)
+			if(head_marking_style.do_coloration)
+				h_marking_s.Blend(owner.m_colors["head"], ICON_ADD)
 			add_overlay(h_marking_s)
 
 	if(!((owner.head && (owner.head.flags & BLOCKHAIR)) || (owner.wear_mask && (owner.wear_mask.flags & BLOCKHAIR)))) //Common restriction for all the below features.
@@ -119,8 +119,8 @@
 			var/datum/sprite_accessory/head_accessory_style = GLOB.head_accessory_styles_list[ha_style]
 			if(head_accessory_style && head_accessory_style.species_allowed && (dna.species.sprite_sheet_name in head_accessory_style.species_allowed))
 				var/icon/head_accessory_s = new /icon("icon" = head_accessory_style.icon, "icon_state" = "[head_accessory_style.icon_state]_s")
-				if(head_accessory_style.do_colouration)
-					head_accessory_s.Blend(headacc_colour, ICON_ADD)
+				if(head_accessory_style.do_coloration)
+					head_accessory_s.Blend(headacc_color, ICON_ADD)
 				add_overlay(head_accessory_s)
 
 		if(f_style)
@@ -128,9 +128,9 @@
 			if(facial_hair_style && ((facial_hair_style.species_allowed && (dna.species.sprite_sheet_name in facial_hair_style.species_allowed)) || (dna.species.bodyflags & ALL_RPARTS)))
 				var/icon/facial_s = new /icon("icon" = facial_hair_style.icon, "icon_state" = "[facial_hair_style.icon_state]_s")
 				if(istype(dna.species, /datum/species/slime)) // I am el worstos
-					facial_s.Blend("[owner.skin_colour]A0", ICON_AND) //A0 = 160 alpha.
-				else if(facial_hair_style.do_colouration)
-					facial_s.Blend(facial_colour, ICON_ADD)
+					facial_s.Blend("[owner.skin_color]A0", ICON_AND) //A0 = 160 alpha.
+				else if(facial_hair_style.do_coloration)
+					facial_s.Blend(facial_color, ICON_ADD)
 				add_overlay(facial_s)
 
 		if(h_style)
@@ -139,9 +139,9 @@
 				if(hair_style && ((dna.species.sprite_sheet_name in hair_style.species_allowed) || (dna.species.bodyflags & ALL_RPARTS)))
 					var/icon/hair_s = new /icon("icon" = hair_style.icon, "icon_state" = "[hair_style.icon_state]_s")
 					if(istype(dna.species, /datum/species/slime)) // I am el worstos
-						hair_s.Blend("[owner.skin_colour]A0", ICON_AND) //A0 = 160 alpha.
-					else if(hair_style.do_colouration)
-						hair_s.Blend(hair_colour, ICON_ADD)
+						hair_s.Blend("[owner.skin_color]A0", ICON_AND) //A0 = 160 alpha.
+					else if(hair_style.do_coloration)
+						hair_s.Blend(hair_color, ICON_ADD)
 					add_overlay(hair_s)
 
 	return mob_icon //Don't need to blend the above into this as it's handled in human/update_icons(). The overlays are for rendering stuff on disembodied heads.

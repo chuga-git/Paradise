@@ -29,7 +29,7 @@
 	var/real_explosion_block	//ignore this, just use explosion_block
 	var/breaksound = "shatter"
 	var/hitsound = 'sound/effects/Glasshit.ogg'
-	/// Used to restore colours from polarised glass
+	/// Used to restore colors from polarised glass
 	var/old_color
 	/// Used to define what file the edging sprite is contained within
 	var/edge_overlay_file
@@ -99,7 +99,7 @@
 		set_opacity(TRUE)
 
 /obj/structure/window/narsie_act()
-	color = NARSIE_WINDOW_COLOUR
+	color = NARSIE_WINDOW_COLOR
 
 /obj/structure/window/rpd_act()
 	return

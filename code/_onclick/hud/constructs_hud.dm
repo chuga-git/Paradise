@@ -1,4 +1,4 @@
-/datum/hud/construct/armoured/New(mob/owner)
+/datum/hud/construct/armored/New(mob/owner)
 	..()
 	mymob.healths = new /atom/movable/screen()
 	mymob.healths.icon = 'icons/mob/screen_construct.dmi'

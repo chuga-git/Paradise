@@ -113,7 +113,7 @@
 #define COLOR_BLOOD_MACHINE "#1F181F"
 #define COLOR_BLOOD_XENO "#05EE05"
 
-// Pipe colours
+// Pipe colors
 #define	PIPE_COLOR_GREY		"#ffffff"	//yes white is grey
 #define	PIPE_COLOR_RED		"#ff0000"
 #define	PIPE_COLOR_BLUE		"#0000ff"
@@ -135,7 +135,7 @@
 #define COLOR_MATRIX_ADD(C) list(COLOR_RED, COLOR_GREEN, COLOR_BLUE, C)
 #define COLOR_MATRIX_OVERLAY(C) list(COLOR_BLACK, COLOR_BLACK, COLOR_BLACK, C)
 
-// Blob primary colours
+// Blob primary colors
 #define COLOR_RIPPING_TENDRILS "#7F0000"
 #define COLOR_BOILING_OIL "#B68D00"
 #define COLOR_ENVENOMED_FILAMENTS "#9ACD32"
@@ -145,7 +145,7 @@
 #define COLOR_SORIUM "#808000"
 #define COLOR_TESLIUM_PASTE "#20324D"
 
-// Blob complementary colours
+// Blob complementary colors
 #define COMPLEMENTARY_COLOR_RIPPING_TENDRILS "#a15656"
 #define COMPLEMENTARY_COLOR_BOILING_OIL "#c0a856"
 #define COMPLEMENTARY_COLOR_ENVENOMED_FILAMENTS "#b0cd73"

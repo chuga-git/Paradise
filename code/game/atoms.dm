@@ -57,7 +57,7 @@
 	///overlays managed by [update_overlays][/atom/proc/update_overlays] to prevent removing overlays that weren't added by the same proc. Single items are stored on their own, not in a list.
 	var/list/managed_overlays
 
-	var/list/atom_colours	 //used to store the different colors on an atom
+	var/list/atom_colors	 //used to store the different colors on an atom
 						//its inherent color, the colored paint applied on it, special color effect etc...
 
 	/// Radiation insulation types
@@ -99,7 +99,7 @@
 	var/light_power = 1
 	// Range in tiles of the light.
 	var/light_range = 0
-	// Hexadecimal RGB string representing the colour of the light. ALWAYS REMEMBER TO MAKE SURE THIS CAN'T BE NULL/NEGATIVE
+	// Hexadecimal RGB string representing the color of the light. ALWAYS REMEMBER TO MAKE SURE THIS CAN'T BE NULL/NEGATIVE
 	var/light_color
 
 	// Our light source. Don't fuck with this directly unless you have a good reason!
@@ -168,7 +168,7 @@
 	initialized = TRUE
 
 	if(color)
-		add_atom_colour(color, FIXED_COLOUR_PRIORITY)
+		add_atom_color(color, FIXED_COLOR_PRIORITY)
 
 	if(light_power && light_range)
 		update_light()
@@ -1191,11 +1191,11 @@ GLOBAL_LIST_EMPTY(blood_splatter_icons)
 		if("light_power", "light_range", "light_color")
 			update_light()
 		if("color")
-			add_atom_colour(color, ADMIN_COLOUR_PRIORITY)
+			add_atom_color(color, ADMIN_COLOR_PRIORITY)
 
 /atom/vv_get_dropdown()
 	. = ..()
-	.["Manipulate Colour Matrix"] = "byond://?_src_=vars;manipcolours=[UID()]"
+	.["Manipulate Color Matrix"] = "byond://?_src_=vars;manipcolors=[UID()]"
 	var/turf/curturf = get_turf(src)
 	if(curturf)
 		.["Jump to turf"] = "byond://?_src_=holder;adminplayerobservecoodjump=1;X=[curturf.x];Y=[curturf.y];Z=[curturf.z]"
@@ -1235,43 +1235,43 @@ GLOBAL_LIST_EMPTY(blood_splatter_icons)
 	SEND_SIGNAL(src, COMSIG_ATOM_EXITED, AM, new_loc)
 
 /*
-	Adds an instance of colour_type to the atom's atom_colours list
+	Adds an instance of color_type to the atom's atom_colors list
 */
-/atom/proc/add_atom_colour(coloration, colour_priority)
-	if(!atom_colours || !length(atom_colours))
-		atom_colours = list()
-		atom_colours.len = COLOUR_PRIORITY_AMOUNT //four priority levels currently.
+/atom/proc/add_atom_color(coloration, color_priority)
+	if(!atom_colors || !length(atom_colors))
+		atom_colors = list()
+		atom_colors.len = COLOR_PRIORITY_AMOUNT //four priority levels currently.
 	if(!coloration)
 		return
-	if(colour_priority > length(atom_colours))
+	if(color_priority > length(atom_colors))
 		return
-	atom_colours[colour_priority] = coloration
-	update_atom_colour()
+	atom_colors[color_priority] = coloration
+	update_atom_color()
 
 /*
-	Removes an instance of colour_type from the atom's atom_colours list
+	Removes an instance of color_type from the atom's atom_colors list
 */
-/atom/proc/remove_atom_colour(colour_priority, coloration)
-	if(!atom_colours)
-		atom_colours = list()
-		atom_colours.len = COLOUR_PRIORITY_AMOUNT //four priority levels currently.
-	if(colour_priority > length(atom_colours))
+/atom/proc/remove_atom_color(color_priority, coloration)
+	if(!atom_colors)
+		atom_colors = list()
+		atom_colors.len = COLOR_PRIORITY_AMOUNT //four priority levels currently.
+	if(color_priority > length(atom_colors))
 		return
-	if(coloration && atom_colours[colour_priority] != coloration)
+	if(coloration && atom_colors[color_priority] != coloration)
 		return //if we don't have the expected color (for a specific priority) to remove, do nothing
-	atom_colours[colour_priority] = null
-	update_atom_colour()
+	atom_colors[color_priority] = null
+	update_atom_color()
 
 /*
 	Resets the atom's color to null, and then sets it to the highest priority
-	colour available
+	color available
 */
-/atom/proc/update_atom_colour()
-	if(!atom_colours)
-		atom_colours = list()
-		atom_colours.len = COLOUR_PRIORITY_AMOUNT //four priority levels currently.
+/atom/proc/update_atom_color()
+	if(!atom_colors)
+		atom_colors = list()
+		atom_colors.len = COLOR_PRIORITY_AMOUNT //four priority levels currently.
 	color = null
-	for(var/C in atom_colours)
+	for(var/C in atom_colors)
 		if(islist(C))
 			var/list/L = C
 			if(length(L))

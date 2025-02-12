@@ -65,28 +65,28 @@
 /obj/item/projectile/bullet/incendiary/firebullet
 	damage = 10
 
-/obj/item/projectile/bullet/armourpiercing
+/obj/item/projectile/bullet/armorpiercing
 	damage = 17
-	armour_penetration_flat = 10
+	armor_penetration_flat = 10
 
-/obj/item/projectile/bullet/armourpiercing/wt550
+/obj/item/projectile/bullet/armorpiercing/wt550
 	damage = 15
-	armour_penetration_percentage = 50
-	armour_penetration_flat = 25
+	armor_penetration_percentage = 50
+	armor_penetration_flat = 25
 
 /obj/item/projectile/bullet/pellet
 	name = "pellet"
 	damage = 12.5
 	tile_dropoff = 0.75
 	tile_dropoff_s = 1.25
-	armour_penetration_flat = -20
+	armor_penetration_flat = -20
 
 /obj/item/projectile/bullet/pellet/rubber
 	name = "rubber pellet"
 	damage = 3
 	stamina = 12.5
 	icon_state = "bullet-r"
-	armour_penetration_flat = -10
+	armor_penetration_flat = -10
 
 /obj/item/projectile/bullet/pellet/rubber/on_hit(atom/target, blocked = 0)
 	. = ..()
@@ -108,7 +108,7 @@
 
 /obj/item/projectile/bullet/midbullet
 	damage = 20
-	stamina = 45 // Three rounds from the c20r knocks unarmoured people down, four for people with bulletproof
+	stamina = 45 // Three rounds from the c20r knocks unarmored people down, four for people with bulletproof
 
 /obj/item/projectile/bullet/midbullet_r
 	damage = 5
@@ -122,11 +122,11 @@
 
 /obj/item/projectile/bullet/midbullet3/hp
 	damage = 40
-	armour_penetration_flat = -40
+	armor_penetration_flat = -40
 
 /obj/item/projectile/bullet/midbullet3/ap
 	damage = 27
-	armour_penetration_flat = 40
+	armor_penetration_flat = 40
 
 /obj/item/projectile/bullet/midbullet3/fire
 	immolate = 1

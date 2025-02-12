@@ -27,7 +27,7 @@
 		screentip_mode,
 		screentip_color,
 		ghost_darkness_level,
-		colourblind_mode,
+		colorblind_mode,
 		keybindings,
 		server_region,
 		muted_adminsounds_ckeys,

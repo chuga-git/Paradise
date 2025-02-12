@@ -258,8 +258,8 @@
 	if(T.icon != icon)
 		T.icon = icon
 	if(color)
-		T.atom_colours = atom_colours.Copy()
-		T.update_atom_colour()
+		T.atom_colors = atom_colors.Copy()
+		T.update_atom_color()
 	if(T.dir != dir)
 		T.setDir(dir)
 	T.transform = transform
@@ -327,8 +327,8 @@
 	if(T.icon != icon)
 		T.icon = icon
 	if(color)
-		T.atom_colours = atom_colours.Copy()
-		T.update_atom_colour()
+		T.atom_colors = atom_colors.Copy()
+		T.update_atom_color()
 	if(T.dir != dir)
 		T.setDir(dir)
 	T.transform = transform

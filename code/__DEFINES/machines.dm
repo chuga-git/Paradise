@@ -6,7 +6,7 @@
 // #define PODFAB			(1<<5) 	//Used by the spacepod part fabricator. Same idea as the mechfab // AA 2021-10-02 - Removed. Kept for flag consistency.
 #define BIOGENERATOR	(1<<6) 	//Uses biomass
 #define SMELTER			(1<<7) //uses various minerals
-/// Used for gamma armoury lathe designs
+/// Used for gamma armory lathe designs
 #define GAMMALATHE		(1<<8)
 //Note: More then one of these can be added to a design but imprinter and lathe designs are incompatable.
 

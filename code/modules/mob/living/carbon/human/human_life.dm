@@ -809,7 +809,7 @@
 	var/temp = PULSE_NORM
 
 	if(blood_volume <= BLOOD_VOLUME_BAD)//how much blood do we have
-		temp = PULSE_THREADY	//not enough :(     ) fuck you bracket colouriser
+		temp = PULSE_THREADY	//not enough :(     ) fuck you bracket coloriser
 
 	if(HAS_TRAIT(src, TRAIT_FAKEDEATH))
 		temp = PULSE_NONE		//pretend that we're dead. unlike actual death, can be inflienced by meds

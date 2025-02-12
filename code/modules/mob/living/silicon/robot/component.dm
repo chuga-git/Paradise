@@ -136,9 +136,9 @@
 		return max_slowdown_factor
 	return  current_slowdown_factor
 
-/datum/robot_component/armour
-	name = "armour plating"
-	external_type = /obj/item/robot_parts/robot_component/armour
+/datum/robot_component/armor
+	name = "armor plating"
+	external_type = /obj/item/robot_parts/robot_component/armor
 	max_damage = 100
 
 /datum/robot_component/actuator
@@ -210,7 +210,7 @@
 	components["diagnosis unit"] = new/datum/robot_component/diagnosis_unit(src)
 	components["camera"] = new/datum/robot_component/camera(src)
 	components["comms"] = new/datum/robot_component/binary_communication(src)
-	components["armour"] = new/datum/robot_component/armour(src)
+	components["armor"] = new/datum/robot_component/armor(src)
 
 /mob/living/silicon/robot/proc/is_component_functioning(module_name)
 	var/datum/robot_component/C = components[module_name]
@@ -259,8 +259,8 @@
 	desc = "A modular, hydraulic actuator used by robots for movement and manipulation."
 	icon_state = "actuator"
 
-/obj/item/robot_parts/robot_component/armour
-	name = "armour plating"
+/obj/item/robot_parts/robot_component/armor
+	name = "armor plating"
 	desc = "A pair of flexible, adaptable armor plates, used to protect the internals of robots."
 	icon_state = "armor_plating"
 

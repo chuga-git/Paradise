@@ -1,6 +1,6 @@
 /obj/item/clothing/head/soft
 	name = "grey cap"
-	desc = "It's a baseball hat in a tasteless grey colour."
+	desc = "It's a baseball hat in a tasteless grey color."
 	icon = 'icons/obj/clothing/head/softcap.dmi'
 	icon_state = "greysoft"
 	item_state = 'icons/mob/clothing/head/softcap.dmi'
@@ -39,55 +39,55 @@
 
 /obj/item/clothing/head/soft/red
 	name = "red cap"
-	desc = "It's a baseball hat in a tasteless red colour."
+	desc = "It's a baseball hat in a tasteless red color."
 	icon_state = "redsoft"
 	item_color = "red"
 	dog_fashion = /datum/dog_fashion/head/softcap
 
 /obj/item/clothing/head/soft/blue
 	name = "blue cap"
-	desc = "It's a baseball hat in a tasteless blue colour."
+	desc = "It's a baseball hat in a tasteless blue color."
 	icon_state = "bluesoft"
 	item_color = "blue"
 	dog_fashion = /datum/dog_fashion/head/softcap
 
 /obj/item/clothing/head/soft/green
 	name = "green cap"
-	desc = "It's a baseball hat in a tasteless green colour."
+	desc = "It's a baseball hat in a tasteless green color."
 	icon_state = "greensoft"
 	item_color = "green"
 	dog_fashion = /datum/dog_fashion/head/softcap
 
 /obj/item/clothing/head/soft/yellow
 	name = "yellow cap"
-	desc = "It's a baseball hat in a tasteless yellow colour."
+	desc = "It's a baseball hat in a tasteless yellow color."
 	icon_state = "yellowsoft"
 	item_color = "yellow"
 	dog_fashion = /datum/dog_fashion/head/softcap
 
 /obj/item/clothing/head/soft/orange
 	name = "orange cap"
-	desc = "It's a baseball hat in a tasteless orange colour."
+	desc = "It's a baseball hat in a tasteless orange color."
 	icon_state = "orangesoft"
 	item_color = "orange"
 
 /obj/item/clothing/head/soft/white
 	name = "white cap"
-	desc = "It's a baseball hat in a tasteless white colour."
+	desc = "It's a baseball hat in a tasteless white color."
 	icon_state = "whitesoft"
 	item_color = "white"
 	dog_fashion = /datum/dog_fashion/head/softcap
 
 /obj/item/clothing/head/soft/purple
 	name = "purple cap"
-	desc = "It's a baseball hat in a tasteless purple colour."
+	desc = "It's a baseball hat in a tasteless purple color."
 	icon_state = "purplesoft"
 	item_color = "purple"
 	dog_fashion = /datum/dog_fashion/head/softcap
 
 /obj/item/clothing/head/soft/black
 	name = "black cap"
-	desc = "It's a baseball hat in a tasteless black colour."
+	desc = "It's a baseball hat in a tasteless black color."
 	icon_state = "blacksoft"
 	item_color = "black"
 	dog_fashion = /datum/dog_fashion/head/softcap
@@ -129,7 +129,7 @@
 
 /obj/item/clothing/head/soft/sec
 	name = "security cap"
-	desc = "It's baseball hat in tasteful red colour."
+	desc = "It's baseball hat in tasteful red color."
 	icon_state = "secsoft"
 	item_color = "sec"
 	armor = list(MELEE = 25, BULLET = 20, LASER = 20, ENERGY = 5, BOMB = 0, RAD = 0, FIRE = 10, ACID = 50)
@@ -138,7 +138,7 @@
 
 /obj/item/clothing/head/soft/sec/corp
 	name = "corporate security cap"
-	desc = "It's a baseball hat in corporate colours."
+	desc = "It's a baseball hat in corporate colors."
 	icon_state = "corpsoft"
 	item_color = "corp"
 

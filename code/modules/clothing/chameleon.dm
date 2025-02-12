@@ -455,7 +455,7 @@
 
 /obj/item/clothing/head/chameleon
 	name = "grey cap"
-	desc = "It's a baseball hat in a tasteful grey colour."
+	desc = "It's a baseball hat in a tasteful grey color."
 	icon = 'icons/obj/clothing/head/softcap.dmi'
 	icon_override = 'icons/mob/clothing/head/softcap.dmi'
 	icon_state = "greysoft"

@@ -116,7 +116,7 @@
 			to_chat(M, "<span class='notice'>[bicon(src)] Squeek!</span>")
 
 /mob/living/simple_animal/mouse/proc/toast()
-	add_atom_colour("#3A3A3A", FIXED_COLOUR_PRIORITY)
+	add_atom_color("#3A3A3A", FIXED_COLOR_PRIORITY)
 	desc = "It's toast."
 	death()
 

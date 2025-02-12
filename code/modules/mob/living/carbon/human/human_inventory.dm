@@ -113,7 +113,7 @@
 		if(G.vision_flags || G.see_in_dark || G.invis_override || G.invis_view || !isnull(G.lighting_alpha))
 			update_sight()
 		update_inv_glasses()
-		update_client_colour()
+		update_client_color()
 	else if(target == head)
 		head = null
 		if(target.flags & BLOCKHAIR || target.flags & BLOCKHEADHAIR)
@@ -283,7 +283,7 @@
 			if(G.vision_flags || G.see_in_dark || G.invis_override || G.invis_view || !isnull(G.lighting_alpha))
 				update_sight()
 			update_inv_glasses()
-			update_client_colour()
+			update_client_color()
 		if(ITEM_SLOT_GLOVES)
 			gloves = I
 			update_inv_gloves()

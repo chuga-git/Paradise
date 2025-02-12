@@ -351,7 +351,7 @@
 			ruined = FALSE
 			update_icon(UPDATE_OVERLAYS)
 
-//Random colour tapes
+//Random color tapes
 /obj/item/tape/random/New()
 	..()
 	icon_state = "tape_[pick("white", "blue", "red", "yellow", "purple")]"

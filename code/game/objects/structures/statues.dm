@@ -63,12 +63,12 @@
 
 /obj/structure/statue/uranium/nuke
 	name = "statue of a nuclear fission explosive"
-	desc = "This is a grand statue of a Nuclear Explosive. It has a sickening green colour."
+	desc = "This is a grand statue of a Nuclear Explosive. It has a sickening green color."
 	icon_state = "nuke"
 
 /obj/structure/statue/uranium/eng
 	name = "statue of an engineer"
-	desc = "This statue has a sickening green colour."
+	desc = "This statue has a sickening green color."
 	icon_state = "eng"
 
 /obj/structure/statue/uranium/attackby__legacy__attackchain(obj/item/W, mob/user, params)

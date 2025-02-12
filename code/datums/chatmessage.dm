@@ -126,7 +126,7 @@
 		qdel(src)
 		return
 
-	var/output_color = sanitize_color(target.get_runechat_color()) // Get_runechat_color can be overriden on atoms to display a specific one (Example: Humans having their hair colour as runechat colour)
+	var/output_color = sanitize_color(target.get_runechat_color()) // Get_runechat_color can be overriden on atoms to display a specific one (Example: Humans having their hair color as runechat color)
 
 	// Symbol for special runechats (emote)
 	switch(symbol)
@@ -306,12 +306,12 @@
 
 
 /**
-  * Ensures a colour is bright enough for the system
+  * Ensures a color is bright enough for the system
   *
-  * This proc is used to brighten parts of a colour up if its too dark, and looks bad
+  * This proc is used to brighten parts of a color up if its too dark, and looks bad
   *
   * Arguments:
-  * * hex - Hex colour to be brightened up
+  * * hex - Hex color to be brightened up
   */
 /datum/chatmessage/proc/sanitize_color(color)
 	var/list/HSL = rgb2hsl(hex2num(copytext(color,2,4)),hex2num(copytext(color,4,6)),hex2num(copytext(color,6,8)))
@@ -320,10 +320,10 @@
 	return "#[num2hex(RGB[1],2)][num2hex(RGB[2],2)][num2hex(RGB[3],2)]"
 
 /**
-  * Proc to allow atoms to set their own runechat colour
+  * Proc to allow atoms to set their own runechat color
   *
-  * This is a proc designed to be overridden in places if you want a specific atom to use a specific runechat colour
-  * Exampls include consoles using a colour based on their screen colour, and mobs using a colour based off of a customisation property
+  * This is a proc designed to be overridden in places if you want a specific atom to use a specific runechat color
+  * Exampls include consoles using a color based on their screen color, and mobs using a color based off of a customisation property
   *
   */
 /atom/proc/get_runechat_color()

@@ -355,7 +355,7 @@
 	blackbox_message = "Toggle reverb"
 
 // /datum/preference_toggle/toggle_white_runechat
-// 	name = "Toggle Runechat Colour Forcing"
+// 	name = "Toggle Runechat Color Forcing"
 // 	description = "Forces your runechat color to white"
 // 	preftoggle_bitflag = PREFTOGGLE_2_FORCE_WHITE_RUNECHAT
 // 	preftoggle_toggle = PREFTOGGLE_TOGGLE2

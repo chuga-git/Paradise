@@ -67,8 +67,8 @@
 	var/embed_title
 	/// Content of the embed
 	var/embed_content
-	/// Colour of the strip on the side of the embed. Must be in hexadecimal WITHOUT leading hash
-	var/embed_colour
+	/// Color of the strip on the side of the embed. Must be in hexadecimal WITHOUT leading hash
+	var/embed_color
 	/// Timestamp the embed was sent at. Must be in 8601 format. Will be autoset on /New()
 	var/embed_timestamp
 	/// List of all fields in the embed
@@ -91,8 +91,8 @@
 		json["title"] = embed_title
 	if(embed_content)
 		json["description"] = embed_content
-	if(embed_colour)
-		json["color"] = hex2num(embed_colour)
+	if(embed_color)
+		json["color"] = hex2num(embed_color)
 	json["timestamp"] = embed_timestamp
 
 	// Now serialize the fields

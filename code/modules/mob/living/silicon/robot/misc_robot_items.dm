@@ -7,13 +7,13 @@
 	var/mode = 1
 
 /obj/item/pen/multi/robopen/attack_self__legacy__attackchain(mob/user as mob)
-	var/choice = tgui_input_list(user, "Would you like to change colour or mode?", name, list("Colour","Mode"))
+	var/choice = tgui_input_list(user, "Would you like to change color or mode?", name, list("Color","Mode"))
 	if(!choice)
 		return
 
 	switch(choice)
-		if("Colour")
-			select_colour(user)
+		if("Color")
+			select_color(user)
 		if("Mode")
 			if(mode == 1)
 				mode = 2

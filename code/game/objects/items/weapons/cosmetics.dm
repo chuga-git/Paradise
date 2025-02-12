@@ -4,7 +4,7 @@
 	icon = 'icons/obj/items.dmi'
 	icon_state = "lipstick"
 	w_class = WEIGHT_CLASS_TINY
-	var/colour = "red"
+	var/color = "red"
 	var/open = FALSE
 	var/static/list/lipstick_colors
 
@@ -24,39 +24,39 @@
 
 /obj/item/lipstick/purple
 	name = "purple lipstick"
-	colour = "purple"
+	color = "purple"
 
 /obj/item/lipstick/jade
 	name = "jade lipstick"
-	colour = "jade"
+	color = "jade"
 
 /obj/item/lipstick/lime
 	name = "lime lipstick"
-	colour = "lime"
+	color = "lime"
 
 /obj/item/lipstick/black
 	name = "black lipstick"
-	colour = "black"
+	color = "black"
 
 /obj/item/lipstick/green
 	name = "green lipstick"
-	colour = "green"
+	color = "green"
 
 /obj/item/lipstick/blue
 	name = "blue lipstick"
-	colour = "blue"
+	color = "blue"
 
 /obj/item/lipstick/white
 	name = "white lipstick"
-	colour = "white"
+	color = "white"
 
 /obj/item/lipstick/random
 	name = "lipstick"
 
 /obj/item/lipstick/random/Initialize(mapload)
 	. = ..()
-	colour = pick(lipstick_colors)
-	name = "[colour] lipstick"
+	color = pick(lipstick_colors)
+	name = "[color] lipstick"
 
 /obj/item/lipstick/attack_self__legacy__attackchain(mob/user)
 	cut_overlays()
@@ -64,7 +64,7 @@
 	open = !open
 	if(open)
 		var/mutable_appearance/colored = mutable_appearance('icons/obj/items.dmi', "lipstick_uncap_color")
-		colored.color = lipstick_colors[colour]
+		colored.color = lipstick_colors[color]
 		icon_state = "lipstick_uncap"
 		add_overlay(colored)
 	else
@@ -83,7 +83,7 @@
 			user.visible_message("<span class='notice'>[user] does [user.p_their()] lips with [src].</span>", \
 								"<span class='notice'>You take a moment to apply [src]. Perfect!</span>")
 			H.lip_style = "lipstick"
-			H.lip_color = lipstick_colors[colour]
+			H.lip_color = lipstick_colors[color]
 			H.update_body()
 		else
 			user.visible_message("<span class='warning'>[user] begins to do [H]'s lips with \the [src].</span>", \
@@ -92,7 +92,7 @@
 				user.visible_message("<span class='notice'>[user] does [H]'s lips with \the [src].</span>", \
 									"<span class='notice'>You apply \the [src].</span>")
 				H.lip_style = "lipstick"
-				H.lip_color = lipstick_colors[colour]
+				H.lip_color = lipstick_colors[color]
 				H.update_body()
 	else
 		to_chat(user, "<span class='notice'>Where are the lips on that?</span>")

@@ -5,8 +5,8 @@
 	floor_tile = /obj/item/stack/tile/light
 	/// Are we on
 	var/on = FALSE
-	/// Can we modify a colour
-	var/can_modify_colour = TRUE
+	/// Can we modify a color
+	var/can_modify_color = TRUE
 	/// Are we draining power
 	var/using_power = FALSE
 
@@ -42,7 +42,7 @@
 	return A.powernet.has_power(PW_CHANNEL_LIGHTING)
 
 /turf/simulated/floor/light/attack_hand(mob/user)
-	if(!can_modify_colour)
+	if(!can_modify_color)
 		return
 	if(user.a_intent != INTENT_HELP)
 		return
@@ -50,7 +50,7 @@
 
 /turf/simulated/floor/light/multitool_act(mob/user, obj/item/I)
 	. = TRUE
-	if(!can_modify_colour)
+	if(!can_modify_color)
 		return
 	if(!I.use_tool(src, user, 0, volume = I.tool_volume))
 		return
@@ -104,7 +104,7 @@
 /turf/simulated/floor/light/disco
 	floor_tile = /obj/item/stack/tile/disco_light
 	/// Cannot change its color with a multitool
-	can_modify_colour = FALSE
+	can_modify_color = FALSE
 	/// The tile can change into these colors
 	var/list/available_colors = list("#d41e3c", "#ed7b39", "#fff540", "#77b02a", "#488bd4", "#b0fff1", "#94007a", "#ff417d")
 	/// This is our current color, don't pick it again

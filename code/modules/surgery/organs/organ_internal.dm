@@ -377,11 +377,11 @@
 				head_organ.h_style = "Mohawk"
 			else
 				head_organ.h_style = "Very Long Hair"
-			head_organ.hair_colour = "#D8C078"
+			head_organ.hair_color = "#D8C078"
 			H.update_hair()
 		if(!(head_organ.f_style == "Very Long Beard"))
 			head_organ.f_style = "Very Long Beard"
-			head_organ.facial_colour = "#D8C078"
+			head_organ.facial_color = "#D8C078"
 			H.update_fhair()
 
 /obj/item/organ/internal/handle_germs()

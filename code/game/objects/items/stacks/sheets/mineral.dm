@@ -505,7 +505,7 @@ GLOBAL_LIST_INIT(titanium_recipes, list(
 	. = ..()
 	. += "A high-performance superalloy of plasma and titanium, plastitanium is exceptionally light and strong, and has excellent thermal and corrosion resistance."
 	. += ""
-	. += "It is used in the construction of military-grade starship hulls, top-of-the-line personal armour, and melee weaponry."
+	. += "It is used in the construction of military-grade starship hulls, top-of-the-line personal armor, and melee weaponry."
 
 /obj/item/stack/sheet/mineral/plastitanium/fifty
 	amount = 50
@@ -525,7 +525,7 @@ GLOBAL_LIST_INIT(plastitanium_recipes, list(
 //Alien Alloy
 /obj/item/stack/sheet/mineral/abductor
 	name = "alien alloy"
-	desc = "The dizzying colours change constantly depending on how the light hits it."
+	desc = "The dizzying colors change constantly depending on how the light hits it."
 	icon = 'icons/obj/abductor.dmi'
 	icon_state = "sheet-abductor"
 	item_state = "sheet-abductor"

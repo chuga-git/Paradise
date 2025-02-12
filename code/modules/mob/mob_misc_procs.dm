@@ -12,31 +12,31 @@
 			return 1
 	return 0
 
-/mob/proc/get_screen_colour()
+/mob/proc/get_screen_color()
 	SHOULD_CALL_PARENT(TRUE)
-	// OOC Colourblind setting takes priority over everything else.
+	// OOC Colorblind setting takes priority over everything else.
 	if(client?.prefs)
-		switch(client.prefs.colourblind_mode)
-			if(COLOURBLIND_MODE_NONE)
+		switch(client.prefs.colorblind_mode)
+			if(COLORBLIND_MODE_NONE)
 				. = null
 
 			/*
 				Also it goes without saying
 
 				For the love of god, do NOT mess with the matricies below.
-				The values may look arbitrary as hell, but they follow colour filtering rules
-				to accent specific colours and block out others, which helps different
-				forms of colourblindness. Its not perfect but it helps.
+				The values may look arbitrary as hell, but they follow color filtering rules
+				to accent specific colors and block out others, which helps different
+				forms of colorblindness. Its not perfect but it helps.
 
 				If you ever want to modify these matricies, test them with someone who
-				suffers that form of colourblindness, and ask if its an improvement or a hinderance.
+				suffers that form of colorblindness, and ask if its an improvement or a hinderance.
 				I cannot stress this enough
 
 				-aa07
 			*/
-			if(COLOURBLIND_MODE_DEUTER)
+			if(COLORBLIND_MODE_DEUTER)
 				// Red-green (green weak, deuteranopia)
-				// Below is a colour matrix to account for that
+				// Below is a color matrix to account for that
 				. = list(
 					1.8,  0, -0.14, 0,
 					-1.05, 1,  0.1,  0,
@@ -44,9 +44,9 @@
 					0,    0,  0,    1
 				) // Time spent creating this matrix: 1 hour 32 minutes
 
-			if(COLOURBLIND_MODE_PROT)
+			if(COLORBLIND_MODE_PROT)
 				// Red-green (red weak, protanopia)
-				// Below is a colour matrix to account for that
+				// Below is a color matrix to account for that
 				. = list(
 					1, 0.475, 0.594, 0,
 					0, 0.482, -0.68, 0,
@@ -54,9 +54,9 @@
 					0, 0,     0,     1
 				) // Time spent creating this matrix: 57 minutes
 
-			if(COLOURBLIND_MODE_TRIT)
+			if(COLORBLIND_MODE_TRIT)
 				// Blue-yellow (tritanopia)
-				// Below is a colour matrix to account for that
+				// Below is a color matrix to account for that
 				. = list(
 					0.74,  0.07,  0, 0,
 					-0.405, 0.593, 0, 0,
@@ -66,22 +66,22 @@
 
 	return
 
-/mob/proc/update_client_colour(time = 10) //Update the mob's client.color with an animation the specified time in length.
-	if(!client) //No client_colour without client. If the player logs back in they'll be back through here anyway.
+/mob/proc/update_client_color(time = 10) //Update the mob's client.color with an animation the specified time in length.
+	if(!client) //No client_color without client. If the player logs back in they'll be back through here anyway.
 		return
-	client.colour_transition(get_screen_colour(), time = time) //Get the colour matrix we're going to transition to depending on relevance (magic glasses first, eyes second).
+	client.color_transition(get_screen_color(), time = time) //Get the color matrix we're going to transition to depending on relevance (magic glasses first, eyes second).
 
-/mob/living/carbon/human/get_screen_colour() //Fetch the colour matrix from wherever (e.g. eyes) so it can be compared to client.color.
+/mob/living/carbon/human/get_screen_color() //Fetch the color matrix from wherever (e.g. eyes) so it can be compared to client.color.
 	. = ..()
 	if(.)
 		return
 
 	var/obj/item/clothing/glasses/worn_glasses = glasses
 	var/obj/item/organ/internal/eyes/eyes = get_int_organ(/obj/item/organ/internal/eyes)
-	if(istype(worn_glasses) && worn_glasses.color_view) //Check to see if they got those magic glasses and they're augmenting the colour of what the wearer sees. If they're not, color_view should be null.
+	if(istype(worn_glasses) && worn_glasses.color_view) //Check to see if they got those magic glasses and they're augmenting the color of what the wearer sees. If they're not, color_view should be null.
 		return worn_glasses.color_view
-	else if(eyes) //If they're not, check to see if their eyes got one of them there colour matrices. Will be null if eyes are robotic/the mob isn't colourblind and they have no default colour matrix.
-		return eyes.get_colourmatrix()
+	else if(eyes) //If they're not, check to see if their eyes got one of them there color matrices. Will be null if eyes are robotic/the mob isn't colorblind and they have no default color matrix.
+		return eyes.get_colormatrix()
 
 /**
   * Flash up a color as an overlay on a player's screen, then fade back to normal.
@@ -93,10 +93,10 @@
 /mob/proc/flash_screen_color(flash_color, flash_time)
 	if(!client)
 		return
-	if(client?.prefs.colourblind_mode != COLOURBLIND_MODE_NONE)
+	if(client?.prefs.colorblind_mode != COLORBLIND_MODE_NONE)
 		return
 	client.color = flash_color
-	INVOKE_ASYNC(client, TYPE_PROC_REF(/client, colour_transition), get_screen_colour(), flash_time)
+	INVOKE_ASYNC(client, TYPE_PROC_REF(/client, color_transition), get_screen_color(), flash_time)
 
 /proc/ismindshielded(A) //Checks to see if the person contains a mindshield implant, then checks that the implant is actually inside of them
 	for(var/obj/item/bio_chip/mindshield/L in A)

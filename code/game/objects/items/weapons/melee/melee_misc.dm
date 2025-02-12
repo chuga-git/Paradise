@@ -32,7 +32,7 @@
 	force = 15
 	throwforce = 10
 	w_class = WEIGHT_CLASS_BULKY
-	armour_penetration_percentage = 75
+	armor_penetration_percentage = 75
 	sharp = TRUE
 	origin_tech = null
 	attack_verb = list("lunged at", "stabbed")
@@ -45,7 +45,7 @@
 
 /obj/item/melee/saber/examine(mob/user)
 	. = ..()
-	. += "<span class='notice'>The blade looks very well-suited for piercing armour.</span>"
+	. += "<span class='notice'>The blade looks very well-suited for piercing armor.</span>"
 
 /obj/item/melee/saber/examine_more(mob/user)
 	. = ..()
@@ -134,7 +134,7 @@
 	flags = CONDUCT
 	force = 5
 	throwforce = 5
-	armour_penetration_flat = 30
+	armor_penetration_flat = 30
 	w_class = WEIGHT_CLASS_BULKY
 	sharp = TRUE
 	origin_tech = "combat=6;syndicate=5"
@@ -165,7 +165,7 @@
 	species find difficult to lift, let alone use in any sort of fight."
 	. += ""
 	. += "Actually a little lightweight for its size, a Breach Cleaver is unmatched in combat utility as a weapon, a tool for getting into\
-	places and as a slab of armour for the wielder. The leather of the Kar'oche beast, a predator native to Moghes, binds the hilt, \
+	places and as a slab of armor for the wielder. The leather of the Kar'oche beast, a predator native to Moghes, binds the hilt, \
 	allowing it to be gripped securely by its warrior. The wide blade is often etched with scenes depicting military victories or great hunts."
 
 /obj/item/melee/breach_cleaver/update_icon_state()
@@ -308,7 +308,7 @@
 	hitsound = 'sound/weapons/rapierhit.ogg'
 	w_class = WEIGHT_CLASS_BULKY
 	force = 25
-	armour_penetration_flat = 50
+	armor_penetration_flat = 50
 	sharp = TRUE
 	///enchantment holder, gives it unique on hit effects.
 	var/datum/enchantment/enchant = null

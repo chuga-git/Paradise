@@ -214,7 +214,7 @@ research holder datum.
 
 	return ..()
 
-///Gamma Armoury autolathe files
+///Gamma Armory autolathe files
 /datum/research/autolathe/gamma
 
 /datum/research/autolathe/gamma/DesignHasReqs(datum/design/D)

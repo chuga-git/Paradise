@@ -106,13 +106,13 @@
 
 
 
-/mob/living/simple_animal/hostile/construct/armoured
+/mob/living/simple_animal/hostile/construct/armored
 	name = "Juggernaut"
 	real_name = "Juggernaut"
-	desc = "A possessed suit of armour driven by the will of the restless dead."
+	desc = "A possessed suit of armor driven by the will of the restless dead."
 	icon_state = "behemoth"
 	icon_living = "behemoth"
-	hud_type = /datum/hud/construct/armoured
+	hud_type = /datum/hud/construct/armored
 	maxHealth = 250
 	health = 250
 	response_harm   = "harmlessly punches"
@@ -120,7 +120,7 @@
 	obj_damage = 90
 	melee_damage_lower = 30
 	melee_damage_upper = 30
-	attacktext = "smashes their armoured gauntlet into"
+	attacktext = "smashes their armored gauntlet into"
 	speed = 3
 	environment_smash = 2
 	attack_sound = 'sound/weapons/punch3.ogg'
@@ -134,11 +134,11 @@
 						create shield walls, rip apart enemies and walls.</b>"
 
 /// actually hostile, will move around, hit things
-/mob/living/simple_animal/hostile/construct/armoured/hostile
+/mob/living/simple_animal/hostile/construct/armored/hostile
 	AIStatus = AI_ON
 	environment_smash = 1 //only token destruction, don't smash the cult wall NO STOP
 
-/mob/living/simple_animal/hostile/construct/armoured/bullet_act(obj/item/projectile/P)
+/mob/living/simple_animal/hostile/construct/armored/bullet_act(obj/item/projectile/P)
 	if(P.is_reflectable(REFLECTABILITY_ENERGY))
 		if(P.damage_type == BRUTE || P.damage_type == BURN)
 			adjustBruteLoss(P.damage * 0.6) // 21 hit with security laser gun
@@ -282,7 +282,7 @@
 	attack_sound = 'sound/weapons/punch4.ogg'
 	force_threshold = 11
 	construct_type = "behemoth"
-	hud_type = /datum/hud/construct/armoured
+	hud_type = /datum/hud/construct/armored
 	var/energy = 0
 	var/max_energy = 1000
 
@@ -365,7 +365,7 @@
 
 ///ui stuff
 
-/mob/living/simple_animal/hostile/construct/armoured/update_health_hud()
+/mob/living/simple_animal/hostile/construct/armored/update_health_hud()
 	if(!client)
 		return
 	if(healths)

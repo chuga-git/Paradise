@@ -4,7 +4,7 @@
 	damage = 0
 	damage_type = OXY
 	nodamage = 1
-	armour_penetration_percentage = 100
+	armor_penetration_percentage = 100
 	flag = MAGIC
 	/// determines what type of antimagic can block the spell projectile
 	var/antimagic_flags = MAGIC_RESISTANCE
@@ -436,6 +436,6 @@ GLOBAL_LIST_INIT(wabbajack_docile_animals, list(
 	damage = 20
 	damage_type = BURN
 	nodamage = FALSE
-	armour_penetration_flat = 0
+	armor_penetration_flat = 0
 	flag = MAGIC
 	hitsound = 'sound/weapons/barragespellhit.ogg'

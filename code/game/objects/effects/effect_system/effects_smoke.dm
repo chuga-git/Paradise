@@ -157,8 +157,8 @@
 		return
 
 	var/mob/living/carbon/human/human_crosser = breather
-	var/fire_armour = human_crosser.get_thermal_protection()
-	if(fire_armour >= FIRE_SUIT_MAX_TEMP_PROTECT || HAS_TRAIT(human_crosser, TRAIT_RESISTHEAT))
+	var/fire_armor = human_crosser.get_thermal_protection()
+	if(fire_armor >= FIRE_SUIT_MAX_TEMP_PROTECT || HAS_TRAIT(human_crosser, TRAIT_RESISTHEAT))
 		return
 
 	breather.adjustFireLoss(5)

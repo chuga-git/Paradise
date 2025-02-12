@@ -91,7 +91,7 @@
 	// Find the carrier
 	while(!isliving(M))
 		if(!M || !M.loc || count > 6)
-			//For a runtime where M ends up in nullspace (similar to bluespace but less colourful)
+			//For a runtime where M ends up in nullspace (similar to bluespace but less colorful)
 			if(inform)
 				to_chat(usr, "<span class='warning'>You are not being carried by anyone!</span>")
 			return null

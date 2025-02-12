@@ -54,8 +54,8 @@
 	icon_living = "syndicate_sword"
 	attacktext = "slashes"
 	attack_sound = 'sound/weapons/blade1.ogg'
-	armour_penetration_percentage = 40
-	armour_penetration_flat = 10
+	armor_penetration_percentage = 40
+	armor_penetration_flat = 10
 	status_flags = 0
 	var/melee_block_chance = 20
 	var/ranged_block_chance = 35
@@ -266,7 +266,7 @@
 		ranged_block_chance = 0
 		icon_state = "syndicate_pistol"
 		icon_living = "syndicate_pistol"
-		projectiletype = /obj/item/projectile/bullet/armourpiercing
+		projectiletype = /obj/item/projectile/bullet/armorpiercing
 		projectilesound = 'sound/weapons/gunshots/gunshot_pistol.ogg'
 
 /mob/living/simple_animal/hostile/syndicate/melee/autogib/depot/armory
@@ -274,7 +274,7 @@
 	icon_state = "syndicate_stormtrooper_sword"
 	icon_living = "syndicate_stormtrooper_sword"
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
-	armour_penetration_percentage = 50 // same as e-sword
+	armor_penetration_percentage = 50 // same as e-sword
 	minbodytemp = 0
 	maxHealth = 250
 	health = 250

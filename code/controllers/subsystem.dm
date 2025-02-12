@@ -306,15 +306,15 @@
 		if(SS_IDLE)
 			. = " "
 
-/datum/controller/subsystem/proc/state_colour()
+/datum/controller/subsystem/proc/state_color()
 	switch(state)
-		if(SS_RUNNING) // If its actively processing, colour it green
+		if(SS_RUNNING) // If its actively processing, color it green
 			. = "<font color='#32a852'>"
-		if(SS_QUEUED) // If its in the running queue, but delayed, colour it orange
+		if(SS_QUEUED) // If its in the running queue, but delayed, color it orange
 			. = "<font color='#fcba03'>"
-		if(SS_PAUSED, SS_PAUSING) // If its being paused due to lag, colour it red
+		if(SS_PAUSED, SS_PAUSING) // If its being paused due to lag, color it red
 			. = "<font color='#eb4034'>"
-		if(SS_SLEEPING) // If fire() slept, colour it blue
+		if(SS_SLEEPING) // If fire() slept, color it blue
 			. = "<font color='#4287f5'>"
 		if(SS_IDLE) // Leave it default if the SS is idle
 			. = "<font>"

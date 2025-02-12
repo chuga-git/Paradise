@@ -1324,15 +1324,15 @@ Standard way to write links -Sayu
 		chance = max(chance - (initial_chance / steps), 0)
 		steps--
 
-/proc/get_random_colour(simple, lower, upper)
-	var/colour
+/proc/get_random_color(simple, lower, upper)
+	var/color
 	if(simple)
-		colour = pick("FF0000","FF7F00","FFFF00","00FF00","0000FF","4B0082","8F00FF")
+		color = pick("FF0000","FF7F00","FFFF00","00FF00","0000FF","4B0082","8F00FF")
 	else
 		for(var/i=1;i<=3;i++)
 			var/temp_col = "[num2hex(rand(lower,upper), 2)]"
-			colour += temp_col
-	return colour
+			color += temp_col
+	return color
 
 /proc/get_distant_turf(turf/T, direction, distance)
 	if(!T || !direction || !distance)	return
@@ -1826,7 +1826,7 @@ GLOBAL_DATUM_INIT(dview_mob, /mob/dview, new)
 
 	return ghosts
 
-#define RANDOM_COLOUR (rgb(rand(0,255),rand(0,255),rand(0,255)))
+#define RANDOM_COLOR (rgb(rand(0,255),rand(0,255),rand(0,255)))
 
 /// This proc returns every player with a client who is not a ghost or a new_player
 /proc/get_living_players(exclude_nonhuman = FALSE, exclude_offstation = FALSE)

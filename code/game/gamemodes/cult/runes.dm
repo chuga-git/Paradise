@@ -800,7 +800,7 @@ structure_check() searches for nearby cultist structures required for the invoca
   *
   * When invoked deals up to 30 burn damage to nearby non-cultists and sets them on fire.
   *
-  * On activation the rune charges for six seconds, changing colour, glowing, and giving out a warning to all nearby mobs.
+  * On activation the rune charges for six seconds, changing color, glowing, and giving out a warning to all nearby mobs.
   * After the charging period the rune burns any non-cultists in view and sets them on fire. After another short wait it does the same again with slightly higher damage.
   * If the cultists channeling the rune move away or are stunned at any point, the rune is deleted. So it can be countered pretty easily with flashbangs.
   */
@@ -1036,7 +1036,7 @@ structure_check() searches for nearby cultist structures required for the invoca
 		V.Remove(ghost)
 		//GM.Remove(ghost)
 	REMOVE_TRAIT(user, SCRYING, CULT_TRAIT)
-	user.remove_atom_colour(ADMIN_COLOUR_PRIORITY, RUNE_COLOR_DARKRED)
+	user.remove_atom_color(ADMIN_COLOR_PRIORITY, RUNE_COLOR_DARKRED)
 	user = null
 	rune_in_use = FALSE
 

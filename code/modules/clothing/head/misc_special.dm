@@ -192,7 +192,7 @@
 	var/obj/item/organ/external/head/head_organ = user.get_organ("head")
 
 	mob = new/icon("icon" = 'icons/mob/clothing/head.dmi', "icon_state" = icon_state)
-	mob.Blend(head_organ.hair_colour, ICON_ADD)
+	mob.Blend(head_organ.hair_color, ICON_ADD)
 
 	var/icon/earbit = new/icon("icon" = 'icons/mob/clothing/head.dmi', "icon_state" = "[icon_state]inner")
 	mob.Blend(earbit, ICON_OVERLAY)

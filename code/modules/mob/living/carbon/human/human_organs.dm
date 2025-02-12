@@ -1,7 +1,7 @@
 /mob/living/carbon/human/proc/update_eyes()
 	var/obj/item/organ/internal/eyes/eyes = get_int_organ(/obj/item/organ/internal/eyes)
 	if(eyes)
-		eyes.update_colour()
+		eyes.update_color()
 		update_body()
 
 // Takes care of organ related updates, such as broken and missing limbs

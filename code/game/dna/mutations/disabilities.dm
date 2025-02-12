@@ -101,27 +101,27 @@
 	M.update_blind_effects()
 
 
-/datum/mutation/disability/colourblindness
-	name = "Colourblindness"
-	activation_messages = list("You feel a peculiar prickling in your eyes while your perception of colour changes.")
-	deactivation_messages = list("Your eyes tingle unsettlingly, though everything seems to become a lot more colourful.")
+/datum/mutation/disability/colorblindness
+	name = "Colorblindness"
+	activation_messages = list("You feel a peculiar prickling in your eyes while your perception of color changes.")
+	deactivation_messages = list("Your eyes tingle unsettlingly, though everything seems to become a lot more colorful.")
 	instability = -GENE_INSTABILITY_MINOR
 	traits_to_add = list(TRAIT_COLORBLIND)
 
-/datum/mutation/disability/colourblindness/New()
+/datum/mutation/disability/colorblindness/New()
 	..()
-	block = GLOB.colourblindblock
+	block = GLOB.colorblindblock
 
-/datum/mutation/disability/colourblindness/activate(mob/M)
+/datum/mutation/disability/colorblindness/activate(mob/M)
 	..()
-	M.update_client_colour() //Handle the activation of the colourblindness on the mob.
+	M.update_client_color() //Handle the activation of the colorblindness on the mob.
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		H.update_misc_effects()
 
-/datum/mutation/disability/colourblindness/deactivate(mob/M)
+/datum/mutation/disability/colorblindness/deactivate(mob/M)
 	..()
-	M.update_client_colour() //Handle the deactivation of the colourblindness on the mob.
+	M.update_client_color() //Handle the deactivation of the colorblindness on the mob.
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		H.update_misc_effects()

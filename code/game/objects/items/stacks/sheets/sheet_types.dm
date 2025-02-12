@@ -218,8 +218,8 @@ GLOBAL_LIST_INIT(plasteel_recipes, list(
 	. += "A high-performance steel superalloy that incorporates a significant quantity of plasma. The plasma forms cross-links with the other constituants of the metal, \
 	pulling them in and bonding with them extremely strongly. It is exceptionally tough, heat-resistant, corrosion-resistant, and about 2.5 times as dense as regular steel."
 	. += ""
-	. += "It is used in the constuction of top-grade building and vehicle armour and some specialised tools and weapons. It is too heavy to make starships out of, \
-	although it is sometimes incorporated into the armour of critical areas. Its high density also makes it an excellent material for radiation shielding."
+	. += "It is used in the constuction of top-grade building and vehicle armor and some specialised tools and weapons. It is too heavy to make starships out of, \
+	although it is sometimes incorporated into the armor of critical areas. Its high density also makes it an excellent material for radiation shielding."
 
 /obj/item/stack/sheet/plasteel/five
 	amount = 5
@@ -647,7 +647,7 @@ GLOBAL_LIST_INIT(brass_recipes, list (
 
 /obj/item/stack/tile/brass/examine_more(mob/user)
 	. = ..()
-	. += "Brass describes a class of alloys made primarily from copper and zinc, with colours ranging from yellowish-white, gold, brown, and reddish. \
+	. += "Brass describes a class of alloys made primarily from copper and zinc, with colors ranging from yellowish-white, gold, brown, and reddish. \
 	It is a highly workable material with good electrical and thermal conductivity, and corrosion resistance."
 	. += ""
 	. += "It is used for ornamental and fashion applications (sometimes as a cheap substitute for gold), musical instruments, some specialised electronics, and spark-free tooling."

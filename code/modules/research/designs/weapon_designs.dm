@@ -177,8 +177,8 @@
 	category = list("Weapons")
 
 /datum/design/box_oldsmg/ap_box
-	name = "WT-550 PDW Armour Piercing Ammo Box (4.6x30mm AP)"
-	desc = "A box of 20 armour piercing rounds for the WT-550 PDW."
+	name = "WT-550 PDW Armor Piercing Ammo Box (4.6x30mm AP)"
+	desc = "A box of 20 armor piercing rounds for the WT-550 PDW."
 	id = "box_oldsmg_ap"
 	materials = list(MAT_METAL = 6000, MAT_SILVER = 600)
 	build_path = /obj/item/ammo_box/wt550/wtap
@@ -281,14 +281,14 @@
 	build_path = /obj/item/weaponcrafting/gunkit/immolator
 	category = list("Weapons")
 
-/datum/design/reactive_armour
+/datum/design/reactive_armor
 	name = "Reactive Armor Shell"
 	desc = "A reactive armor shell, that can have an anomaly core inserted to make a reactive armor."
 	id = "reactivearmor"
 	req_tech = list("combat" = 6, "materials" = 7, "engineering" = 5)
 	build_type = PROTOLATHE
 	materials = list(MAT_PLASMA = 8000, MAT_TITANIUM = 14000, MAT_BLUESPACE = 6000) //Big strong armor needs big-ish investment
-	build_path = /obj/item/reactive_armour_shell
+	build_path = /obj/item/reactive_armor_shell
 	locked = TRUE
 	access_requirement = list(ACCESS_RD)
 	category = list("Weapons")

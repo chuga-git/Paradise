@@ -11,7 +11,7 @@
 	var/ask_verb = "asks"                       // Used when sentence ends in a ?
 	var/list/exclaim_verbs = list("exclaims")   // Used when sentence ends in a !
 	var/whisper_verb                            // Optional. When not specified speech_verb + quietly/softly is used instead.
-	var/colour = "body"                         // CSS style to use for strings in this language.
+	var/color = "body"                         // CSS style to use for strings in this language.
 	var/key = "x"                               // Character used to speak in language eg. :o for Unathi.
 	var/flags = 0                               // Various language flags.
 	var/native                                  // If set, non-native speakers will have trouble speaking.
@@ -89,10 +89,10 @@
 	return scrambled_text
 
 /datum/language/proc/format_message(message)
-	return "<span class='message'><span class='[colour]'>[message]</span></span>"
+	return "<span class='message'><span class='[color]'>[message]</span></span>"
 
 /datum/language/proc/format_message_radio(message)
-	return "<span class='[colour]'>[message]</span>"
+	return "<span class='[color]'>[message]</span>"
 
 /datum/language/proc/get_talkinto_msg_range(message)
 	// if you yell, you'll be heard from two tiles over instead of one
@@ -143,10 +143,10 @@
 	flags = RESTRICTED|NONGLOBAL|INNATE|NO_TALK_MSG|NO_STUTTER
 
 /datum/language/noise/format_message(message)
-	return "<span class='message'><span class='[colour]'>[message]</span></span>"
+	return "<span class='message'><span class='[color]'>[message]</span></span>"
 
 /datum/language/noise/format_message_radio(message)
-	return "<span class='[colour]'>[message]</span>"
+	return "<span class='[color]'>[message]</span>"
 
 /datum/language/noise/get_talkinto_msg_range(message)
 	// if you make a loud noise (screams etc), you'll be heard from 4 tiles over instead of two
@@ -158,7 +158,7 @@
 	speech_verb = "hisses"
 	ask_verb = "hisses"
 	exclaim_verbs = list("roars")
-	colour = "soghun"
+	color = "soghun"
 	key = "o"
 	flags = RESTRICTED
 	syllables = list("za","az","ze","ez","zi","iz","zo","oz","zu","uz","zs","sz","ha","ah","he","eh","hi","ih", \
@@ -179,7 +179,7 @@
 	speech_verb = "mrowls"
 	ask_verb = "mrowls"
 	exclaim_verbs = list("yowls")
-	colour = "tajaran"
+	color = "tajaran"
 	key = "j"
 	flags = RESTRICTED
 	syllables = list("rr","rr","tajr","kir","raj","kii","mir","kra","ahk","nal","vah","khaz","jri","ran","darr", \
@@ -201,7 +201,7 @@
 	speech_verb = "rawrs"
 	ask_verb = "rurs"
 	exclaim_verbs = list("barks")
-	colour = "vulpkanin"
+	color = "vulpkanin"
 	key = "7"
 	flags = RESTRICTED
 	syllables = list("rur","ya","cen","rawr","bar","kuk","tek","qat","uk","wu","vuh","tah","tch","schz","auch", \
@@ -224,7 +224,7 @@
 	speech_verb = "warbles"
 	ask_verb = "warbles"
 	exclaim_verbs = list("warbles")
-	colour = "skrell"
+	color = "skrell"
 	key = "k"
 	flags = RESTRICTED
 	syllables = list("qr","qrr","xuq","qil","quum","xuqm","vol","xrim","zaoo","qu-uu","qix","qoo","zix","*","!")
@@ -235,7 +235,7 @@
 	speech_verb = "shrieks"
 	ask_verb = "creels"
 	exclaim_verbs = list("loudly skrees")
-	colour = "vox"
+	color = "vox"
 	key = "v"
 	flags = RESTRICTED | WHITELISTED
 	syllables = list("ti","ti","ti","hi","hi","ki","ki","ki","ki","ya","ta","ha","ka","ya","yi","chi","cha","kah", \
@@ -257,7 +257,7 @@
 	speech_verb = "creaks and rustles"
 	ask_verb = "creaks"
 	exclaim_verbs = list("rustles")
-	colour = "diona"
+	color = "diona"
 	key = "q"
 	flags = RESTRICTED
 	syllables = list("hs","zt","kr","st","sh")
@@ -273,7 +273,7 @@
 	speech_verb = "states"
 	ask_verb = "queries"
 	exclaim_verbs = list("exclaims")
-	colour = "trinary"
+	color = "trinary"
 	key = "5"
 	flags = RESTRICTED | WHITELISTED
 	syllables = list("0", "1", "2")
@@ -297,7 +297,7 @@
 	speech_verb = "rubs their antennae together"
 	ask_verb = "rubs their antennae together"
 	exclaim_verbs = list("rubs their antennae together")
-	colour = "kidan"
+	color = "kidan"
 	key = "4"
 	flags = RESTRICTED | WHITELISTED
 	syllables = list("click","clack")
@@ -320,7 +320,7 @@
 	speech_verb = "burbles"
 	ask_verb = "pops softly"
 	exclaim_verbs = list("fizzes")
-	colour = "slime"
+	color = "slime"
 	key = "f"
 	flags = RESTRICTED | WHITELISTED
 	syllables = list("zlu", "gl", "oo", "shl", "bl", "wob", "lur", "wh", "zz", "spl", "mur", "fl", "dro", "fru", "slu", "gle", "flo")
@@ -340,7 +340,7 @@
 	speech_verb = "expresses"
 	ask_verb = "inquires"
 	exclaim_verbs = list("imparts")
-	colour = "abductor"
+	color = "abductor"
 	key = "^"
 	flags = RESTRICTED | HIVEMIND | NOLIBRARIAN | HIVEMIND_RUNECHAT
 	follow = TRUE
@@ -378,7 +378,7 @@
 	speech_verb = "drones"
 	ask_verb = "hums"
 	exclaim_verbs = list("rumbles")
-	colour = "drask"
+	color = "drask"
 	key = "%"
 	flags = RESTRICTED | WHITELISTED
 	syllables = list("hoorb","vrrm","ooorm","urrrum","ooum","ee","ffm","hhh","mn","ongg")
@@ -395,7 +395,7 @@
 	speech_verb = "buzzes"
 	ask_verb = "flaps"
 	exclaim_verbs = list("chatters")
-	colour = "moth"
+	color = "moth"
 	key = "#"
 	flags = RESTRICTED | WHITELISTED
 	join_override = "-"
@@ -428,7 +428,7 @@
 	speech_verb = "says"
 	exclaim_verbs = list("snaps", "shouts", "barks")
 	whisper_verb = "whispers"
-	colour = "solcom"
+	color = "solcom"
 	key = "1"
 	space_chance = 70
 	flags = RESTRICTED
@@ -440,7 +440,7 @@
 	name = "Tradeband"
 	desc = "Maintained by the various trading cartels in major systems, this elegant, structured language is used for bartering and bargaining."
 	speech_verb = "enunciates"
-	colour = "tradeband"
+	color = "tradeband"
 	key = "2"
 	space_chance = 100
 	syllables = list("lorem", "ipsum", "dolor", "sit", "amet", "consectetur", "adipiscing", "elit",
@@ -458,7 +458,7 @@
 	speech_verb = "growls"
 	ask_verb = "gnarls"
 	exclaim_verbs = list("snarls")
-	colour = "gutter"
+	color = "gutter"
 	key = "3"
 	syllables = list ("gra","ba","ba","breh","bra","rah","dur","ra","ro","gro","go","ber","bar","geh","heh","gra")
 
@@ -468,7 +468,7 @@
 	speech_verb = "honks"
 	ask_verb = "honks"
 	exclaim_verbs = list("toots", "wubs", "honks")
-	colour = "clown"
+	color = "clown"
 	key = "0"
 	syllables = list ("honk","squeak","bonk","toot","narf","zub","wee","wub","norf")
 
@@ -478,7 +478,7 @@
 	speech_verb = "articulates"
 	whisper_verb = "murmurs"
 	exclaim_verbs = list("proclaims", "boasts", "accentuates")
-	colour = "com_zvezhan"
+	color = "com_zvezhan"
 	key = "?"
 	space_chance = 50
 	syllables = list("ai","bai","bian","che","chuang","e","fan","gan","huo","jian","jiao","ka","man","mu","nang","nuo","o","pang","pi",
@@ -491,7 +491,7 @@
 
 /datum/language/xenocommon
 	name = "Xenomorph"
-	colour = "alien"
+	color = "alien"
 	desc = "The common tongue of the xenomorphs."
 	speech_verb = "hisses"
 	ask_verb = "hisses"
@@ -506,7 +506,7 @@
 	speech_verb = "hisses"
 	ask_verb = "hisses"
 	exclaim_verbs = list("hisses")
-	colour = "alien"
+	color = "alien"
 	key = "a"
 	flags = RESTRICTED | HIVEMIND | NOBABEL
 	follow = TRUE
@@ -524,7 +524,7 @@
 	speech_verb = "chitters"
 	ask_verb = "chitters"
 	exclaim_verbs = list("chitters")
-	colour = "terrorspider"
+	color = "terrorspider"
 	key = "ts"
 	flags = RESTRICTED | HIVEMIND | NOBABEL
 	follow = TRUE
@@ -541,7 +541,7 @@
 	name = "Changeling"
 	desc = "Although they are normally wary and suspicious of each other, changelings can commune over a distance."
 	speech_verb = "says"
-	colour = "changeling"
+	color = "changeling"
 	key = "g"
 	flags = RESTRICTED | HIVEMIND | NOBABEL
 	follow = TRUE
@@ -560,7 +560,7 @@
 	speech_verb = "gibbers"
 	ask_verb = "gibbers"
 	exclaim_verbs = list("gibbers")
-	colour = "abductor"
+	color = "abductor"
 	key = "zw" //doesn't matter, this is their default and only language
 	flags = RESTRICTED | HIVEMIND | NOBABEL | HIVEMIND_RUNECHAT
 	follow = TRUE
@@ -587,7 +587,7 @@
 /datum/language/binary
 	name = "Robot Talk"
 	desc = "Most human stations support free-use communications protocols and routing hubs for synthetic use."
-	colour = "say_quote"
+	color = "say_quote"
 	speech_verb = "states"
 	ask_verb = "queries"
 	exclaim_verbs = list("declares")
@@ -650,7 +650,7 @@
 	speech_verb = "transmits"
 	ask_verb = "transmits"
 	exclaim_verbs = list("transmits")
-	colour = "say_quote"
+	color = "say_quote"
 	key = "d"
 	flags = RESTRICTED | HIVEMIND | NOBABEL
 	drone_only = TRUE
@@ -782,7 +782,7 @@
 	speech_verb = "groans"
 	ask_verb = "groans"
 	exclaim_verbs = list("yells")
-	colour = "zombie"
+	color = "zombie"
 	key = "zz" //doesn't matter, this is their default and only language
 	flags = RESTRICTED | NOLIBRARIAN
 	syllables = list("Brains", "Brainssss", "Flesh", "Grrr", "Hnng", "Braaaains", "Braaiiiins")

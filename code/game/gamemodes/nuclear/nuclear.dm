@@ -168,17 +168,17 @@
 	M.flavor_text = null
 	M.dna.ready_dna(M) // Quadriplegic Nuke Ops won't be participating in the paralympics
 	M.dna.species.create_organs(M)
-	M.cleanSE() //No fat/blind/colourblind/epileptic/whatever ops.
+	M.cleanSE() //No fat/blind/colorblind/epileptic/whatever ops.
 	M.overeatduration = 0
 
 	var/obj/item/organ/external/head/head_organ = M.get_organ("head")
 	var/hair_c = pick("#8B4513","#000000","#FF4500","#FFD700") // Brown, black, red, blonde
 	var/eye_c = pick("#000000","#8B4513","1E90FF") // Black, brown, blue
 	var/skin_tone = pick(-50, -30, -10, 0, 0, 0, 10) // Caucasian/black
-	head_organ.facial_colour = hair_c
-	head_organ.sec_facial_colour = hair_c
-	head_organ.hair_colour = hair_c
-	head_organ.sec_hair_colour = hair_c
+	head_organ.facial_color = hair_c
+	head_organ.sec_facial_color = hair_c
+	head_organ.hair_color = hair_c
+	head_organ.sec_hair_color = hair_c
 	M.change_eye_color(eye_c)
 	M.s_tone = skin_tone
 	head_organ.h_style = random_hair_style(M.gender, head_organ.dna.species.name)

@@ -166,36 +166,36 @@ GLOBAL_LIST_EMPTY(ert_request_messages)
 	var/species = S.type
 	M.set_species(species, TRUE)
 	M.dna.ready_dna(M)
-	M.cleanSE() //No fat/blind/colourblind/epileptic/whatever ERT.
+	M.cleanSE() //No fat/blind/colorblind/epileptic/whatever ERT.
 	M.overeatduration = 0
 	var/obj/item/organ/external/head/head_organ = M.get_organ("head")
 	var/eye_c = pick("#000000", "#8B4513", "#1E90FF", "#8c00ff", "#a80c0c", "#2fdb63") // Black, brown, blue, purple, red, green
 	var/skin_tone = rand(-120, 20) // A range of skin colors
 
-	switch(new_species) //Diona not included as they don't use the hair colours, kidan use accessory, drask are skin tone Grey not included as they are BALD
+	switch(new_species) //Diona not included as they don't use the hair colors, kidan use accessory, drask are skin tone Grey not included as they are BALD
 		if("Human", "Tajaran", "Vulpkanin", "Nian")
 			var/hair_c_htvn = pick("#8B4513", "#000000", "#FF4500", "#FFD700", "#d4d1bf") // Brown, black, red, blonde, grey
-			head_organ.facial_colour = hair_c_htvn
-			head_organ.sec_facial_colour = hair_c_htvn
-			head_organ.hair_colour = hair_c_htvn
-			head_organ.sec_hair_colour = hair_c_htvn
-			M.skin_colour = hair_c_htvn
-		if("Skrell", "Unathi") //Some common skrell / unathi colours
+			head_organ.facial_color = hair_c_htvn
+			head_organ.sec_facial_color = hair_c_htvn
+			head_organ.hair_color = hair_c_htvn
+			head_organ.sec_hair_color = hair_c_htvn
+			M.skin_color = hair_c_htvn
+		if("Skrell", "Unathi") //Some common skrell / unathi colors
 			var/list/su = list("#1f138b", "#272525", "#07a035", "#8c00ff", "#a80c0c")
 			var/hair_c_su = pick_n_take(su)
-			head_organ.facial_colour = hair_c_su
-			head_organ.sec_facial_colour = hair_c_su
-			head_organ.hair_colour = hair_c_su
-			head_organ.sec_hair_colour = hair_c_su
+			head_organ.facial_color = hair_c_su
+			head_organ.sec_facial_color = hair_c_su
+			head_organ.hair_color = hair_c_su
+			head_organ.sec_hair_color = hair_c_su
 			if(new_species == "Skrell")
-				M.skin_colour = hair_c_su
+				M.skin_color = hair_c_su
 			else
-				M.skin_colour = pick(su) //Pick a diffrent colour for body.
+				M.skin_color = pick(su) //Pick a diffrent color for body.
 
 
 	M.change_eye_color(eye_c)
 	M.s_tone = skin_tone
-	head_organ.headacc_colour = pick("#1f138b", "#272525", "#07a035", "#8c00ff", "#a80c0c")
+	head_organ.headacc_color = pick("#1f138b", "#272525", "#07a035", "#8c00ff", "#a80c0c")
 	head_organ.h_style = random_hair_style(M.gender, head_organ.dna.species.sprite_sheet_name)
 	head_organ.f_style = random_facial_hair_style(M.gender, head_organ.dna.species.sprite_sheet_name)
 

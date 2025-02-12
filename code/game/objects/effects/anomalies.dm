@@ -17,7 +17,7 @@
 	var/lifespan = 990
 	var/death_time
 
-	var/countdown_colour
+	var/countdown_color
 	var/obj/effect/countdown/anomaly/countdown
 
 	/// Do we drop a core when we're neutralized?
@@ -47,8 +47,8 @@
 		lifespan = new_lifespan
 	death_time = world.time + lifespan
 	countdown = new(src)
-	if(countdown_colour)
-		countdown.color = countdown_colour
+	if(countdown_color)
+		countdown.color = countdown_color
 	countdown.start()
 
 	// Only log an anomaly if it drops a core. Prevents logging of SM events and Vetus.
@@ -379,8 +379,8 @@
 		air.set_toxins(125)
 		air.set_oxygen(125)
 		T.blind_release_air(air)
-	var/new_colour = pick("red", "orange")
-	var/mob/living/simple_animal/slime/S = new(T, new_colour)
+	var/new_color = pick("red", "orange")
+	var/mob/living/simple_animal/slime/S = new(T, new_color)
 	S.rabid = TRUE
 	S.amount_grown = SLIME_EVOLUTION_THRESHOLD
 	S.Evolve()

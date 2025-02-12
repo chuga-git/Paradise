@@ -1,6 +1,6 @@
-// Armour defines for the new armour system.
+// Armor defines for the new armor system.
 
-#define ARMOUR_CONSTANT 50
-#define ARMOUR_EQUATION(damage, armour, modifier) (armour <= -ARMOUR_CONSTANT ? INFINITY : (damage / (1 + (armour / ARMOUR_CONSTANT))) * modifier)
-#define ARMOUR_PERCENTAGE_TO_VALUE(percentage) (percentage >= 100 ? INFINITY : (5000 / (100 - percentage)) - 50)
-#define ARMOUR_VALUE_TO_PERCENTAGE(value) (value == INFINITY ? 100 : round((100 - (100 / (1 + (value / ARMOUR_CONSTANT)))), 0.01))
+#define ARMOR_CONSTANT 50
+#define ARMOR_EQUATION(damage, armor, modifier) (armor <= -ARMOR_CONSTANT ? INFINITY : (damage / (1 + (armor / ARMOR_CONSTANT))) * modifier)
+#define ARMOR_PERCENTAGE_TO_VALUE(percentage) (percentage >= 100 ? INFINITY : (5000 / (100 - percentage)) - 50)
+#define ARMOR_VALUE_TO_PERCENTAGE(value) (value == INFINITY ? 100 : round((100 - (100 / (1 + (value / ARMOR_CONSTANT)))), 0.01))

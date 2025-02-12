@@ -78,7 +78,7 @@
 		for(var/datum/alternate_appearance/AA in viewing_alternate_appearances)
 			AA.display_to(list(src))
 
-	update_client_colour(0)
+	update_client_color(0)
 	update_morgue()
 	client.init_verbs()
 	SEND_SIGNAL(src, COMSIG_MOB_LOGIN)

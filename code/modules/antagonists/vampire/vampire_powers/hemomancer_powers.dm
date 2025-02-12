@@ -46,7 +46,7 @@
 	w_class = WEIGHT_CLASS_BULKY
 	flags = ABSTRACT | NODROP | DROPDEL
 	force = 10
-	armour_penetration_flat = 20
+	armor_penetration_flat = 20
 	sharp = TRUE
 	attack_effect_override = ATTACK_EFFECT_CLAW
 	hitsound = 'sound/weapons/bladeslice.ogg'
@@ -99,7 +99,7 @@
 				heal_boost = 2 // This *might* let you survive xeno disarms. Maybe.
 				damtype = BURN
 				hitsound = 'sound/weapons/sear.ogg'
-				color = list(0.5,1,0,0, 0,1,0,0, 0,0,0.5,0, 0,0,0,1, 0,0,0,0) // This makes it coloured acidic green
+				color = list(0.5,1,0,0, 0,1,0,0, 0,0,0.5,0, 0,0,0,1, 0,0,0,0) // This makes it colored acidic green
 				user.update_inv_r_hand()
 				user.update_inv_l_hand()
 	if(C.ckey && C.stat != DEAD && C.affects_vampire())

@@ -23,7 +23,7 @@
 			"default" = list(
 				"Any" = "\"Key_Down \[\[*\]\]\"", // Passes any key down to the rebindable input system
 				"Any+UP" = "\"Key_Up \[\[*\]\]\"", // Passes any key up to the rebindable input system
-				"Tab" = "\".winset \\\"mainwindow.macro=legacy input.focus=true input.border=sunken\\\"\"", // Swaps us to legacy mode, forces input to the input bar, sets the input bar colour to salmon pink
+				"Tab" = "\".winset \\\"mainwindow.macro=legacy input.focus=true input.border=sunken\\\"\"", // Swaps us to legacy mode, forces input to the input bar, sets the input bar color to salmon pink
 				"Back" = "\".winset \\\"input.focus=true ? input.text=\\\"\"" // This makes it so backspace can remove default inputs
 			),
 			"legacy" = list(

@@ -69,15 +69,15 @@
 	new A(loc)
 	qdel(src)
 
-/obj/item/reactive_armour_shell
-	name = "reactive armour shell"
-	desc = "An experimental suit of armour, awaiting installation of an anomaly core."
+/obj/item/reactive_armor_shell
+	name = "reactive armor shell"
+	desc = "An experimental suit of armor, awaiting installation of an anomaly core."
 	icon_state = "reactiveoff"
 	icon = 'icons/obj/clothing/suits.dmi'
 	w_class = WEIGHT_CLASS_NORMAL
 
-/obj/item/reactive_armour_shell/attackby__legacy__attackchain(obj/item/I, mob/user, params)
-	var/static/list/anomaly_armour_types = list(
+/obj/item/reactive_armor_shell/attackby__legacy__attackchain(obj/item/I, mob/user, params)
+	var/static/list/anomaly_armor_types = list(
 		/obj/item/assembly/signaler/anomaly/grav = /obj/item/clothing/suit/armor/reactive/repulse,
 		/obj/item/assembly/signaler/anomaly/flux = /obj/item/clothing/suit/armor/reactive/tesla,
 		/obj/item/assembly/signaler/anomaly/bluespace = /obj/item/clothing/suit/armor/reactive/teleport,
@@ -88,11 +88,11 @@
 
 	if(istype(I, /obj/item/assembly/signaler/anomaly))
 		var/obj/item/assembly/signaler/anomaly/A = I
-		var/armour_path = anomaly_armour_types[A.type]
-		if(!armour_path)
-			armour_path = /obj/item/clothing/suit/armor/reactive/stealth //Fallback
+		var/armor_path = anomaly_armor_types[A.type]
+		if(!armor_path)
+			armor_path = /obj/item/clothing/suit/armor/reactive/stealth //Fallback
 		to_chat(user, "<span class='notice'>You insert [A] into the chest plate, and the armor gently hums to life.</span>")
-		new armour_path(get_turf(src))
+		new armor_path(get_turf(src))
 		qdel(src)
 		qdel(A)
 	return ..()

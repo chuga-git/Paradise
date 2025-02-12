@@ -83,7 +83,7 @@
 /obj/item/ammo_casing/c9mm/ap
 	name = "9mm armor piercing round"
 	desc = "A 9mm pistol cartridge, with a Teflon coating to increase armor penetration, at the cost of stopping power."
-	projectile_type = /obj/item/projectile/bullet/armourpiercing
+	projectile_type = /obj/item/projectile/bullet/armorpiercing
 
 /obj/item/ammo_casing/c9mm/tox
 	name = "9mm toxic round"
@@ -107,7 +107,7 @@
 /obj/item/ammo_casing/c46x30mm/ap
 	name = "4.6x30mm armor piercing round"
 	desc = "A 4.6x30mm PDW cartridge, with a tungsten core to increase armor penetration, at the cost of stopping power."
-	projectile_type = /obj/item/projectile/bullet/armourpiercing/wt550
+	projectile_type = /obj/item/projectile/bullet/armorpiercing/wt550
 
 /obj/item/ammo_casing/c46x30mm/tox
 	name = "4.6x30mm toxic round"

@@ -247,7 +247,7 @@
 //Head of Personnel
 /obj/item/clothing/suit/hopcoat
 	name = "head of personnel's coat"
-	desc = "A big coat for the Head of Personnel who wants to make a fashion statement. Has armour woven within the fabric."
+	desc = "A big coat for the Head of Personnel who wants to make a fashion statement. Has armor woven within the fabric."
 	icon_state = "hopcoat"
 	item_state = "hopcoat"
 	allowed = list(/obj/item/gun/energy, /obj/item/reagent_containers/spray/pepper, /obj/item/gun/projectile, /obj/item/ammo_box, /obj/item/ammo_casing, /obj/item/melee/baton, /obj/item/restraints/handcuffs, /obj/item/flashlight/seclite, /obj/item/melee/classic_baton/telescopic, /obj/item/kitchen/knife/combat)

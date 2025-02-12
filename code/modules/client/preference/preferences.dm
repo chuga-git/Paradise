@@ -121,8 +121,8 @@ GLOBAL_LIST_INIT(special_role_times, list(
 	var/datum/character_save/active_character
 	/// How dark things are if client is a ghost, 0-255
 	var/ghost_darkness_level = LIGHTING_PLANE_ALPHA_VISIBLE
-	/// Colourblind mode
-	var/colourblind_mode = COLOURBLIND_MODE_NONE
+	/// Colorblind mode
+	var/colorblind_mode = COLORBLIND_MODE_NONE
 	/// Active keybinds (currently useable by the mob/client)
 	var/list/datum/keybindings = list()
 	/// Keybinding overrides ("name" => ["key"...])
@@ -157,8 +157,8 @@ GLOBAL_LIST_INIT(special_role_times, list(
 		if(!successful_load)
 			to_chat(C, "<span class='narsie'>Your preferences failed to load. Please inform the server host immediately.</span>")
 
-/datum/preferences/proc/color_square(colour)
-	return "<span style='font-face: fixedsys; background-color: [colour]; color: [colour]'>___</span>"
+/datum/preferences/proc/color_square(color)
+	return "<span style='font-face: fixedsys; background-color: [color]; color: [color]'>___</span>"
 
 // Hello I am a proc full of snowflake species checks how are you
 /datum/preferences/proc/ShowChoices(mob/user)
@@ -257,32 +257,32 @@ GLOBAL_LIST_INIT(special_role_times, list(
 					headaccessoryname = "Horns: "
 				dat += "<b>[headaccessoryname]</b>"
 				dat += "<a href='byond://?_src_=prefs;preference=ha_style;task=input'>[active_character.ha_style]</a> "
-				dat += "<a href='byond://?_src_=prefs;preference=headaccessory;task=input'>Color</a> [color_square(active_character.hacc_colour)]<br>"
+				dat += "<a href='byond://?_src_=prefs;preference=headaccessory;task=input'>Color</a> [color_square(active_character.hacc_color)]<br>"
 
 			if(S.bodyflags & HAS_HEAD_MARKINGS) //Species with head markings.
 				dat += "<b>Head Markings:</b> "
 				dat += "<a href='byond://?_src_=prefs;preference=m_style_head;task=input'>[active_character.m_styles["head"]]</a>"
-				dat += "<a href='byond://?_src_=prefs;preference=m_head_colour;task=input'>Color</a> [color_square(active_character.m_colours["head"])]<br>"
+				dat += "<a href='byond://?_src_=prefs;preference=m_head_color;task=input'>Color</a> [color_square(active_character.m_colors["head"])]<br>"
 			if(S.bodyflags & HAS_BODY_MARKINGS) //Species with body markings/tattoos.
 				dat += "<b>Body Markings:</b> "
 				dat += "<a href='byond://?_src_=prefs;preference=m_style_body;task=input'>[active_character.m_styles["body"]]</a>"
-				dat += "<a href='byond://?_src_=prefs;preference=m_body_colour;task=input'>Color</a> [color_square(active_character.m_colours["body"])]<br>"
+				dat += "<a href='byond://?_src_=prefs;preference=m_body_color;task=input'>Color</a> [color_square(active_character.m_colors["body"])]<br>"
 			if(S.bodyflags & HAS_TAIL_MARKINGS) //Species with tail markings.
 				dat += "<b>Tail Markings:</b> "
 				dat += "<a href='byond://?_src_=prefs;preference=m_style_tail;task=input'>[active_character.m_styles["tail"]]</a>"
-				dat += "<a href='byond://?_src_=prefs;preference=m_tail_colour;task=input'>Color</a> [color_square(active_character.m_colours["tail"])]<br>"
+				dat += "<a href='byond://?_src_=prefs;preference=m_tail_color;task=input'>Color</a> [color_square(active_character.m_colors["tail"])]<br>"
 			if(!(S.bodyflags & BALD))
 				dat += "<b>Hair:</b> "
 				dat += "<a href='byond://?_src_=prefs;preference=h_style;task=input'>[active_character.h_style]</a>"
-				dat += "<a href='byond://?_src_=prefs;preference=hair;task=input'>Color</a> [color_square(active_character.h_colour)]"
+				dat += "<a href='byond://?_src_=prefs;preference=hair;task=input'>Color</a> [color_square(active_character.h_color)]"
 				var/datum/sprite_accessory/temp_hair_style = GLOB.hair_styles_public_list[active_character.h_style]
-				if(temp_hair_style && temp_hair_style.secondary_theme && !temp_hair_style.no_sec_colour)
-					dat += " <a href='byond://?_src_=prefs;preference=secondary_hair;task=input'>Color #2</a> [color_square(active_character.h_sec_colour)]"
+				if(temp_hair_style && temp_hair_style.secondary_theme && !temp_hair_style.no_sec_color)
+					dat += " <a href='byond://?_src_=prefs;preference=secondary_hair;task=input'>Color #2</a> [color_square(active_character.h_sec_color)]"
 				// Hair gradient
 				dat += "<br>"
 				dat += "- <b>Gradient:</b>"
 				dat += " <a href='byond://?_src_=prefs;preference=h_grad_style;task=input'>[active_character.h_grad_style]</a>"
-				dat += " <a href='byond://?_src_=prefs;preference=h_grad_colour;task=input'>Color</a> [color_square(active_character.h_grad_colour)]"
+				dat += " <a href='byond://?_src_=prefs;preference=h_grad_color;task=input'>Color</a> [color_square(active_character.h_grad_color)]"
 				dat += " <a href='byond://?_src_=prefs;preference=h_grad_alpha;task=input'>[active_character.h_grad_alpha]</a>"
 				dat += "<br>"
 				dat += "- <b>Gradient Offset:</b> <a href='byond://?_src_=prefs;preference=h_grad_offset;task=input'>[active_character.h_grad_offset_x],[active_character.h_grad_offset_y]</a>"
@@ -292,10 +292,10 @@ GLOBAL_LIST_INIT(special_role_times, list(
 			if(!(S.bodyflags & SHAVED))
 				dat += "<b>Facial Hair:</b> "
 				dat += "<a href='byond://?_src_=prefs;preference=f_style;task=input'>[active_character.f_style ? "[active_character.f_style]" : "Shaved"]</a>"
-				dat += "<a href='byond://?_src_=prefs;preference=facial;task=input'>Color</a> [color_square(active_character.f_colour)]"
+				dat += "<a href='byond://?_src_=prefs;preference=facial;task=input'>Color</a> [color_square(active_character.f_color)]"
 				var/datum/sprite_accessory/temp_facial_hair_style = GLOB.facial_hair_styles_list[active_character.f_style]
-				if(temp_facial_hair_style && temp_facial_hair_style.secondary_theme && !temp_facial_hair_style.no_sec_colour)
-					dat += " <a href='byond://?_src_=prefs;preference=secondary_facial;task=input'>Color #2</a> [color_square(active_character.f_sec_colour)]"
+				if(temp_facial_hair_style && temp_facial_hair_style.secondary_theme && !temp_facial_hair_style.no_sec_color)
+					dat += " <a href='byond://?_src_=prefs;preference=secondary_facial;task=input'>Color #2</a> [color_square(active_character.f_sec_color)]"
 				dat += "<br>"
 			else
 				active_character.f_style = "Shaved"
@@ -303,11 +303,11 @@ GLOBAL_LIST_INIT(special_role_times, list(
 
 			if(!(S.bodyflags & ALL_RPARTS) && (S.eyes != "blank_eyes") && !(S.bodyflags & NO_EYES))
 				dat += "<b>Eyes:</b> "
-				dat += "<a href='byond://?_src_=prefs;preference=eyes;task=input'>Color</a> [color_square(active_character.e_colour)]<br>"
+				dat += "<a href='byond://?_src_=prefs;preference=eyes;task=input'>Color</a> [color_square(active_character.e_color)]<br>"
 
 			if((S.bodyflags & HAS_SKIN_COLOR) || ((S.bodyflags & HAS_BODYACC_COLOR) && GLOB.body_accessory_by_species[active_character.species]) || check_rights(R_ADMIN, 0, user)) //admins can always fuck with this, because they are admins
 				dat += "<b>Body Color:</b> "
-				dat += "<a href='byond://?_src_=prefs;preference=skin;task=input'>Color</a> [color_square(active_character.s_colour)]<br>"
+				dat += "<a href='byond://?_src_=prefs;preference=skin;task=input'>Color</a> [color_square(active_character.s_color)]<br>"
 
 			if(GLOB.body_accessory_by_species[active_character.species] || check_rights(R_ADMIN, 0, user))
 				dat += "<b>Body Accessory:</b> "
@@ -419,7 +419,7 @@ GLOBAL_LIST_INIT(special_role_times, list(
 			if(unlock_content)
 				dat += "<b>BYOND Membership Publicity:</b> <a href='byond://?_src_=prefs;preference=publicity'><b>[(toggles & PREFTOGGLE_MEMBER_PUBLIC) ? "Public" : "Hidden"]</b></a><br>"
 			dat += "<b>CKEY Anonymity:</b> <a href='byond://?_src_=prefs;preference=anonmode'><b>[toggles2 & PREFTOGGLE_2_ANON ? "Anonymous" : "Not Anonymous"]</b></a><br>"
-			dat += "<b>Colourblind Mode:</b> <a href='byond://?_src_=prefs;preference=cbmode'>[colourblind_mode]</a><br>"
+			dat += "<b>Colorblind Mode:</b> <a href='byond://?_src_=prefs;preference=cbmode'>[colorblind_mode]</a><br>"
 			if(user.client.donator_level > 0)
 				dat += "<b>Donator Publicity:</b> <a href='byond://?_src_=prefs;preference=donor_public'><b>[(toggles & PREFTOGGLE_DONATOR_PUBLIC) ? "Public" : "Hidden"]</b></a><br>"
 			dat += "<b>FPS:</b>	 <a href='byond://?_src_=prefs;preference=clientfps;task=input'>[clientfps]</a><br>"
@@ -428,7 +428,7 @@ GLOBAL_LIST_INIT(special_role_times, list(
 			dat += "<b>Ghost Sight:</b> <a href='byond://?_src_=prefs;preference=ghost_sight'><b>[(toggles & PREFTOGGLE_CHAT_GHOSTSIGHT) ? "All Emotes" : "Nearest Creatures"]</b></a><br>"
 			dat += "<b>Ghost PDA:</b> <a href='byond://?_src_=prefs;preference=ghost_pda'><b>[(toggles & PREFTOGGLE_CHAT_GHOSTPDA) ? "All PDA Messages" : "No PDA Messages"]</b></a><br>"
 			if(check_rights(R_ADMIN,0))
-				dat += "<b>OOC Color:</b> <span style='border: 1px solid #161616; background-color: [ooccolor ? ooccolor : GLOB.normal_ooc_colour];'>&nbsp;&nbsp;&nbsp;</span> <a href='byond://?_src_=prefs;preference=ooccolor;task=input'><b>Change</b></a><br>"
+				dat += "<b>OOC Color:</b> <span style='border: 1px solid #161616; background-color: [ooccolor ? ooccolor : GLOB.normal_ooc_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='byond://?_src_=prefs;preference=ooccolor;task=input'><b>Change</b></a><br>"
 			if(GLOB.configuration.general.allow_character_metadata)
 				dat += "<b>OOC Notes:</b> <a href='byond://?_src_=prefs;preference=metadata;task=input'><b>Edit</b></a><br>"
 			dat += "<b>Parallax (Fancy Space):</b> <a href='byond://?_src_=prefs;preference=parallax'>"

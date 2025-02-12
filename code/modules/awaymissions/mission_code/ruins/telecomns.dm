@@ -512,7 +512,7 @@ GLOBAL_LIST_EMPTY(telecomms_trap_tank)
 	update_icon(UPDATE_OVERLAYS)
 	var/obj/effect/overlay/hologram = new(get_turf(src))
 	our_holo = hologram
-	hologram.icon = getHologramIcon(get_id_photo(H, "Naked"), colour = null, opacity = 0.8, colour_blocking = TRUE) // This is more offputting. Also in colour more and less transparent.
+	hologram.icon = getHologramIcon(get_id_photo(H, "Naked"), color = null, opacity = 0.8, color_blocking = TRUE) // This is more offputting. Also in color more and less transparent.
 	hologram.alpha = 166
 	hologram.mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	hologram.layer = FLY_LAYER

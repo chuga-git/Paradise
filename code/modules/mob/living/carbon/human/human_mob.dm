@@ -212,7 +212,7 @@
 
 	var/brute_loss = 0
 	var/burn_loss = 0
-	var/bomb_armor = ARMOUR_VALUE_TO_PERCENTAGE(getarmor(null, BOMB))
+	var/bomb_armor = ARMOR_VALUE_TO_PERCENTAGE(getarmor(null, BOMB))
 	var/list/valid_limbs = list("l_arm", "l_leg", "r_arm", "r_leg")
 	var/limbs_amount = 1
 	var/limb_loss_chance = 50
@@ -1109,10 +1109,10 @@
 	hunger_drain = dna.species.hunger_drain
 
 	if(dna.species.base_color && use_default_color)
-		//Apply colour.
-		skin_colour = dna.species.base_color
+		//Apply color.
+		skin_color = dna.species.base_color
 	else
-		skin_colour = "#000000"
+		skin_color = "#000000"
 
 	if(!(dna.species.bodyflags & HAS_SKIN_TONE))
 		s_tone = 0
@@ -1222,22 +1222,22 @@
 		else
 			H.ha_style = "None"
 
-		if(dna.species.default_hair_colour)
-			//Apply colour.
-			H.hair_colour = dna.species.default_hair_colour
+		if(dna.species.default_hair_color)
+			//Apply color.
+			H.hair_color = dna.species.default_hair_color
 		else
-			H.hair_colour = "#000000"
-		if(dna.species.default_fhair_colour)
-			H.facial_colour = dna.species.default_fhair_colour
+			H.hair_color = "#000000"
+		if(dna.species.default_fhair_color)
+			H.facial_color = dna.species.default_fhair_color
 		else
-			H.facial_colour = "#000000"
-		if(dna.species.default_headacc_colour)
-			H.headacc_colour = dna.species.default_headacc_colour
+			H.facial_color = "#000000"
+		if(dna.species.default_headacc_color)
+			H.headacc_color = dna.species.default_headacc_color
 		else
-			H.headacc_colour = "#000000"
+			H.headacc_color = "#000000"
 
 	m_styles = DEFAULT_MARKING_STYLES //Wipes out markings, setting them all to "None".
-	m_colours = DEFAULT_MARKING_COLOURS //Defaults colour to #00000 for all markings.
+	m_colors = DEFAULT_MARKING_COLORS //Defaults color to #00000 for all markings.
 	if(dna.species.bodyflags & HAS_BODY_ACCESSORY)
 		body_accessory = GLOB.body_accessory_by_name[dna.species.default_bodyacc]
 	else
@@ -1249,7 +1249,7 @@
 
 	dna.species.handle_dna(src) //Give them whatever special dna business they got.
 
-	update_client_colour(0)
+	update_client_color(0)
 
 	if(!delay_icon_update)
 		UpdateAppearance()
@@ -1828,7 +1828,7 @@ Eyes need to have significantly high darksight to shine unless the mob has the X
 			continue
 		// "New" code handles insertion and DNA sync'ing
 		var/obj/item/organ/external/E = list_to_object(limbs_list[limb], src)
-		E.sync_colour_to_dna()
+		E.sync_color_to_dna()
 
 	for(var/organ in organs_list)
 		// As above, "New" code handles insertion, DNA sync

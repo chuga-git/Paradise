@@ -125,7 +125,7 @@
 ///////////////////////////////////////////////////////////
 //The /atom and /turf examples are just so these compile, replace those with your typepaths in your subtypes.
 
-//Settings appropriate for a turf that covers the entire map region, eg a fill colour on a bottom layer in a graphics program.
+//Settings appropriate for a turf that covers the entire map region, eg a fill color on a bottom layer in a graphics program.
 //Should only have one of these in your mapGenerator unless you want to waste CPU
 /datum/map_generator_module/bottom_layer
 	clusterCheckFlags = MAP_GENERATOR_CLUSTER_CHECK_NONE

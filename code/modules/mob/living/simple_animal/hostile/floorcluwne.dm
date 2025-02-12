@@ -371,7 +371,7 @@
 	playsound(H, 'sound/spookoween/scary_horn2.ogg', 100, 0)
 	var/old_color = H.client?.color
 
-	if(H?.client?.prefs.colourblind_mode == COLOURBLIND_MODE_NONE)
+	if(H?.client?.prefs.colorblind_mode == COLORBLIND_MODE_NONE)
 		client_kill_animation(H)
 
 	for(var/turf/T in orange(H, 4))

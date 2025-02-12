@@ -202,7 +202,7 @@ Works together with spawning an observer, noted above.
 		ghost.verbs |= /mob/dead/observer/proc/do_observe
 		ghost.verbs |= /mob/dead/observer/proc/observe
 	if(user_color)
-		add_atom_colour(user_color, ADMIN_COLOUR_PRIORITY)
+		add_atom_color(user_color, ADMIN_COLOR_PRIORITY)
 		ghost.color = user_color
 	if(ghost_name)
 		ghost.name = ghost_name

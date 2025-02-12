@@ -404,7 +404,7 @@
 
 	. = ..()	//calls mob.Login()
 
-	mob.update_client_colour(0) // Activate colourblind mode if they have one set
+	mob.update_client_color(0) // Activate colorblind mode if they have one set
 
 
 	if(ckey in GLOB.clientmessages)
@@ -967,8 +967,8 @@
 
 		to_chat(world, "[message]")
 
-/client/proc/colour_transition(list/colour_to = null, time = 10) //Call this with no parameters to reset to default.
-	animate(src, color = colour_to, time = time, easing = SINE_EASING)
+/client/proc/color_transition(list/color_to = null, time = 10) //Call this with no parameters to reset to default.
+	animate(src, color = color_to, time = time, easing = SINE_EASING)
 
 /client/proc/on_varedit()
 	var_edited = TRUE

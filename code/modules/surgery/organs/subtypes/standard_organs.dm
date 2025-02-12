@@ -238,23 +238,23 @@
 	var/can_intake_reagents = 1
 	var/alt_head = "None"
 
-	//Hair colour and style
-	var/hair_colour = "#000000"
-	var/sec_hair_colour = "#000000"
+	//Hair color and style
+	var/hair_color = "#000000"
+	var/sec_hair_color = "#000000"
 	var/h_style = "Bald"
 	var/h_grad_style = "None"
 	var/h_grad_offset_x = 0
 	var/h_grad_offset_y = 0
-	var/h_grad_colour = "#000000"
+	var/h_grad_color = "#000000"
 	var/h_grad_alpha = 255
 
-	//Head accessory colour and style
-	var/headacc_colour = "#000000"
+	//Head accessory color and style
+	var/headacc_color = "#000000"
 	var/ha_style = "None"
 
-	//Facial hair colour and style
-	var/facial_colour = "#000000"
-	var/sec_facial_colour = "#000000"
+	//Facial hair color and style
+	var/facial_color = "#000000"
+	var/sec_facial_color = "#000000"
 	var/f_style = "Shaved"
 
 /obj/item/organ/external/head/examine(mob/user)
@@ -263,7 +263,7 @@
 		. += "<span class='warning'>There is nothing left inside!</span>"
 
 /obj/item/organ/external/head/vars_to_save()
-	return list("color", "name", "h_grad_style", "h_grad_offset_x", "h_grad_offset_y", "h_grad_colour", "h_grad_alpha")
+	return list("color", "name", "h_grad_style", "h_grad_offset_x", "h_grad_offset_y", "h_grad_color", "h_grad_alpha")
 
 /obj/item/organ/external/head/droplimb(clean, disintegrate, ignore_children, nodamage)
 	disintegrate = DROPLIMB_SHARP // Lets make sure to not delete brains

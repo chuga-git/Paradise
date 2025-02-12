@@ -69,7 +69,7 @@
 	var/stamina_mod = 1
 	var/stun_mod = 1	 // If a species is more/less impacated by stuns/weakens/paralysis
 	var/speed_mod = 0	// this affects the race's speed. positive numbers make it move slower, negative numbers make it move faster
-	///Additional armour value for the species.
+	///Additional armor value for the species.
 	var/armor = 0
 	var/blood_damage_type = OXY //What type of damage does this species take if it's low on blood?
 	var/total_health = 100
@@ -151,11 +151,11 @@
 
 	//Default hair/headacc style vars.
 	var/default_hair				//Default hair style for newly created humans unless otherwise set.
-	var/default_hair_colour
+	var/default_hair_color
 	var/default_fhair				//Default facial hair style for newly created humans unless otherwise set.
-	var/default_fhair_colour
+	var/default_fhair_color
 	var/default_headacc				//Default head accessory style for newly created humans unless otherwise set.
-	var/default_headacc_colour
+	var/default_headacc_color
 
 	/// Name of default body accessory if any.
 	var/default_bodyacc
@@ -463,11 +463,11 @@
 			if(!organ)
 				organ = H.bodyparts[1]
 
-	var/total_armour = blocked + armor
+	var/total_armor = blocked + armor
 
 	switch(damagetype)
 		if(BRUTE)
-			var/damage_amount = ARMOUR_EQUATION(damage, total_armour, brute_mod * H.physiology.brute_mod)
+			var/damage_amount = ARMOR_EQUATION(damage, total_armor, brute_mod * H.physiology.brute_mod)
 			if(damage_amount)
 				H.damageoverlaytemp = 20
 
@@ -477,7 +477,7 @@
 			else //no bodypart, we deal damage with a more general method.
 				H.adjustBruteLoss(damage_amount)
 		if(BURN)
-			var/damage_amount = ARMOUR_EQUATION(damage, total_armour, burn_mod * H.physiology.burn_mod)
+			var/damage_amount = ARMOR_EQUATION(damage, total_armor, burn_mod * H.physiology.burn_mod)
 			if(damage_amount)
 				H.damageoverlaytemp = 20
 
@@ -487,19 +487,19 @@
 			else
 				H.adjustFireLoss(damage_amount)
 		if(TOX)
-			var/damage_amount = ARMOUR_EQUATION(damage, total_armour, H.physiology.tox_mod)
+			var/damage_amount = ARMOR_EQUATION(damage, total_armor, H.physiology.tox_mod)
 			H.adjustToxLoss(damage_amount)
 		if(OXY)
-			var/damage_amount = ARMOUR_EQUATION(damage, total_armour, H.physiology.oxy_mod)
+			var/damage_amount = ARMOR_EQUATION(damage, total_armor, H.physiology.oxy_mod)
 			H.adjustOxyLoss(damage_amount)
 		if(CLONE)
-			var/damage_amount = ARMOUR_EQUATION(damage, total_armour, H.physiology.clone_mod)
+			var/damage_amount = ARMOR_EQUATION(damage, total_armor, H.physiology.clone_mod)
 			H.adjustCloneLoss(damage_amount)
 		if(STAMINA)
-			var/damage_amount = ARMOUR_EQUATION(damage, total_armour, H.physiology.stamina_mod)
+			var/damage_amount = ARMOR_EQUATION(damage, total_armor, H.physiology.stamina_mod)
 			H.adjustStaminaLoss(damage_amount)
 		if(BRAIN)
-			var/damage_amount = ARMOUR_EQUATION(damage, total_armour, H.physiology.brain_mod)
+			var/damage_amount = ARMOR_EQUATION(damage, total_armor, H.physiology.brain_mod)
 			H.adjustBrainLoss(damage_amount)
 
 	// Will set our damageoverlay icon to the next level, which will then be set back to the normal level the next mob.Life().

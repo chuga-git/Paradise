@@ -121,7 +121,7 @@
 		var/mob/living/carbon/human/H = holder
 		icobase = H.dna.species.icobase
 		replaced(H)
-		sync_colour_to_human(H)
+		sync_color_to_human(H)
 		properly_attached = TRUE
 
 	if(is_robotic())
@@ -980,7 +980,7 @@ Note that amputating the affected organ does in fact remove the infection from t
 		set_company(company)
 	..() // Parent call loads in the DNA
 	if(data["dna"])
-		sync_colour_to_dna()
+		sync_color_to_dna()
 
 /obj/item/organ/external/proc/remove_embedded_object(obj/item/I)
 	embedded_objects -= I

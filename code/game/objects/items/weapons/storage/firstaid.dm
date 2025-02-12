@@ -281,7 +281,7 @@
 	var/applying_meds = FALSE //To Prevent spam clicking and generating runtimes from apply a deleting pill multiple times.
 	var/rapid_intake_message = "unscrews the cap on the pill bottle and begins dumping the entire contents down their throat!"
 	var/rapid_post_instake_message = "downs the entire bottle of pills in one go!"
-	/// Whether to render a coloured wrapper overlay on the icon.
+	/// Whether to render a colored wrapper overlay on the icon.
 	var/allow_wrap = TRUE
 	/// The color of the wrapper overlay.
 	var/wrapper_color = null

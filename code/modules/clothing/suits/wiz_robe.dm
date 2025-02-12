@@ -111,7 +111,7 @@
 
 /obj/item/clothing/suit/wizrobe/clown
 	name = "clown robe"
-	desc = "A set of armoured robes that seem to radiate a dark power. That, and bad fashion decisions."
+	desc = "A set of armored robes that seem to radiate a dark power. That, and bad fashion decisions."
 	icon_state = "wizzclown"
 	item_state = "wizzclown"
 
@@ -134,13 +134,13 @@
 
 /obj/item/clothing/suit/wizrobe/magusblue
 	name = "magus robe"
-	desc = "A set of armoured robes that seem to radiate a dark power."
+	desc = "A set of armored robes that seem to radiate a dark power."
 	icon_state = "magusblue"
 	item_state = "magusblue"
 
 /obj/item/clothing/suit/wizrobe/magusred
 	name = "magus robe"
-	desc = "A set of armoured robes that seem to radiate a dark power."
+	desc = "A set of armored robes that seem to radiate a dark power."
 	icon_state = "magusred"
 	item_state = "magusred"
 
@@ -182,7 +182,7 @@
 	resistance_flags = FLAMMABLE
 	magical = FALSE
 
-//Shielded Armour
+//Shielded Armor
 
 /obj/item/clothing/suit/space/hardsuit/wizard
 	name = "battlemage armor"

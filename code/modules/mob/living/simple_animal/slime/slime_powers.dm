@@ -172,15 +172,15 @@
 			var/new_nutrition = round(nutrition * 0.9)
 			var/new_powerlevel = round(powerlevel / 4)
 			for(var/i=1,i<=4,i++)
-				var/child_colour
+				var/child_color
 				if(mutation_chance >= 100)
-					child_colour = "rainbow"
+					child_color = "rainbow"
 				else if(prob(mutation_chance))
-					child_colour = slime_mutation[rand(1,4)]
+					child_color = slime_mutation[rand(1,4)]
 				else
-					child_colour = colour
+					child_color = color
 				var/mob/living/simple_animal/slime/M
-				M = new(loc, child_colour)
+				M = new(loc, child_color)
 				if(ckey)
 					M.set_nutrition(new_nutrition) //Player slimes are more robust at spliting. Once an oversight of poor copypasta, now a feature!
 				M.powerlevel = new_powerlevel
@@ -188,7 +188,7 @@
 					step_away(M, get_turf(src))
 				babies += M
 				M.mutation_chance = clamp(mutation_chance+(rand(5,-5)),0,100)
-				SSblackbox.record_feedback("tally", "slime_babies_born", 1, M.colour)
+				SSblackbox.record_feedback("tally", "slime_babies_born", 1, M.color)
 
 			var/mob/living/simple_animal/slime/new_slime = pick(babies)
 			new_slime.a_intent = INTENT_HARM

@@ -15,13 +15,13 @@
 	return isnull(alpha) ? rgb(r, g, b) : rgb(r, g, b, alpha)
 
 /proc/rand_hex_color()
-	var/list/colours = list("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f")
-	var/list/output_colour = list()
+	var/list/colors = list("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f")
+	var/list/output_color = list()
 
 	for(var/i = 0; i < 6; i++)
-		output_colour += pick(colours)
+		output_color += pick(colors)
 
-	return "#[output_colour.Join("")]"
+	return "#[output_color.Join("")]"
 
 
 // Change grayscale color to black->tone->white range

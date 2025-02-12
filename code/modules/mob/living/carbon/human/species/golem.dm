@@ -39,7 +39,7 @@
 		"is crumbling into dust!",
 		"is smashing their body apart!")
 
-	var/golem_colour = rgb(170, 170, 170)
+	var/golem_color = rgb(170, 170, 170)
 	var/info_text = "As an <span class='danger'>Iron Golem</span>, you don't have any special traits."
 	var/random_eligible = TRUE
 	var/prefix = "Iron"
@@ -102,7 +102,7 @@
 		"adamantine_resonator" = /obj/item/organ/internal/adamantine_resonator,
 		"vocal_cords" = /obj/item/organ/internal/vocal_cords/adamantine
 		)
-	golem_colour = rgb(68, 238, 221)
+	golem_color = rgb(68, 238, 221)
 	info_text = "As an <span class='danger'>Adamantine Golem</span>, you possess special vocal cords allowing you to \"resonate\" messages to all golems."
 	prefix = "Adamantine"
 	special_names = null
@@ -113,7 +113,7 @@
 	skinned_type = /obj/item/stack/ore/plasma
 	//Can burn and takes damage from heat
 	inherent_traits = list(TRAIT_NOBREATH, TRAIT_RESISTCOLD, TRAIT_RESISTHIGHPRESSURE, TRAIT_RESISTLOWPRESSURE, TRAIT_CHUNKYFINGERS, TRAIT_RADIMMUNE, TRAIT_PIERCEIMMUNE, TRAIT_NOPAIN, TRAIT_NO_BONES, TRAIT_STURDY_LIMBS, TRAIT_BURN_WOUND_IMMUNE) //no RESISTHEAT, NOFIRE
-	golem_colour = rgb(170, 51, 221)
+	golem_color = rgb(170, 51, 221)
 	info_text = "As a <span class='danger'>Plasma Golem</span>, you burn easily. Be careful, if you get hot enough while burning, you'll blow up!"
 	heatmod = 0 //fine until they blow up
 	prefix = "Plasma"
@@ -169,17 +169,17 @@
 //Harder to hurt
 /datum/species/golem/diamond
 	name = "Diamond Golem"
-	golem_colour = rgb(0, 255, 255)
+	golem_color = rgb(0, 255, 255)
 	armor = 70 //up from 55
 	skinned_type = /obj/item/stack/ore/diamond
 	info_text = "As a <span class='danger'>Diamond Golem</span>, you are more resistant than the average golem."
 	prefix = "Diamond"
 	special_names = list("Back")
 
-//Faster but softer and less armoured
+//Faster but softer and less armored
 /datum/species/golem/gold
 	name = "Gold Golem"
-	golem_colour = rgb(204, 204, 0)
+	golem_color = rgb(204, 204, 0)
 	speed_mod = 1
 	armor = 25 //down from 55
 	skinned_type = /obj/item/stack/ore/gold
@@ -190,7 +190,7 @@
 //Heavier, thus higher chance of stunning when punching
 /datum/species/golem/silver
 	name = "Silver Golem"
-	golem_colour = rgb(221, 221, 221)
+	golem_color = rgb(221, 221, 221)
 	punchstunthreshold = 9 //60% chance, from 40%
 	skinned_type = /obj/item/stack/ore/silver
 	info_text = "As a <span class='danger'>Silver Golem</span>, your attacks have a higher chance of stunning."
@@ -200,7 +200,7 @@
 //Harder to stun, deals more damage, but it's even slower
 /datum/species/golem/plasteel
 	name = "Plasteel Golem"
-	golem_colour = rgb(187, 187, 187)
+	golem_color = rgb(187, 187, 187)
 	stun_mod = 0.4
 	punchdamagelow = 12
 	punchdamagehigh = 21
@@ -219,7 +219,7 @@
 //More resistant to burn damage and immune to ashstorm
 /datum/species/golem/titanium
 	name = "Titanium Golem"
-	golem_colour = rgb(255, 255, 255)
+	golem_color = rgb(255, 255, 255)
 	skinned_type = /obj/item/stack/ore/titanium
 	info_text = "As a <span class='danger'>Titanium Golem</span>, you are resistant to burn damage and immune to ash storms."
 	burn_mod = 0.9
@@ -237,7 +237,7 @@
 //Even more resistant to burn damage and immune to ashstorms and lava
 /datum/species/golem/plastitanium
 	name = "Plastitanium Golem"
-	golem_colour = rgb(136, 136, 136)
+	golem_color = rgb(136, 136, 136)
 	skinned_type = /obj/item/stack/ore/titanium
 	info_text = "As a <span class='danger'>Plastitanium Golem</span>, you are very resistant to burn damage and immune to both ash storms and lava."
 	burn_mod = 0.8
@@ -257,7 +257,7 @@
 //Fast and regenerates... but can only speak like an abductor
 /datum/species/golem/alloy
 	name = "Alien Alloy Golem"
-	golem_colour = rgb(51, 51, 51)
+	golem_color = rgb(51, 51, 51)
 	skinned_type = /obj/item/stack/sheet/mineral/abductor
 	language = "Golem Mindlink"
 	default_language = "Golem Mindlink"
@@ -287,7 +287,7 @@
 //Regenerates like dionas, less resistant
 /datum/species/golem/wood
 	name = "Wood Golem"
-	golem_colour = rgb(158, 112, 75)
+	golem_color = rgb(158, 112, 75)
 	skinned_type = /obj/item/stack/sheet/wood
 	//Can burn and take damage from heat
 	inherent_traits = list(TRAIT_NOBREATH, TRAIT_RESISTCOLD, TRAIT_RESISTHIGHPRESSURE, TRAIT_RESISTLOWPRESSURE, TRAIT_CHUNKYFINGERS, TRAIT_RADIMMUNE, TRAIT_PIERCEIMMUNE, TRAIT_NOPAIN, TRAIT_NO_BONES, TRAIT_STURDY_LIMBS, TRAIT_BURN_WOUND_IMMUNE)
@@ -336,7 +336,7 @@
 //Radioactive
 /datum/species/golem/uranium
 	name = "Uranium Golem"
-	golem_colour = rgb(119, 255, 0)
+	golem_color = rgb(119, 255, 0)
 	skinned_type = /obj/item/stack/ore/uranium
 	info_text = "As an <span class='danger'>Uranium Golem</span>, you emit radiation. It won't harm fellow golems, but organic lifeforms will be affected."
 	prefix = "Uranium"
@@ -352,14 +352,14 @@
 	prefix = "Plastic"
 	special_names = null
 	ventcrawler = VENTCRAWLER_NUDE
-	golem_colour = rgb(255, 255, 255)
+	golem_color = rgb(255, 255, 255)
 	skinned_type = /obj/item/stack/sheet/plastic
 	info_text = "As a <span class='danger'>Plastic Golem</span>, you are capable of ventcrawling if you're naked."
 
 //Immune to physical bullets and resistant to brute, but very vulnerable to burn damage. Dusts on death.
 /datum/species/golem/sand
 	name = "Sand Golem"
-	golem_colour = rgb(255, 220, 143)
+	golem_color = rgb(255, 220, 143)
 	skinned_type = /obj/item/stack/ore/glass //this is sand
 	armor = 0
 	burn_mod = 3 //melts easily
@@ -379,7 +379,7 @@
 
 /datum/species/golem/sand/bullet_act(obj/item/projectile/P, mob/living/carbon/human/H)
 	if(!(P.original == H && P.firer == H))
-		if((P.flag == BULLET || P.flag == BOMB) && P.armour_penetration_percentage < 100)
+		if((P.flag == BULLET || P.flag == BOMB) && P.armor_penetration_percentage < 100)
 			playsound(H, 'sound/effects/shovel_dig.ogg', 70, 1)
 			H.visible_message("<span class='danger'>[P] sinks harmlessly in [H]'s sandy body!</span>", \
 			"<span class='userdanger'>[P] sinks harmlessly in [H]'s sandy body!</span>")
@@ -392,7 +392,7 @@
 //Reflects lasers and resistant to burn damage, but very vulnerable to brute damage. Shatters on death.
 /datum/species/golem/glass
 	name = "Glass Golem"
-	golem_colour = rgb(90, 150, 180)
+	golem_color = rgb(90, 150, 180)
 	skinned_type = /obj/item/shard
 	armor = 0
 	brute_mod = 3 //very fragile
@@ -426,7 +426,7 @@
 //Teleports when hit or when it wants to
 /datum/species/golem/bluespace
 	name = "Bluespace Golem"
-	golem_colour = rgb(51, 51, 255)
+	golem_color = rgb(51, 51, 255)
 	skinned_type = /obj/item/stack/ore/bluespace_crystal
 	info_text = "As a <span class='danger'>Bluespace Golem</span>, you are spatially unstable: You will teleport when hit, and you can teleport manually at a long distance."
 	prefix = "Bluespace"
@@ -552,7 +552,7 @@
 //honk
 /datum/species/golem/bananium
 	name = "Bananium Golem"
-	golem_colour = rgb(255, 255, 0)
+	golem_color = rgb(255, 255, 0)
 	punchdamagelow = 0
 	punchdamagehigh = 1
 	punchstunthreshold = 2 //Harmless and can't stun
@@ -638,7 +638,7 @@
 	name = "Tranquillite Golem"
 	prefix = "Tranquillite"
 	special_names = null
-	golem_colour = rgb(255, 255, 255)
+	golem_color = rgb(255, 255, 255)
 	skinned_type = /obj/item/stack/ore/tranquillite
 	info_text = "As a <span class='danger'>Tranquillite Golem</span>, you are capable of creating invisible walls, and can regenerate by drinking your bottle of Nothing."
 	unarmed_type = /datum/unarmed_attack/golem/tranquillite
@@ -681,7 +681,7 @@
 	punchstunthreshold = 7
 	punchdamagehigh = 8 // not as heavy as stone
 	prefix = "Cloth"
-	golem_colour = null
+	golem_color = null
 	special_names = null
 
 /datum/species/golem/cloth/get_random_name()

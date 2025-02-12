@@ -497,7 +497,7 @@
 	w_class = WEIGHT_CLASS_BULKY
 	sharp = TRUE
 	force = 18
-	armour_penetration_percentage = -100 //This means that armor twice as effective against it
+	armor_penetration_percentage = -100 //This means that armor twice as effective against it
 	reach = 2
 	hitsound = 'sound/weapons/whip.ogg'
 	attack_verb = list("slashes", "whips", "lashes", "lacerates")
@@ -506,9 +506,9 @@
 
 /obj/item/melee/razorwire/Initialize(mapload)
 	. = ..()
-	var/random_colour = pick("razorwire", "razorwire_teal", "razorwire_yellow", "razorwire_purple", "razorwire_green")
-	icon_state = random_colour
-	item_state = random_colour
+	var/random_color = pick("razorwire", "razorwire_teal", "razorwire_yellow", "razorwire_purple", "razorwire_green")
+	icon_state = random_color
+	item_state = random_color
 	update_icon()
 	razorwire_skin_options["Reliable Red"] = "razorwire"
 	razorwire_skin_options["Troubling Teal"] = "razorwire_teal"
@@ -893,7 +893,7 @@
 	icon_state = "syndie_mantis"
 	item_state = "syndie_mantis"
 	force = 15
-	armour_penetration_percentage = 30
+	armor_penetration_percentage = 30
 
 /obj/item/melee/mantis_blade/syndicate/Initialize(mapload)
 	. = ..()

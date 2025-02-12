@@ -71,7 +71,7 @@
 /obj/item/projectile/bullet/sniper
 	damage = 70
 	weaken = 10 SECONDS
-	armour_penetration_flat = 70
+	armor_penetration_flat = 70
 	forced_accuracy = TRUE
 	pass_flags = PASSTABLE | PASSGLASS | PASSGRILLE | PASSGIRDER
 	speed = 0.5
@@ -119,7 +119,7 @@
 	harmful = FALSE
 
 /obj/item/projectile/bullet/sniper/soporific
-	armour_penetration_flat = 0
+	armor_penetration_flat = 0
 	nodamage = 1
 	weaken = 0
 
@@ -146,7 +146,7 @@
 	icon_state = ".50"
 
 /obj/item/projectile/bullet/sniper/haemorrhage
-	armour_penetration_flat = 25
+	armor_penetration_flat = 25
 	damage = 45
 	weaken = 6 SECONDS
 

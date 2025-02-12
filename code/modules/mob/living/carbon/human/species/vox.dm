@@ -30,7 +30,7 @@
 	flesh_color = "#808D11"
 	//Default styles for created mobs.
 	default_hair = "Short Vox Quills"
-	default_hair_colour = "#614f19" //R: 97, G: 79, B: 25
+	default_hair_color = "#614f19" //R: 97, G: 79, B: 25
 	butt_sprite = "vox"
 
 	reagent_tag = PROCESS_ORG | PROCESS_SYN
@@ -128,7 +128,7 @@
 				new_icobase = 'icons/mob/human_races/vox/r_voxplum.dmi'
 				H.tail = "voxtail_plum"
 			else  //Default Lime Vox.
-				H.tail = "voxtail_lime" //Ensures they get an appropriately coloured tail depending on the skin-tone.
+				H.tail = "voxtail_lime" //Ensures they get an appropriately colored tail depending on the skin-tone.
 
 		H.change_icobase(new_icobase, owner_sensitive) //Update the icobase of all our organs, but make sure we don't mess with frankenstein limbs in doing so.
 

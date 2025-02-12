@@ -35,7 +35,7 @@
 
 /obj/item/beach_ball/dodgeball
 	name = "dodgeball"
-	desc = "Used for playing the most violent and degrading of childhood games. This one is connected to the laser tag armour system."
+	desc = "Used for playing the most violent and degrading of childhood games. This one is connected to the laser tag armor system."
 	icon = 'icons/obj/basketball.dmi'
 	icon_state = "dodgeball"
 	item_state = "dodgeball"

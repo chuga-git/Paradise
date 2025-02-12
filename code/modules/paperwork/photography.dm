@@ -98,7 +98,7 @@
 
 /obj/item/photo/proc/show(mob/user as mob)
 	var/icon/img_shown = new/icon(img)
-	var/colormatrix = user.get_screen_colour()
+	var/colormatrix = user.get_screen_color()
 	// Apply colorblindness effects, if any.
 	if(islist(colormatrix))
 		img_shown.MapColors(

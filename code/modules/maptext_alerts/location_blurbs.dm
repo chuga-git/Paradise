@@ -26,7 +26,7 @@
 	var/appear_animation_duration = 0
 	/// Amount of time the blurb takes to fade (alpha changing from 255 to 0). 0 means blurb is instantly removed from the screen after finished
 	var/fade_animation_duration = 0
-	// Colours of the background
+	// Colors of the background
 	var/background_r = 0
 	var/background_g = 0
 	var/background_b = 0

@@ -349,7 +349,7 @@
 	)
 
 // Mining Gripper
-// For mining borgs. Mostly for self-application of goliath armour.
+// For mining borgs. Mostly for self-application of goliath armor.
 /obj/item/gripper/mining
 	name = "mining gripper"
 	desc = "A grasping tool for cyborgs. This ruggedized version will let you add goliath plating to yourself and activate survival capsules. You could also use it to swing a pickaxe if you don't feel like using your drill."

@@ -38,7 +38,7 @@
 			var/obj/effect/temp_visual/heal/H = new /obj/effect/temp_visual/heal(get_turf(src)) //hello yes you are being healed
 			if(overmind)
 				H.color = overmind.blob_reagent_datum.complementary_color
-				if(H.color == COMPLEMENTARY_COLOR_RIPPING_TENDRILS) //the colour define for ripping tendrils
+				if(H.color == COMPLEMENTARY_COLOR_RIPPING_TENDRILS) //the color define for ripping tendrils
 					H.color = COLOR_HEALING_GREEN //bye red cross
 			else
 				H.color = COLOR_BLACK

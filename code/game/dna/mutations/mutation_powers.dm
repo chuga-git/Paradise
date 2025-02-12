@@ -853,13 +853,13 @@
 		if(new_style)
 			M.change_hair(new_style)
 
-		var/new_hair = tgui_input_color(user, "Please select hair color.", "Character Generation", head_organ.hair_colour)
+		var/new_hair = tgui_input_color(user, "Please select hair color.", "Character Generation", head_organ.hair_color)
 		if(!isnull(new_hair))
 			M.change_hair_color(new_hair)
 
 		var/datum/sprite_accessory/hair_style = GLOB.hair_styles_public_list[head_organ.h_style]
-		if(hair_style.secondary_theme && !hair_style.no_sec_colour)
-			new_hair = tgui_input_color(user, "Please select secondary hair color.", "Character Generation", head_organ.sec_hair_colour)
+		if(hair_style.secondary_theme && !hair_style.no_sec_color)
+			new_hair = tgui_input_color(user, "Please select secondary hair color.", "Character Generation", head_organ.sec_hair_color)
 			if(!isnull(new_hair))
 				M.change_hair_color(new_hair, TRUE)
 
@@ -870,13 +870,13 @@
 		if(new_style)
 			M.change_facial_hair(new_style)
 
-		var/new_facial = tgui_input_color(user, "Please select facial hair color.", "Character Generation", head_organ.facial_colour)
+		var/new_facial = tgui_input_color(user, "Please select facial hair color.", "Character Generation", head_organ.facial_color)
 		if(!isnull(new_facial))
 			M.change_facial_hair_color(new_facial)
 
 		var/datum/sprite_accessory/facial_hair_style = GLOB.facial_hair_styles_list[head_organ.f_style]
-		if(facial_hair_style.secondary_theme && !facial_hair_style.no_sec_colour)
-			new_facial = tgui_input_color(user, "Please select secondary facial hair color.", "Character Generation", head_organ.sec_facial_colour)
+		if(facial_hair_style.secondary_theme && !facial_hair_style.no_sec_color)
+			new_facial = tgui_input_color(user, "Please select secondary facial hair color.", "Character Generation", head_organ.sec_facial_color)
 			if(!isnull(new_facial))
 				M.change_facial_hair_color(new_facial, TRUE)
 
@@ -887,9 +887,9 @@
 			if(!isnull(new_head_accessory))
 				M.change_head_accessory(new_head_accessory)
 
-			var/new_head_accessory_colour = tgui_input_color(user, "Please select head accessory color.", "Character Generation", head_organ.headacc_colour)
-			if(!isnull(new_head_accessory_colour))
-				M.change_head_accessory_color(new_head_accessory_colour)
+			var/new_head_accessory_color = tgui_input_color(user, "Please select head accessory color.", "Character Generation", head_organ.headacc_color)
+			if(!isnull(new_head_accessory_color))
+				M.change_head_accessory_color(new_head_accessory_color)
 
 
 	//Body accessory.
@@ -908,9 +908,9 @@
 			if(!isnull(new_marking))
 				M.change_markings(new_marking, "head")
 
-			var/new_marking_colour = tgui_input_color(user, "Please select head marking color.", "Character Generation", M.m_colours["head"])
-			if(!isnull(new_marking_colour))
-				M.change_marking_color(new_marking_colour, "head")
+			var/new_marking_color = tgui_input_color(user, "Please select head marking color.", "Character Generation", M.m_colors["head"])
+			if(!isnull(new_marking_color))
+				M.change_marking_color(new_marking_color, "head")
 
 	//Body markings.
 	if(M.dna.species.bodyflags & HAS_BODY_MARKINGS)
@@ -919,9 +919,9 @@
 		if(!isnull(new_marking))
 			M.change_markings(new_marking, "body")
 
-		var/new_marking_colour = tgui_input_color(user, "Please select body marking color.", "Character Generation", M.m_colours["body"])
-		if(!isnull(new_marking_colour))
-			M.change_marking_color(new_marking_colour, "body")
+		var/new_marking_color = tgui_input_color(user, "Please select body marking color.", "Character Generation", M.m_colors["body"])
+		if(!isnull(new_marking_color))
+			M.change_marking_color(new_marking_color, "body")
 	//Tail markings.
 	if(M.dna.species.bodyflags & HAS_TAIL_MARKINGS)
 		var/list/valid_tail_markings = M.generate_valid_markings("tail")
@@ -929,9 +929,9 @@
 		if(!isnull(new_marking))
 			M.change_markings(new_marking, "tail")
 
-		var/new_marking_colour = tgui_input_color(user, "Please select tail marking color.", "Character Generation", M.m_colours["tail"])
-		if(!isnull(new_marking_colour))
-			M.change_marking_color(new_marking_colour, "tail")
+		var/new_marking_color = tgui_input_color(user, "Please select tail marking color.", "Character Generation", M.m_colors["tail"])
+		if(!isnull(new_marking_color))
+			M.change_marking_color(new_marking_color, "tail")
 
 	//Skin tone.
 	if(M.dna.species.bodyflags & HAS_SKIN_TONE)
@@ -957,11 +957,11 @@
 			new_tone = max(min(round(text2num(new_tone)), length(M.dna.species.icon_skin_tones)), 1)
 			M.change_skin_tone(new_tone)
 
-	//Skin colour.
+	//Skin color.
 	if(M.dna.species.bodyflags & HAS_SKIN_COLOR)
-		var/new_body_colour = tgui_input_color(user, "Please select body color.", "Character Generation", M.skin_colour)
-		if(!isnull(new_body_colour))
-			M.change_skin_color(new_body_colour)
+		var/new_body_color = tgui_input_color(user, "Please select body color.", "Character Generation", M.skin_color)
+		if(!isnull(new_body_color))
+			M.change_skin_color(new_body_color)
 
 	M.update_dna()
 

@@ -1,7 +1,7 @@
 //Regular syndicate space suit
 /obj/item/clothing/head/helmet/space/syndicate
 	name = "red space helmet"
-	desc = "A suspicious-looking space helmet. It is reinforced with a layer of armour."
+	desc = "A suspicious-looking space helmet. It is reinforced with a layer of armor."
 	icon_state = "syndicate"
 	item_state = "syndicate"
 	armor = list(MELEE = 35, BULLET = 50, LASER = 20, ENERGY = 10, BOMB = 20, RAD = 20, FIRE = 200, ACID = 285)

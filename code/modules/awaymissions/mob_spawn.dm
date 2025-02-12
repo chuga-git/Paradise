@@ -248,17 +248,17 @@
 			D.h_style = hair_style
 		else
 			D.h_style = random_hair_style(gender, D.dna.species.sprite_sheet_name)
-		D.hair_colour = rand_hex_color()
+		D.hair_color = rand_hex_color()
 		if(facial_hair_style)
 			D.f_style = facial_hair_style
 		else
 			D.f_style = random_facial_hair_style(gender, D.dna.species.sprite_sheet_name)
-		D.facial_colour = rand_hex_color()
+		D.facial_color = rand_hex_color()
 	if(skin_tone)
 		H.s_tone = skin_tone
 	else
 		H.s_tone = random_skin_tone()
-		H.skin_colour = rand_hex_color()
+		H.skin_color = rand_hex_color()
 
 	if(dna_scrambled)
 		H.get_dna_scrambled()

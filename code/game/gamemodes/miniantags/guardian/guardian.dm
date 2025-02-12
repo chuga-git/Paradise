@@ -493,7 +493,7 @@
  <br>
  <b>Explosive</b>: High damage resist and medium power attack. Can turn any object into a bomb, dealing explosive damage to the next person to touch it. The object will return to normal after the trap is triggered.<br>
  <br>
- <b>Assassin</b>: Medium damage with no damage resistance, can enter stealth which massively increases the damage of the next attack causing it to ignore armour.
+ <b>Assassin</b>: Medium damage with no damage resistance, can enter stealth which massively increases the damage of the next attack causing it to ignore armor.
  <br>
  <b>Charger</b>: Medium damage and defense, very fast and has a special charge attack which damages a target and knocks them to the ground.
  <br>

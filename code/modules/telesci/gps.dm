@@ -227,7 +227,7 @@ GLOBAL_LIST_EMPTY(GPS_list)
 	if(T)
 		// I assume it's faster to color,tag and OR the turf in, rather
 		// then checking if its there
-		T.color = RANDOM_COLOUR
+		T.color = RANDOM_COLOR
 		T.maptext = "[T.x],[T.y],[T.z]"
 		tagged |= T
 

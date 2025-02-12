@@ -312,7 +312,7 @@
 			"desc" = "External armor is installed."),
 		//3
 		list(
-			"key" = /obj/item/mecha_parts/part/gygax_armour,
+			"key" = /obj/item/mecha_parts/part/gygax_armor,
 			"backkey" = TOOL_WELDER,
 			"desc" = "Internal armor is welded."),
 		//4
@@ -553,7 +553,7 @@
 				holder.icon_state = "gygax19"
 			else
 				user.visible_message("<span class='notice'>[user] pries the Gygax Armor Plates from the [holder].</span>", "<span class='notice'>You pry the Gygax Armor Plates from the [holder].</span>")
-				new /obj/item/mecha_parts/part/gygax_armour(get_turf(holder))
+				new /obj/item/mecha_parts/part/gygax_armor(get_turf(holder))
 				holder.icon_state = "gygax17"
 		if(1)
 			if(diff==CONSTRUCTION_PATH_FORWARDS)

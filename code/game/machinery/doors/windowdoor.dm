@@ -266,7 +266,7 @@
 		. += new /obj/item/stack/cable_coil(location, cable)
 
 /obj/machinery/door/window/narsie_act()
-	color = NARSIE_WINDOW_COLOUR
+	color = NARSIE_WINDOW_COLOR
 
 /obj/machinery/door/window/temperature_expose(datum/gas_mixture/air, exposed_temperature, exposed_volume)
 	..()

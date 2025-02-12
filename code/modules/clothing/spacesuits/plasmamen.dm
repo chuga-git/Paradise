@@ -241,7 +241,7 @@
 
 /obj/item/clothing/head/helmet/space/plasmaman/mime
 	name = "mime envirosuit helmet"
-	desc = "The makeup is painted on, it's a miracle it doesn't chip. It's not very colourful."
+	desc = "The makeup is painted on, it's a miracle it doesn't chip. It's not very colorful."
 	icon_state = "mime_envirohelm"
 	item_state = "mime_envirohelm"
 	visor_icon = "mime_envisor"

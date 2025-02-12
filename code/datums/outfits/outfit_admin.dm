@@ -1599,10 +1599,10 @@
 	var/obj/item/organ/external/head/head_organ = H.get_organ("head")
 	head_organ.h_style = "Bedhead 2"
 	head_organ.f_style = "Full Beard"
-	head_organ.hair_colour = hair_color
-	head_organ.sec_facial_colour = hair_color
-	head_organ.facial_colour = hair_color
-	head_organ.sec_hair_colour = hair_color
+	head_organ.hair_color = hair_color
+	head_organ.sec_facial_color = hair_color
+	head_organ.facial_color = hair_color
+	head_organ.sec_hair_color = hair_color
 	H.update_hair()
 	H.update_fhair()
 	H.update_dna()

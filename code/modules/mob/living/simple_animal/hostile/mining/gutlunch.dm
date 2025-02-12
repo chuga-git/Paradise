@@ -114,7 +114,7 @@
 
 /mob/living/simple_animal/hostile/asteroid/gutlunch/gubbuck/Initialize(mapload)
 	. = ..()
-	add_atom_colour(pick("#E39FBB", "#D97D64", "#CF8C4A"), FIXED_COLOUR_PRIORITY)
+	add_atom_color(pick("#E39FBB", "#D97D64", "#CF8C4A"), FIXED_COLOR_PRIORITY)
 	resize = 0.85
 	update_transform()
 
@@ -143,7 +143,7 @@
 //Baby gutlunch
 /mob/living/simple_animal/hostile/asteroid/gutlunch/grublunch/Initialize(mapload)
 	. = ..()
-	add_atom_colour("#9E9E9E", FIXED_COLOUR_PRIORITY) //Somewhat hidden
+	add_atom_color("#9E9E9E", FIXED_COLOR_PRIORITY) //Somewhat hidden
 	resize = 0.45
 	update_transform()
 

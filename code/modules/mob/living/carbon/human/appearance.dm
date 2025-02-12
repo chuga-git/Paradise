@@ -164,7 +164,7 @@
 	H.h_grad_style = "None"
 	H.h_grad_offset_x = 0
 	H.h_grad_offset_y = 0
-	H.h_grad_colour = "#000000"
+	H.h_grad_color = "#000000"
 	H.h_grad_alpha = 255
 
 	update_hair()
@@ -215,14 +215,14 @@
 		H.ha_style = "None"
 	update_head_accessory()
 
-/mob/living/carbon/human/proc/change_eye_color(colour = "#000000", update_dna = TRUE, skip_icons = FALSE)
+/mob/living/carbon/human/proc/change_eye_color(color = "#000000", update_dna = TRUE, skip_icons = FALSE)
 	// Update the main DNA datum, then sync the change across the organs
 	var/obj/item/organ/internal/eyes/eyes_organ = get_int_organ(/obj/item/organ/internal/eyes)
 	if(eyes_organ)
-		if(colour == eyes_organ.eye_color)
+		if(color == eyes_organ.eye_color)
 			return
 
-		eyes_organ.eye_color = colour
+		eyes_organ.eye_color = color
 		dna.eye_color_to_dna(eyes_organ)
 		eyes_organ.set_dna(dna)
 
@@ -240,12 +240,12 @@
 		return ..()
 	return dna.chat_color
 
-/mob/living/carbon/human/proc/change_runechat_color(colour = "#000000")
+/mob/living/carbon/human/proc/change_runechat_color(color = "#000000")
 	if(!dna)
 		return
-	if(colour == dna.chat_color)
+	if(color == dna.chat_color)
 		return
-	dna.chat_color = colour
+	dna.chat_color = color
 	update_dna()
 
 /mob/living/carbon/human/proc/get_eye_color()
@@ -254,62 +254,62 @@
 		return E.eye_color
 	return FALSE
 
-/mob/living/carbon/human/proc/change_hair_color(colour = "#000000", secondary)
+/mob/living/carbon/human/proc/change_hair_color(color = "#000000", secondary)
 	var/obj/item/organ/external/head/H = get_organ("head")
 	if(!H)
 		return
 
 	if(!secondary)
-		if(colour == H.hair_colour)
+		if(color == H.hair_color)
 			return
 
-		H.hair_colour = colour
+		H.hair_color = color
 	else
-		if(colour == H.sec_hair_colour)
+		if(color == H.sec_hair_color)
 			return
 
-		H.sec_hair_colour = colour
+		H.sec_hair_color = color
 
 	update_hair()
 	return TRUE
 
-/mob/living/carbon/human/proc/change_facial_hair_color(colour = "#000000", secondary)
+/mob/living/carbon/human/proc/change_facial_hair_color(color = "#000000", secondary)
 	var/obj/item/organ/external/head/H = get_organ("head")
 	if(!H)
 		return
 
 	if(!secondary)
-		if(colour == H.facial_colour)
+		if(color == H.facial_color)
 			return
 
-		H.facial_colour = colour
+		H.facial_color = color
 	else
-		if(colour == H.sec_facial_colour)
+		if(color == H.sec_facial_color)
 			return
 
-		H.sec_facial_colour = colour
+		H.sec_facial_color = color
 
 	update_fhair()
 	return TRUE
 
-/mob/living/carbon/human/proc/change_head_accessory_color(colour = "#000000")
+/mob/living/carbon/human/proc/change_head_accessory_color(color = "#000000")
 	var/obj/item/organ/external/head/H = get_organ("head")
 	if(!H)
 		return
 
-	if(colour == H.headacc_colour)
+	if(color == H.headacc_color)
 		return
 
-	H.headacc_colour = colour
+	H.headacc_color = color
 
 	update_head_accessory()
 	return TRUE
 
-/mob/living/carbon/human/proc/change_marking_color(colour = "#000000", location = "body")
-	if(colour == m_colours[location])
+/mob/living/carbon/human/proc/change_marking_color(color = "#000000", location = "body")
+	if(color == m_colors[location])
 		return
 
-	m_colours[location] = colour
+	m_colors[location] = color
 
 	if(location == "tail")
 		update_tail_layer()
@@ -318,11 +318,11 @@
 	return TRUE
 
 
-/mob/living/carbon/human/proc/change_skin_color(colour = "#000000")
-	if(colour == skin_colour || !(dna.species.bodyflags & HAS_SKIN_COLOR))
+/mob/living/carbon/human/proc/change_skin_color(color = "#000000")
+	if(color == skin_color || !(dna.species.bodyflags & HAS_SKIN_COLOR))
 		return
 
-	skin_colour = colour
+	skin_color = color
 
 	force_update_limbs()
 	return TRUE
@@ -349,7 +349,7 @@
 			H.h_grad_offset_x = clamp(text2num(expl[1]) || 0, -16, 16)
 			H.h_grad_offset_y = clamp(text2num(expl[2]) || 0, -16, 16)
 	if(!isnull(color))
-		H.h_grad_colour = color
+		H.h_grad_color = color
 	if(!isnull(alpha))
 		H.h_grad_alpha = clamp(alpha, 0, 255)
 

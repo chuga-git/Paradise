@@ -115,7 +115,7 @@
 	name = "Cyborg Armor"
 	id = "borg_armor"
 	build_type = MECHFAB
-	build_path = /obj/item/robot_parts/robot_component/armour
+	build_path = /obj/item/robot_parts/robot_component/armor
 	materials = list(MAT_METAL=5000)
 	construction_time = 20 SECONDS
 	category = list("Cyborg Repair")
@@ -381,7 +381,7 @@
 	name = "Exosuit Armor (\"Gygax\")"
 	id = "gygax_armor"
 	build_type = MECHFAB
-	build_path = /obj/item/mecha_parts/part/gygax_armour
+	build_path = /obj/item/mecha_parts/part/gygax_armor
 	materials = list(MAT_METAL=15000,MAT_DIAMOND=10000,MAT_TITANIUM=10000)
 	construction_time = 60 SECONDS
 	category = list("Gygax")

@@ -50,26 +50,26 @@
 		pm_iterator.transition_filter(name, time, new_params, easing, loop)
 
 ///Full override so we can just use filterrific
-/atom/movable/plane_master_controller/add_atom_colour(coloration, colour_priority)
+/atom/movable/plane_master_controller/add_atom_color(coloration, color_priority)
 	. = ..()
 	for(var/i in controlled_planes)
 		var/atom/movable/screen/plane_master/pm_iterator = controlled_planes[i]
-		pm_iterator.add_atom_colour(coloration, colour_priority)
+		pm_iterator.add_atom_color(coloration, color_priority)
 
 
-///Removes an instance of colour_type from the atom's atom_colours list
-/atom/movable/plane_master_controller/remove_atom_colour(colour_priority, coloration)
+///Removes an instance of color_type from the atom's atom_colors list
+/atom/movable/plane_master_controller/remove_atom_color(color_priority, coloration)
 	. = ..()
 	for(var/i in controlled_planes)
 		var/atom/movable/screen/plane_master/pm_iterator = controlled_planes[i]
-		pm_iterator.remove_atom_colour(colour_priority, coloration)
+		pm_iterator.remove_atom_color(color_priority, coloration)
 
 
-///Resets the atom's color to null, and then sets it to the highest priority colour available
-/atom/movable/plane_master_controller/update_atom_colour()
+///Resets the atom's color to null, and then sets it to the highest priority color available
+/atom/movable/plane_master_controller/update_atom_color()
 	for(var/i in controlled_planes)
 		var/atom/movable/screen/plane_master/pm_iterator = controlled_planes[i]
-		pm_iterator.update_atom_colour()
+		pm_iterator.update_atom_color()
 
 
 /atom/movable/plane_master_controller/game

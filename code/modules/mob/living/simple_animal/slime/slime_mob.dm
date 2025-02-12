@@ -67,11 +67,11 @@
 
 	///////////TIME FOR SUBSPECIES
 
-	var/colour = "grey"
+	var/color = "grey"
 	var/coretype = /obj/item/slime_extract/grey
 	var/list/slime_mutation[4]
 
-	var/static/list/slime_colours = list("rainbow", "grey", "purple", "metal", "orange",
+	var/static/list/slime_colors = list("rainbow", "grey", "purple", "metal", "orange",
 	"blue", "dark blue", "dark purple", "yellow", "silver", "pink", "red",
 	"gold", "green", "adamantine", "oil", "light pink", "bluespace",
 	"cerulean", "sepia", "black", "pyrite")
@@ -82,7 +82,7 @@
 	var/applied = 0 //How many extracts of the modtype have been applied.
 
 
-/mob/living/simple_animal/slime/Initialize(mapload, new_colour = "grey", new_is_adult = FALSE)
+/mob/living/simple_animal/slime/Initialize(mapload, new_color = "grey", new_is_adult = FALSE)
 	var/datum/action/innate/slime/feed/F = new
 	F.Grant(src)
 
@@ -97,7 +97,7 @@
 		var/datum/action/innate/slime/evolve/E = new
 		E.Grant(src)
 	create_reagents(100)
-	set_colour(new_colour)
+	set_color(new_color)
 	. = ..()
 	set_nutrition(700)
 	add_language("Bubblish")
@@ -111,27 +111,27 @@
 	Target = null
 	return ..()
 
-/mob/living/simple_animal/slime/proc/set_colour(new_colour)
-	colour = new_colour
+/mob/living/simple_animal/slime/proc/set_color(new_color)
+	color = new_color
 	update_appearance(UPDATE_NAME)
-	slime_mutation = mutation_table(colour)
-	var/sanitizedcolour = replacetext(colour, " ", "")
-	coretype = text2path("/obj/item/slime_extract/[sanitizedcolour]")
+	slime_mutation = mutation_table(color)
+	var/sanitizedcolor = replacetext(color, " ", "")
+	coretype = text2path("/obj/item/slime_extract/[sanitizedcolor]")
 	regenerate_icons()
 
 /mob/living/simple_animal/slime/update_name()
 	. = ..()
 	if(slime_name_regex.Find(name))
 		number = rand(1, 1000)
-		name = "[colour] [is_adult ? "adult" : "baby"] slime ([number])"
+		name = "[color] [is_adult ? "adult" : "baby"] slime ([number])"
 		real_name = name
 
-/mob/living/simple_animal/slime/proc/random_colour()
-	set_colour(pick(slime_colours))
+/mob/living/simple_animal/slime/proc/random_color()
+	set_color(pick(slime_colors))
 
 /mob/living/simple_animal/slime/regenerate_icons()
 	..()
-	var/icon_text = "[colour] [is_adult ? "adult" : "baby"] slime"
+	var/icon_text = "[color] [is_adult ? "adult" : "baby"] slime"
 	icon_dead = "[icon_text] dead"
 	if(stat != DEAD)
 		icon_state = icon_text
@@ -464,8 +464,8 @@
 	if(..())
 		return 3
 
-/mob/living/simple_animal/slime/random/Initialize(mapload, new_colour, new_is_adult)
-	. = ..(mapload, pick(slime_colours), prob(50))
+/mob/living/simple_animal/slime/random/Initialize(mapload, new_color, new_is_adult)
+	. = ..(mapload, pick(slime_colors), prob(50))
 
 /mob/living/simple_animal/slime/handle_ventcrawl(atom/A)
 	if(buckled)

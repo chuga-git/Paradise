@@ -3,7 +3,7 @@
 	icon = 'icons/mob/sprite_accessories/kidan/kidan_hair.dmi'
 	species_allowed = list("Kidan")
 	glasses_over = 1
-	do_colouration = 0
+	do_coloration = 0
 
 /datum/sprite_accessory/hair/kidan/hollow_horns
 	name = "Hollow Horns"

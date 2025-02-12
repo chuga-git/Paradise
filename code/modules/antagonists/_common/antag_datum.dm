@@ -47,7 +47,7 @@ GLOBAL_LIST_EMPTY(antagonists)
 	var/datum/antag_org/organization
 
 	//Blurb stuff
-	/// Intro Blurbs text colour
+	/// Intro Blurbs text color
 	var/blurb_text_color = COLOR_BLACK
 	/// Intro Blurbs outline width
 	var/blurb_text_outline_width = 0

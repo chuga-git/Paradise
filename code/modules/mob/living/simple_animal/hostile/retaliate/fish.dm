@@ -53,7 +53,7 @@
 	// Simplified version of: /mob/living/simple_animal/hostile/carp/proc/carp_randomify(rarechance)
 	var/our_color
 	our_color = pick(carp_colors)
-	add_atom_colour(carp_colors[our_color], FIXED_COLOUR_PRIORITY)
+	add_atom_color(carp_colors[our_color], FIXED_COLOR_PRIORITY)
 	regenerate_icons()
 
 /mob/living/simple_animal/hostile/retaliate/carp/koi

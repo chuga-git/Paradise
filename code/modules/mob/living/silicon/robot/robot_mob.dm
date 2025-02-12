@@ -530,7 +530,7 @@ GLOBAL_LIST_INIT(robot_verbs_default, list(
 
 /**
   * Sets the offset for a cyborg's hats based on their module icon.
-  * Borgs are grouped by similar sprites (Eg. all the Noble borgs are all the same sprite but recoloured.)
+  * Borgs are grouped by similar sprites (Eg. all the Noble borgs are all the same sprite but recolored.)
   *
   * Arguments:
   * * module - An `icon_state` for which the offset needs to be calculated.

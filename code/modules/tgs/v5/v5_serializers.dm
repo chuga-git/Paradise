@@ -15,7 +15,7 @@
 		"description" = description,
 		"url" = url,
 		"timestamp" = timestamp,
-		"colour" = colour,
+		"color" = color,
 		"image" = src.image ? src.image._interop_serialize() : null,
 		"thumbnail" = thumbnail ? thumbnail._interop_serialize() : null,
 		"video" = video ? video._interop_serialize() : null,

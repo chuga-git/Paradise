@@ -131,7 +131,7 @@
 			head.ha_style = "None"
 			H.s_tone = 0
 			H.m_styles = DEFAULT_MARKING_STYLES //Wipes out markings, setting them all to "None".
-			H.m_colours = DEFAULT_MARKING_COLOURS //Defaults colour to #00000 for all markings.
+			H.m_colors = DEFAULT_MARKING_COLORS //Defaults color to #00000 for all markings.
 			H.change_head_accessory(GLOB.head_accessory_styles_list[temp_species.default_headacc])
 		H.change_icobase(temp_species.icobase, owner_sensitive) //Update the icobase of all our organs, but make sure we don't mess with frankenstein limbs in doing so.
 /datum/species/machine/on_species_gain(mob/living/carbon/human/H)
@@ -210,13 +210,13 @@
 	var/datum/robolimb/robohead = GLOB.all_robolimbs[head_organ.model]
 	if(!head_organ)
 		return
-	if(!robohead.is_monitor) //If they've got a prosthetic head and it isn't a monitor, they've no screen to adjust. Instead, let them change the colour of their optics!
-		var/optic_colour = tgui_input_color(H, "Please select an optic color", "Select Optic Color", H.m_colours["head"])
+	if(!robohead.is_monitor) //If they've got a prosthetic head and it isn't a monitor, they've no screen to adjust. Instead, let them change the color of their optics!
+		var/optic_color = tgui_input_color(H, "Please select an optic color", "Select Optic Color", H.m_colors["head"])
 		if(H.incapacitated(TRUE, TRUE))
 			to_chat(H, "<span class='warning'>You were interrupted while changing the color of your optics.</span>")
 			return
-		if(!isnull(optic_colour))
-			H.change_markings(optic_colour, "head")
+		if(!isnull(optic_color))
+			H.change_markings(optic_color, "head")
 
 	else if(robohead.is_monitor) //Means that the character's head is a monitor (has a screen). Time to customize.
 		var/list/hair = list()
@@ -234,7 +234,7 @@
 		var/new_style = tgui_input_list(H, "Select a monitor display", "Monitor Display", hair)
 		if(!new_style)
 			return
-		var/new_color = tgui_input_color(H, "Please select hair color.", "Monitor Color", head_organ.hair_colour)
+		var/new_color = tgui_input_color(H, "Please select hair color.", "Monitor Color", head_organ.hair_color)
 
 		if(H.incapacitated(TRUE, TRUE))
 			to_chat(H, "<span class='warning'>You were interrupted while changing your monitor display.</span>")

@@ -66,8 +66,8 @@
 
 /datum/reagent/slimejelly/on_merge(list/mix_data)
 	if(data && mix_data)
-		if(mix_data["colour"])
-			color = mix_data["colour"]
+		if(mix_data["color"])
+			color = mix_data["color"]
 
 /datum/reagent/slimejelly/reaction_turf(turf/T, volume, color)
 	if(volume >= 3 && !isspaceturf(T) && !locate(/obj/effect/decal/cleanable/blood/slime) in T)
@@ -162,7 +162,7 @@
 	reagent_state = SOLID
 	color = "#C7C7C7" // rgb: 199,199,199
 	penetrates_skin = TRUE
-	taste_description = "the colour blue and regret"
+	taste_description = "the color blue and regret"
 
 /datum/reagent/radium/on_mob_life(mob/living/M)
 	if(M.radiation < 80)
@@ -280,7 +280,7 @@
 	color = "#00FF32"
 	process_flags = ORGANIC | SYNTHETIC
 	taste_description = "<span class='userdanger'>ACID</span>"
-	var/acidpwr = 10 //the amount of protection removed from the armour
+	var/acidpwr = 10 //the amount of protection removed from the armor
 	goal_department = "Science"
 	goal_difficulty = REAGENT_GOAL_EASY
 

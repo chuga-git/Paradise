@@ -47,12 +47,12 @@
 
 	if(ishuman(H) && H.glasses == src)
 		H.update_sight()
-		H.update_client_colour()
+		H.update_client_color()
 
 /obj/item/clothing/glasses/hud/tajblind/examine_more(mob/user)
 	. = ..()
 	. += "Tajaran Veils have long been an important part of their spirituality and culture, suppressed by the Overseers and making a strong return after the civil war. Tajaran believe that to see one’s eyes is to see their soul, and thus the more spiritual Tajara wear veils to conceal their eyes from everyone but the ones closest to them. <br>\
-			These current designs are adapted from recreations of the ancient veils, created by the Alchemists Guild. Technologically advanced and created to help Tajara adapt to life in the larger galactic community, they have systems built-in that allow them to have holographic huds, as well as corrective technology to help Tajaran overcome their genetic tritanopia colour blindness. <br>\
+			These current designs are adapted from recreations of the ancient veils, created by the Alchemists Guild. Technologically advanced and created to help Tajara adapt to life in the larger galactic community, they have systems built-in that allow them to have holographic huds, as well as corrective technology to help Tajaran overcome their genetic tritanopia color blindness. <br>\
 			Availability on the wider market is highly restricted as a result of their cultural importance, as well as the patent held by the Alchemists Guild, and the lenses are very hard to reverse engineer. Popular theories suggest this as a result of the unique materials available on Adhomai, or the inability to recreate the light conditions of the Tajara homeworld."
 
 /obj/item/clothing/glasses/hud/tajblind/meson

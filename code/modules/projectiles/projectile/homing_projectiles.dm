@@ -28,7 +28,7 @@
 	damage = 0
 	damage_type = OXY
 	nodamage = 1
-	armour_penetration_percentage = 100
+	armor_penetration_percentage = 100
 	flag = MAGIC
 
 /obj/item/projectile/homing/magic/toolbox

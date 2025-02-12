@@ -73,7 +73,7 @@
 	if(isnum(set_duration))
 		duration = set_duration
 	if(set_color)
-		add_atom_colour(set_color, FIXED_COLOUR_PRIORITY)
+		add_atom_color(set_color, FIXED_COLOR_PRIORITY)
 	. = ..()
 	var/oldtransform = transform
 	transform = matrix() * 2

@@ -54,7 +54,7 @@
 	if(HAS_TRAIT(H, TRAIT_RADIMMUNE) || resist == INFINITY)
 		return
 
-	if(prob(max(0, 100 - ARMOUR_VALUE_TO_PERCENTAGE(resist))))
+	if(prob(max(0, 100 - ARMOR_VALUE_TO_PERCENTAGE(resist))))
 		L.rad_act(400)
 		if(HAS_TRAIT(H, TRAIT_GENELESS))
 			return

@@ -127,8 +127,8 @@
 	Detach(ridable_atom)
 	ridable_atom.AddElement(/datum/element/ridable, component_type = riding_component_type, potion_boost = TRUE)
 	to_chat(user, "<span class='notice'>You slather the red gunk over [ridable_atom], making it faster.</span>")
-	ridable_atom.remove_atom_colour(WASHABLE_COLOUR_PRIORITY)
-	ridable_atom.add_atom_colour("#6e6e86", FIXED_COLOUR_PRIORITY)
+	ridable_atom.remove_atom_color(WASHABLE_COLOR_PRIORITY)
+	ridable_atom.add_atom_color("#6e6e86", FIXED_COLOR_PRIORITY)
 	ADD_TRAIT(ridable_atom, TRAIT_OIL_SLICKED, "potion")
 	qdel(speed_potion)
 	return SPEED_POTION_STOP

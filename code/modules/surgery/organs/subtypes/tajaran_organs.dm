@@ -6,16 +6,16 @@
 /obj/item/organ/internal/eyes/tajaran
 	icon = 'icons/obj/species_organs/tajaran.dmi'
 	name = "tajaran eyeballs"
-	colourblind_matrix = MATRIX_TAJ_CBLIND //The colour matrix and darksight parameters that the mob will receive when they get the disability.
-	replace_colours = TRITANOPIA_COLOR_REPLACE
+	colorblind_matrix = MATRIX_TAJ_CBLIND //The color matrix and darksight parameters that the mob will receive when they get the disability.
+	replace_colors = TRITANOPIA_COLOR_REPLACE
 	see_in_dark = 4
 
-/// Being the lesser form of Tajara, Farwas have an utterly incurable version of their colourblindness.
+/// Being the lesser form of Tajara, Farwas have an utterly incurable version of their colorblindness.
 /obj/item/organ/internal/eyes/tajaran/farwa
 	name = "farwa eyeballs"
-	colourmatrix = MATRIX_TAJ_CBLIND
+	colormatrix = MATRIX_TAJ_CBLIND
 	see_in_dark = 3
-	replace_colours = TRITANOPIA_COLOR_REPLACE
+	replace_colors = TRITANOPIA_COLOR_REPLACE
 
 /obj/item/organ/internal/heart/tajaran
 	name = "tajaran heart"

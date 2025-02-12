@@ -15,7 +15,7 @@
   *   line breaks in long strings.
   * * screen_position - screen loc for the bottom-left corner of the blurb.
   * * text_alignment - "right", "left", or "center"
-  * * text_color - colour of the text.
+  * * text_color - color of the text.
   * * blurb_key - a key used for specific blurb types so they are not shown
   *   repeatedly.
   * * ignore_key - used to skip key checks.

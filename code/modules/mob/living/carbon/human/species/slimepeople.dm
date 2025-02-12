@@ -148,12 +148,12 @@
 			head.ha_style = "None"
 			H.s_tone = 0
 			H.m_styles = DEFAULT_MARKING_STYLES //Wipes out markings, setting them all to "None".
-			H.m_colours = DEFAULT_MARKING_COLOURS //Defaults colour to #00000 for all markings.
+			H.m_colors = DEFAULT_MARKING_COLORS //Defaults color to #00000 for all markings.
 			H.change_head_accessory(GLOB.head_accessory_styles_list[default_headacc])
 		H.change_icobase(temp_species.icobase, owner_sensitive) //Update the icobase of all our organs, but make sure we don't mess with frankenstein limbs in doing so.
 
 /datum/species/slime/proc/blend(mob/living/carbon/human/H)
-	var/new_color = BlendRGB(H.skin_colour, "#acacac", 0.5) // Blends this to make it work better
+	var/new_color = BlendRGB(H.skin_color, "#acacac", 0.5) // Blends this to make it work better
 	if(H.dna.species.blood_color != new_color) // Put here, so if it's a roundstart, dyed, or CMA'd slime, their blood changes to match skin
 		H.dna.species.blood_color = new_color
 
@@ -162,13 +162,13 @@
 	if(reagent_skin_coloring && H.reagents.total_volume > SLIMEPERSON_COLOR_SHIFT_TRIGGER)
 		var/blood_amount = H.blood_volume
 		var/r_color = mix_color_from_reagents(H.reagents.reagent_list)
-		var/new_body_color = BlendRGB(r_color, H.skin_colour, (blood_amount*SLIMEPERSON_BLOOD_SCALING_FACTOR)/((blood_amount*SLIMEPERSON_BLOOD_SCALING_FACTOR)+(H.reagents.total_volume)))
-		H.skin_colour = new_body_color
+		var/new_body_color = BlendRGB(r_color, H.skin_color, (blood_amount*SLIMEPERSON_BLOOD_SCALING_FACTOR)/((blood_amount*SLIMEPERSON_BLOOD_SCALING_FACTOR)+(H.reagents.total_volume)))
+		H.skin_color = new_body_color
 		if(world.time % SLIMEPERSON_ICON_UPDATE_PERIOD > SLIMEPERSON_ICON_UPDATE_PERIOD - 20) // The 20 is because this gets called every 2 seconds, from the mob controller
 			for(var/organname in H.bodyparts_by_name)
 				var/obj/item/organ/external/E = H.bodyparts_by_name[organname]
 				if(istype(E) && E.dna && istype(E.dna.species, /datum/species/slime))
-					E.sync_colour_to_human(H)
+					E.sync_color_to_human(H)
 			H.update_hair()
 			H.update_body()
 			blend(H)

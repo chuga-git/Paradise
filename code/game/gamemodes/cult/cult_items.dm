@@ -138,8 +138,8 @@
 
 /obj/item/clothing/suit/space/cult
 	name = "cult armor"
-	icon_state = "cult_armour"
-	item_state = "cult_armour"
+	icon_state = "cult_armor"
+	item_state = "cult_armor"
 	desc = "A bulky suit of armor, bristling with spikes. It looks space proof."
 	w_class = WEIGHT_CLASS_NORMAL
 	allowed = list(/obj/item/tome, /obj/item/melee/cultblade, /obj/item/tank/internals)
@@ -151,8 +151,8 @@
 /obj/item/clothing/suit/hooded/cultrobes/cult_shield
 	name = "empowered cultist robes"
 	desc = "An empowered garb which creates a powerful shield around the user."
-	icon_state = "cult_armour"
-	item_state = "cult_armour"
+	icon_state = "cult_armor"
+	item_state = "cult_armor"
 	w_class = WEIGHT_CLASS_BULKY
 	armor = list(MELEE = 50, BULLET = 35, LASER = 50, ENERGY = 20, BOMB = 50, RAD = 20, FIRE = 50, ACID = 75)
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
@@ -571,7 +571,7 @@
 	force = 17
 	throwforce = 30
 	throw_speed = 2
-	armour_penetration_percentage = 50
+	armor_penetration_percentage = 50
 	attack_verb = list("attacked", "impaled", "stabbed", "torn", "gored")
 	sharp = TRUE
 	no_spin_thrown = TRUE
@@ -841,7 +841,7 @@ GLOBAL_LIST_EMPTY(proteon_portals)
 	light_range = 3
 	light_color = LIGHT_COLOR_RED
 	new_attack_chain = TRUE
-	/// A nice blood colour matrix
+	/// A nice blood color matrix
 	var/list/blood_color_matrix = list(1.25,-0.1,-0.1,0, 0,0.15,0,0, 0,0,0.15,0, 0,0,0,1, 0,0,0,0)
 
 
@@ -894,7 +894,7 @@ GLOBAL_LIST_EMPTY(proteon_portals)
 	if(!IS_CULTIST(user))
 		fucked = TRUE
 		user.notransform = TRUE
-		user.add_atom_colour(LIGHT_COLOR_RED, TEMPORARY_COLOUR_PRIORITY)
+		user.add_atom_color(LIGHT_COLOR_RED, TEMPORARY_COLOR_PRIORITY)
 		user.visible_message("<span class='cult'><b>Dark tendrils appear from the ground and root [user] in place!</b></span>")
 	sleep(5 SECONDS) // can we still use these or. i mean its async
 	new /obj/structure/spawner/sentient/proteon_spawner(src)

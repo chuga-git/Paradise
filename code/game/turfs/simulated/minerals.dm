@@ -24,7 +24,7 @@
 
 	var/defer_change = 0
 	var/mine_time = 4 SECONDS //Changes how fast the turf is mined by pickaxes, multiplied by toolspeed
-	/// Should this be set to the normal rock colour on init?
+	/// Should this be set to the normal rock color on init?
 	var/should_reset_color = TRUE
 
 	/// The ore type, if any, that should spawn in the wall on Initialize.

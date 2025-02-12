@@ -29,7 +29,7 @@
 
 /obj/item/clothing/under/rank/centcom/ert/chaplain
 	name = "response team chaplain uniform"
-	desc = "An armoured uniform designed for emergency response teams. This one belongs to a chaplain."
+	desc = "An armored uniform designed for emergency response teams. This one belongs to a chaplain."
 	icon_state = "ert_chaplain"
 	item_state = "ert_chaplain"
 	item_color = "ert_chaplain"
@@ -37,7 +37,7 @@
 
 /obj/item/clothing/under/rank/centcom/ert/commander
 	name = "response team commander uniform"
-	desc = "An armoured uniform designed for emergency response teams. This one belongs to the command officer."
+	desc = "An armored uniform designed for emergency response teams. This one belongs to the command officer."
 	icon_state = "ert_commander"
 	item_state = "ert_commander"
 	item_color = "ert_commander"
@@ -45,7 +45,7 @@
 
 /obj/item/clothing/under/rank/centcom/ert/engineer
 	name = "response team engineer uniform"
-	desc = "An armoured uniform designed for emergency response teams. This one belongs to an engineer."
+	desc = "An armored uniform designed for emergency response teams. This one belongs to an engineer."
 	icon_state = "ert_engineer"
 	item_state = "ert_engineer"
 	item_color = "ert_engineer"
@@ -53,7 +53,7 @@
 
 /obj/item/clothing/under/rank/centcom/ert/janitor
 	name = "response team janitor uniform"
-	desc = "An armoured uniform designed for emergency response teams. This one belongs to a janitor."
+	desc = "An armored uniform designed for emergency response teams. This one belongs to a janitor."
 	icon_state = "ert_janitor"
 	item_state = "ert_janitor"
 	item_color = "ert_janitor"
@@ -61,7 +61,7 @@
 
 /obj/item/clothing/under/rank/centcom/ert/medical
 	name = "response team medic uniform"
-	desc = "An armoured uniform designed for emergency response teams. This one belongs to a medic."
+	desc = "An armored uniform designed for emergency response teams. This one belongs to a medic."
 	icon_state = "ert_medic"
 	item_state = "ert_medic"
 	item_color = "ert_medic"
@@ -69,7 +69,7 @@
 
 /obj/item/clothing/under/rank/centcom/ert/security
 	name = "response team security uniform"
-	desc = "An armoured uniform designed for emergency response teams. This one belongs to a security officer."
+	desc = "An armored uniform designed for emergency response teams. This one belongs to a security officer."
 	icon_state = "ert_security"
 	item_state = "ert_security"
 	item_color = "ert_security"

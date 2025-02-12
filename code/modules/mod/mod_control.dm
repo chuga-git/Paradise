@@ -665,8 +665,8 @@
 /obj/item/mod/control/proc/set_mod_color(new_color)
 	var/list/all_parts = mod_parts + src
 	for(var/obj/item/part as anything in all_parts)
-		part.remove_atom_colour(WASHABLE_COLOUR_PRIORITY)
-		part.add_atom_colour(new_color, FIXED_COLOUR_PRIORITY)
+		part.remove_atom_color(WASHABLE_COLOR_PRIORITY)
+		part.add_atom_color(new_color, FIXED_COLOR_PRIORITY)
 	wearer?.regenerate_icons()
 
 /obj/item/mod/control/proc/set_mod_skin(new_skin)
@@ -757,7 +757,7 @@
 		slowdown_active = theme.slowdown_active
 		slowdown_inactive = theme.slowdown_inactive
 		update_speed()
-		remove_atom_colour(FIXED_COLOUR_PRIORITY)
+		remove_atom_color(FIXED_COLOR_PRIORITY)
 		REMOVE_TRAIT(src, TRAIT_OIL_SLICKED, "potion")
 		if(ishuman(loc))
 			var/mob/living/carbon/human/H = loc

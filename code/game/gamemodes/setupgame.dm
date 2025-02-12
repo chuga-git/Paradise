@@ -29,7 +29,7 @@
 
 	// Standard muts
 	GLOB.blindblock         = getAssignedBlock("BLINDNESS",     numsToAssign)
-	GLOB.colourblindblock   = getAssignedBlock("COLOURBLIND",   numsToAssign)
+	GLOB.colorblindblock   = getAssignedBlock("COLORBLIND",   numsToAssign)
 	GLOB.deafblock          = getAssignedBlock("DEAF",          numsToAssign)
 	GLOB.hulkblock          = getAssignedBlock("HULK",          numsToAssign, DNA_HARD_BOUNDS, good=1)
 	GLOB.teleblock          = getAssignedBlock("TELE",          numsToAssign, DNA_HARD_BOUNDS, good=1)

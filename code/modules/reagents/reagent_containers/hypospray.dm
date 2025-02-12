@@ -42,7 +42,7 @@
 	if(H.wear_suit)
 		// This check is here entirely to stop goobers injecting Nukies, the SST, and the Deathsquad with meme chems.
 		if(HAS_TRAIT(H.wear_suit, TRAIT_HYPOSPRAY_IMMUNE) && !ignore_hypospray_immunity)
-			to_chat(user, "<span class='warning'>[src] is unable to penetrate the armour of [M] or interface with any injection ports.</span>")
+			to_chat(user, "<span class='warning'>[src] is unable to penetrate the armor of [M] or interface with any injection ports.</span>")
 			return
 
 	if(reagents.total_volume && M.can_inject(user, TRUE, user.zone_selected, penetrate_thick, penetrate_everything))
@@ -165,7 +165,7 @@
 	. = ..()
 	. += "The DeForest Medical Corporation's hypospray is a highly successful medical device currently under patent protection. Naturally, this has not stopped Nanotrasen from taking the design and tinkering with it."
 	. += ""
-	. += "Nanotrasen's version sports a chemical reserviour over 3 times the size. The injector head is able to produce such a fine high-pressure stream that it can pierce through most armour, this \
+	. += "Nanotrasen's version sports a chemical reserviour over 3 times the size. The injector head is able to produce such a fine high-pressure stream that it can pierce through most armor, this \
 	pressurised jet is automatically adjusted to ensure no harm comes to patients with thinner or absent clothing. \
 	It is also able to interface with the autoinjector ports found on mordern hardsuits. As this is a prototype, it currently lacks safety features to prevent harmful chemicals being added."
 	. += ""

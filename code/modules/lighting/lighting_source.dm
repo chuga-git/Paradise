@@ -9,9 +9,9 @@
 	var/turf/pixel_turf      // The turf the top_atom appears to over.
 	var/light_power    // Intensity of the emitter light.
 	var/light_range      // The range of the emitted light.
-	var/light_color    // The colour of the light, string, decomposed by parse_light_color()
+	var/light_color    // The color of the light, string, decomposed by parse_light_color()
 
-	// Variables for keeping track of the colour.
+	// Variables for keeping track of the color.
 	var/lum_r
 	var/lum_g
 	var/lum_b

@@ -224,7 +224,7 @@
 /obj/item/ammo_box/magazine/m10mm/ap
 	name = "pistol magazine (10mm AP)"
 	icon_state = "9x19pA"
-	desc= "A gun magazine. Loaded with rounds which penetrate armour, but are less effective against normal targets"
+	desc= "A gun magazine. Loaded with rounds which penetrate armor, but are less effective against normal targets"
 	ammo_type = /obj/item/ammo_casing/c10mm/ap
 
 /obj/item/ammo_box/magazine/m45
@@ -306,7 +306,7 @@
 				break
 
 /obj/item/ammo_box/magazine/wt550m9/wtap
-	name = "wt550 magazine (Armour Piercing 4.6x30mm)"
+	name = "wt550 magazine (Armor Piercing 4.6x30mm)"
 	icon_state = "46x30mmtA"
 	ammo_type = /obj/item/ammo_casing/c46x30mm/ap
 
@@ -348,7 +348,7 @@
 	multi_sprite_step = 4
 
 /obj/item/ammo_box/magazine/smgm9mm/ap
-	name = "\improper SMG magazine (Armour Piercing 9mm)"
+	name = "\improper SMG magazine (Armor Piercing 9mm)"
 	ammo_type = /obj/item/ammo_casing/c9mm/ap
 	materials = list(MAT_METAL = 3000)
 

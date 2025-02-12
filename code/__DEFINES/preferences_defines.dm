@@ -178,8 +178,8 @@
 #define TAB_KEYS 	3
 #define TAB_TOGGLES 4
 
-// Colourblind modes
-#define COLOURBLIND_MODE_NONE "None"
-#define COLOURBLIND_MODE_DEUTER "Red-green (green weak, deuteranopia)"
-#define COLOURBLIND_MODE_PROT "Red-green (red weak, protanopia)"
-#define COLOURBLIND_MODE_TRIT "Blue-yellow (tritanopia)"
+// Colorblind modes
+#define COLORBLIND_MODE_NONE "None"
+#define COLORBLIND_MODE_DEUTER "Red-green (green weak, deuteranopia)"
+#define COLORBLIND_MODE_PROT "Red-green (red weak, protanopia)"
+#define COLORBLIND_MODE_TRIT "Blue-yellow (tritanopia)"

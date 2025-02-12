@@ -60,11 +60,11 @@
 	var/list/heads_allowed = null //Specifies which, if any, alt heads a head marking, hairstyle or facial hair style is compatible with.
 	var/list/tails_allowed = null //Specifies which, if any, tails a tail marking is compatible with.
 	var/marking_location //Specifies which bodypart a body marking is located on.
-	var/secondary_theme = null //If exists, there's a secondary colour to that hair style and the secondary theme's icon state's suffix is equal to this.
-	var/no_sec_colour = null //If exists, prohibit the colouration of the secondary theme.
+	var/secondary_theme = null //If exists, there's a secondary color to that hair style and the secondary theme's icon state's suffix is equal to this.
+	var/no_sec_color = null //If exists, prohibit the coloration of the secondary theme.
 	var/fluff = 0
-	// Whether or not the accessory can be affected by colouration
-	var/do_colouration = 1
+	// Whether or not the accessory can be affected by coloration
+	var/do_coloration = 1
 
 /* HAIR */
 
@@ -73,7 +73,7 @@
 	var/glasses_over //Hair styles with hair that don't overhang the arms of glasses should have glasses_over set to a positive value
 
 /datum/sprite_accessory/hair/bald
-	icon = 'icons/mob/human_face.dmi' // Keep bald hair here, as for some reason, putting it elsewhere lead to it being colourable - Also it make sense as it is shared by everyone.
+	icon = 'icons/mob/human_face.dmi' // Keep bald hair here, as for some reason, putting it elsewhere lead to it being colorable - Also it make sense as it is shared by everyone.
 	name = "Bald"
 	icon_state = "bald"
 	species_allowed = list("Human", "Unathi", "Vox", "Diona", "Kidan", "Grey", "Plasmaman", "Skeleton", "Vulpkanin", "Tajaran", "Nian")

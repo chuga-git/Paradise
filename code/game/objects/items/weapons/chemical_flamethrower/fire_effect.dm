@@ -120,11 +120,11 @@ GLOBAL_LIST_EMPTY(flame_effects)
 	var/fire_damage = temperature / 100
 	if(ishuman(mob_to_burn))
 		var/mob/living/carbon/human/human_to_burn = mob_to_burn
-		var/fire_armour = human_to_burn.get_thermal_protection()
-		if(fire_armour >= FIRE_IMMUNITY_MAX_TEMP_PROTECT)
+		var/fire_armor = human_to_burn.get_thermal_protection()
+		if(fire_armor >= FIRE_IMMUNITY_MAX_TEMP_PROTECT)
 			return FALSE
 
-		if(fire_armour == FIRE_SUIT_MAX_TEMP_PROTECT) // Good protection but you won't survive infinitely in it
+		if(fire_armor == FIRE_SUIT_MAX_TEMP_PROTECT) // Good protection but you won't survive infinitely in it
 			fire_damage /= 4
 
 	mob_to_burn.adjustFireLoss(fire_damage)

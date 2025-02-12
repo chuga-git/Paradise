@@ -12,20 +12,20 @@
 /obj/item/deck/cards/build_deck()
 	for(var/suit in list("Spades","Clubs","Diamonds","Hearts"))
 		var/card_appearance
-		var/colour
+		var/color
 		var/rank
 		if(simple_deck)
 			if(suit in list("Spades","Clubs"))
-				colour = "black"
+				color = "black"
 			else
-				colour = "red"
+				color = "red"
 		for(var/number in list("Ace","2","3","4","5","6","7","8","9","10","Jack","Queen","King"))
 			if(simple_deck)
 				if(number in list("Jack","Queen","King"))
 					rank = "col"
 				else
 					rank = "num"
-				card_appearance = "sc_[colour]_[rank]_[card_style]"
+				card_appearance = "sc_[color]_[rank]_[card_style]"
 			else
 				card_appearance = "sc_[number] of [suit]_[card_style]"
 			cards += new /datum/playingcard("[number] of [suit]", card_appearance, "singlecard_down_[card_style]")

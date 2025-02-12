@@ -84,12 +84,12 @@
 
 #define MAX_SPACE_EXPOSURE_DAMAGE 2
 
-/// Colours used for effects.
-#define SUPERMATTER_COLOUR "#ffd04f"
+/// Colors used for effects.
+#define SUPERMATTER_COLOR "#ffd04f"
 #define SUPERMATTER_RED "#aa2c16"
-#define SUPERMATTER_TESLA_COLOUR "#00ffff"
-#define SUPERMATTER_SINGULARITY_RAYS_COLOUR "#750000"
-#define SUPERMATTER_SINGULARITY_LIGHT_COLOUR "#400060"
+#define SUPERMATTER_TESLA_COLOR "#00ffff"
+#define SUPERMATTER_SINGULARITY_RAYS_COLOR "#750000"
+#define SUPERMATTER_SINGULARITY_LIGHT_COLOR "#400060"
 
 
 /obj/machinery/atmospherics/supermatter_crystal
@@ -898,7 +898,7 @@
 
 /obj/machinery/atmospherics/supermatter_crystal/proc/sm_filters()
 	var/new_filter = isnull(get_filter("ray"))
-	ray_filter_helper(1, power ? clamp((damage/100) * power, 50, 125) : 1, (gasmix_power_ratio> 0.8 ? SUPERMATTER_RED : SUPERMATTER_COLOUR), clamp(damage/600, 1, 10), clamp(damage/10, 12, 100))
+	ray_filter_helper(1, power ? clamp((damage/100) * power, 50, 125) : 1, (gasmix_power_ratio> 0.8 ? SUPERMATTER_RED : SUPERMATTER_COLOR), clamp(damage/600, 1, 10), clamp(damage/10, 12, 100))
 	// Filter animation persists even if the filter itself is changed externally.
 	// Probably prone to breaking. Treat with suspicion.
 	if(new_filter)
@@ -906,7 +906,7 @@
 		animate(offset = 0, time = 10 SECONDS)
 
 	if(power > POWER_PENALTY_THRESHOLD)
-		ray_filter_helper(1, power ? clamp((damage/100) * power, 50, 175) : 1, SUPERMATTER_TESLA_COLOUR, clamp(damage/300, 1, 20), clamp(damage/5, 12, 200))
+		ray_filter_helper(1, power ? clamp((damage/100) * power, 50, 175) : 1, SUPERMATTER_TESLA_COLOR, clamp(damage/300, 1, 20), clamp(damage/5, 12, 200))
 		if(prob(25))
 			new /obj/effect/warp_effect/bsg(get_turf(src)) //Some extra visual effect to the shocking sm which is a bit less interesting.
 		if(final_countdown)
@@ -919,12 +919,12 @@
 			remove_filter("icon")
 
 	if(combined_gas > MOLE_CRUNCH_THRESHOLD)
-		ray_filter_helper(1, power ? clamp((damage/100) * power, 50, 125) : 1, SUPERMATTER_SINGULARITY_RAYS_COLOUR, clamp(damage / 300, 1, 30), clamp(damage / 5, 12, 300))
+		ray_filter_helper(1, power ? clamp((damage/100) * power, 50, 125) : 1, SUPERMATTER_SINGULARITY_RAYS_COLOR, clamp(damage / 300, 1, 30), clamp(damage / 5, 12, 300))
 
 		add_filter(name = "outline", priority = 2, params = list(
 			type = "outline",
 			size = 1,
-			color = SUPERMATTER_SINGULARITY_LIGHT_COLOUR
+			color = SUPERMATTER_SINGULARITY_LIGHT_COLOR
 		))
 		if(!warp)
 			warp = new(src)
@@ -962,20 +962,20 @@
 	set_light(
 		l_range = 4 + power / 200,
 		l_power = 1 + power / 1000,
-		l_color = gasmix_power_ratio > 0.8 ? SUPERMATTER_RED : SUPERMATTER_COLOUR,
+		l_color = gasmix_power_ratio > 0.8 ? SUPERMATTER_RED : SUPERMATTER_COLOR,
 	)
 
 	if(power > POWER_PENALTY_THRESHOLD)
 		set_light(
 			l_range = 4 + clamp(damage * power, 50, 500),
 			l_power = 3,
-			l_color = SUPERMATTER_TESLA_COLOUR,
+			l_color = SUPERMATTER_TESLA_COLOR,
 		)
 	if(combined_gas > MOLE_CRUNCH_THRESHOLD && get_integrity() > SUPERMATTER_DANGER_PERCENT)
 		set_light(
 			l_range = 4 + clamp((450 - damage) / 10, 1, 50),
 			l_power = 3,
-			l_color = SUPERMATTER_SINGULARITY_LIGHT_COLOUR,
+			l_color = SUPERMATTER_SINGULARITY_LIGHT_COLOR,
 		)
 	if(combined_gas <= MOLE_CRUNCH_THRESHOLD || get_integrity() >= SUPERMATTER_DANGER_PERCENT)
 		for(var/obj/D in darkness_effects)
@@ -1311,11 +1311,11 @@
 #undef SLIGHTLY_CHARGED_ZAP_ICON_STATE
 #undef OVER_9000_ZAP_ICON_STATE
 #undef MAX_SPACE_EXPOSURE_DAMAGE
-#undef SUPERMATTER_COLOUR
+#undef SUPERMATTER_COLOR
 #undef SUPERMATTER_RED
-#undef SUPERMATTER_TESLA_COLOUR
-#undef SUPERMATTER_SINGULARITY_RAYS_COLOUR
-#undef SUPERMATTER_SINGULARITY_LIGHT_COLOUR
+#undef SUPERMATTER_TESLA_COLOR
+#undef SUPERMATTER_SINGULARITY_RAYS_COLOR
+#undef SUPERMATTER_SINGULARITY_LIGHT_COLOR
 #undef O2_CRUNCH
 #undef CO2_CRUNCH
 #undef N2_CRUNCH

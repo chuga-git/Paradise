@@ -1,5 +1,5 @@
 //Misc
-#define DEAD_PLANT_COLOUR "#C2A180"
+#define DEAD_PLANT_COLOR "#C2A180"
 
 // Definitions for genes (trait groupings)
 #define GENE_BIOCHEMISTRY "biochemistry"
@@ -51,10 +51,10 @@
 #define TRAIT_MATURATION           31
 #define TRAIT_PRODUCTION           32
 #define TRAIT_TELEPORTING          33
-#define TRAIT_PLANT_COLOUR         34
-#define TRAIT_PRODUCT_COLOUR       35
+#define TRAIT_PLANT_COLOR         34
+#define TRAIT_PRODUCT_COLOR       35
 #define TRAIT_BIOLUM               36
-#define TRAIT_BIOLUM_COLOUR        37
+#define TRAIT_BIOLUM_COLOR        37
 #define TRAIT_IMMUTABLE            38
 #define TRAIT_RARITY               39
 #define TRAIT_BATTERY_RECHARGE     40

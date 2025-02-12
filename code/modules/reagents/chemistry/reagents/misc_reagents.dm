@@ -336,10 +336,10 @@
 		var/obj/item/organ/external/head/head_organ = H.get_organ("head")
 		if(!istype(head_organ))
 			return ..()
-		head_organ.facial_colour = rand_hex_color()
-		head_organ.sec_facial_colour = rand_hex_color()
-		head_organ.hair_colour = rand_hex_color()
-		head_organ.sec_hair_colour = rand_hex_color()
+		head_organ.facial_color = rand_hex_color()
+		head_organ.sec_facial_color = rand_hex_color()
+		head_organ.hair_color = rand_hex_color()
+		head_organ.sec_hair_color = rand_hex_color()
 		H.update_hair()
 		H.update_fhair()
 	..()
@@ -493,7 +493,7 @@
 			var/list/clown_message = list("You feel light-headed.",
 			"You can't see straight.",
 			"You feel about as funny as the station clown.",
-			"Bright colours and rainbows cloud your vision.",
+			"Bright colors and rainbows cloud your vision.",
 			"Your funny bone aches.",
 			"What was that?!",
 			"You can hear bike horns in the distance.",
@@ -556,7 +556,7 @@
 		M.AdjustDizzy(20 SECONDS, 0, 100 SECONDS)
 		if(M.client)
 			M.client.color = MATRIX_GREYSCALE
-			M.update_client_colour() // TRAIT_COLORBLIND only makes you colourblind for the wires, this fully makes it greyscale
+			M.update_client_color() // TRAIT_COLORBLIND only makes you colorblind for the wires, this fully makes it greyscale
 		if(prob(10))
 			M.EyeBlurry(10 SECONDS)
 		if(prob(6))
@@ -586,7 +586,7 @@
 		if(M.client)
 			M.client.color = null
 			REMOVE_TRAIT(M, TRAIT_COLORBLIND, id)
-			M.update_client_colour() // You get stuck with permanent greyscale if it's not separated from client.color by at least one line
+			M.update_client_color() // You get stuck with permanent greyscale if it's not separated from client.color by at least one line
 		else
 			REMOVE_TRAIT(M, TRAIT_COLORBLIND, id)
 

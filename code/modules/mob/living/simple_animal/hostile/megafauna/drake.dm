@@ -43,7 +43,7 @@ Difficulty: Medium
 	icon_dead = "dragon_dead"
 	friendly = "stares down"
 	speak_emote = list("roars")
-	armour_penetration_percentage = 50
+	armor_penetration_percentage = 50
 	melee_damage_lower = 40
 	melee_damage_upper = 40
 	speed = 5
@@ -234,13 +234,13 @@ Difficulty: Medium
 	SetRecoveryTime(80)
 	visible_message("<span class='boldwarning'>[src] starts to glow vibrantly as its wounds close up!</span>")
 	adjustBruteLoss(-250) // yeah you're gonna pay for that, don't run nerd
-	add_atom_colour(rgb(255, 255, 0), TEMPORARY_COLOUR_PRIORITY)
+	add_atom_color(rgb(255, 255, 0), TEMPORARY_COLOR_PRIORITY)
 	move_to_delay = move_to_delay / 2
 	light_range = 10
 	SLEEP_CHECK_DEATH(10) // run.
 	mass_fire(12, 15, 3)
 	move_to_delay = initial(move_to_delay)
-	remove_atom_colour(TEMPORARY_COLOUR_PRIORITY)
+	remove_atom_color(TEMPORARY_COLOR_PRIORITY)
 	light_range = initial(light_range)
 
 /mob/living/simple_animal/hostile/megafauna/dragon/proc/fire_cone(atom/at = target, meteors = TRUE)

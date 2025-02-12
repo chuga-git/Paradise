@@ -15,7 +15,7 @@
 	max_integrity = 300 //max_integrity is base health
 	armor = list(melee = 20, bullet = 10, laser = 0, energy = 0, bomb = 0, rad = 0, fire = 100, acid = 75)
 	bubble_icon = "machine"
-	var/list/facing_modifiers = list(MECHA_FRONT_ARMOUR = 1.5, MECHA_SIDE_ARMOUR = 1, MECHA_BACK_ARMOUR = 0.5)
+	var/list/facing_modifiers = list(MECHA_FRONT_ARMOR = 1.5, MECHA_SIDE_ARMOR = 1, MECHA_BACK_ARMOR = 0.5)
 	var/initial_icon = null //Mech type for resetting icon. Only used for reskinning kits (see custom items)
 	var/can_move = 0 // time of next allowed movement
 	/// Time it takes to enter the mech
@@ -516,13 +516,13 @@
 ////////  MARK: Health related procs
 ////////////////////////////////////////
 
-/obj/mecha/proc/get_armour_facing(relative_dir)
+/obj/mecha/proc/get_armor_facing(relative_dir)
 	switch(abs(relative_dir))
 		if(180) // BACKSTAB!
-			return facing_modifiers[MECHA_BACK_ARMOUR]
+			return facing_modifiers[MECHA_BACK_ARMOR]
 		if(0, 45)
-			return facing_modifiers[MECHA_FRONT_ARMOUR]
-	return facing_modifiers[MECHA_SIDE_ARMOUR] //always return non-0
+			return facing_modifiers[MECHA_FRONT_ARMOR]
+	return facing_modifiers[MECHA_SIDE_ARMOR] //always return non-0
 
 /obj/mecha/take_damage(damage_amount, damage_type = BRUTE, damage_flag = 0, sound_effect = 1, attack_dir)
 	. = ..()
@@ -559,11 +559,11 @@
 				break
 
 	if(attack_dir)
-		var/facing_modifier = get_armour_facing(dir2angle(attack_dir) - dir2angle(dir))
+		var/facing_modifier = get_armor_facing(dir2angle(attack_dir) - dir2angle(dir))
 		booster_damage_modifier /= facing_modifier
 		booster_deflection_modifier *= facing_modifier
 	if(prob(deflect_chance * booster_deflection_modifier))
-		visible_message("<span class='danger'>[src]'s armour deflects the attack!</span>")
+		visible_message("<span class='danger'>[src]'s armor deflects the attack!</span>")
 		log_message("Armor saved.")
 		return FALSE
 	if(.)

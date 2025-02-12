@@ -15,7 +15,7 @@
 	var/list/possible_shapes = list(/mob/living/simple_animal/mouse,
 		/mob/living/simple_animal/pet/dog/corgi,
 		/mob/living/simple_animal/bot/ed209,
-		/mob/living/simple_animal/hostile/construct/armoured)
+		/mob/living/simple_animal/hostile/construct/armored)
 
 /datum/spell/shapeshift/create_new_targeting()
 	return new /datum/spell_targeting/self

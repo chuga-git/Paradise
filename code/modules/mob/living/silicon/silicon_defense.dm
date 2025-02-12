@@ -23,7 +23,7 @@
 	. = ..()
 	if(.)
 		var/damage = rand(M.melee_damage_lower, M.melee_damage_upper)
-		damage = run_armor(damage, M.melee_damage_type, MELEE, 0, M.armour_penetration_flat, M.armour_penetration_percentage)
+		damage = run_armor(damage, M.melee_damage_type, MELEE, 0, M.armor_penetration_flat, M.armor_penetration_percentage)
 		switch(M.melee_damage_type)
 			if(BRUTE)
 				adjustBruteLoss(damage)

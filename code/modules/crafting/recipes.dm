@@ -785,7 +785,7 @@
 	category = CAT_PRIMAL
 
 /datum/crafting_recipe/drakecloak
-	name = "Ash Drake Armour"
+	name = "Ash Drake Armor"
 	result = list(/obj/item/clothing/suit/hooded/drake)
 	time = 60
 	reqs = list(/obj/item/stack/sheet/bone = 10,

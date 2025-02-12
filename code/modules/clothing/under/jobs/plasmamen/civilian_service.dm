@@ -65,7 +65,7 @@
 
 /obj/item/clothing/under/plasmaman/mime
 	name = "mime envirosuit"
-	desc = "It's not very colourful."
+	desc = "It's not very colorful."
 	icon_state = "mime_envirosuit"
 	item_state = "mime_envirosuit"
 	item_color = "mime_envirosuit"

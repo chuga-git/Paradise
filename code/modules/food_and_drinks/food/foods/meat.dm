@@ -289,7 +289,7 @@
 	trash = /obj/item/trash/plate
 	bitesize = 4
 	list_reagents = list("nutriment" = 6)
-	tastes = list("cobwebs" = 1, "the colour green" = 1)
+	tastes = list("cobwebs" = 1, "the color green" = 1)
 	goal_difficulty = FOOD_GOAL_EXCESSIVE
 
 /obj/item/food/boiledspiderleg

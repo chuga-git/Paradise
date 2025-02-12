@@ -91,7 +91,7 @@
 		"kidneys" 	= /obj/item/organ/internal/kidneys/tajaran,
 		"brain" 	= /obj/item/organ/internal/brain/tajaran,
 		"appendix" 	= /obj/item/organ/internal/appendix,
-		"eyes" 		= /obj/item/organ/internal/eyes/tajaran/farwa //Tajara monkey-forms are uniquely colourblind and have excellent darksight, which is why they need a subtype of their greater-form's organ..
+		"eyes" 		= /obj/item/organ/internal/eyes/tajaran/farwa //Tajara monkey-forms are uniquely colorblind and have excellent darksight, which is why they need a subtype of their greater-form's organ..
 		)
 
 
@@ -114,7 +114,7 @@
 		"kidneys" 	= /obj/item/organ/internal/kidneys/vulpkanin,
 		"brain" 	= /obj/item/organ/internal/brain/vulpkanin,
 		"appendix" 	= /obj/item/organ/internal/appendix,
-		"eyes" 		= /obj/item/organ/internal/eyes/vulpkanin/wolpin //Vulpkanin monkey-forms are uniquely colourblind and have excellent darksight, which is why they need a subtype of their greater-form's organ..
+		"eyes" 		= /obj/item/organ/internal/eyes/vulpkanin/wolpin //Vulpkanin monkey-forms are uniquely colorblind and have excellent darksight, which is why they need a subtype of their greater-form's organ..
 		)
 
 
@@ -140,7 +140,7 @@
 		"kidneys" 	= /obj/item/organ/internal/kidneys/skrell,
 		"brain" 	= /obj/item/organ/internal/brain/skrell,
 		"appendix" 	= /obj/item/organ/internal/appendix,
-		"eyes" 		= /obj/item/organ/internal/eyes/skrell //Tajara monkey-forms are uniquely colourblind and have excellent darksight, which is why they need a subtype of their greater-form's organ..
+		"eyes" 		= /obj/item/organ/internal/eyes/skrell //Tajara monkey-forms are uniquely colorblind and have excellent darksight, which is why they need a subtype of their greater-form's organ..
 		)
 
 /datum/species/monkey/unathi

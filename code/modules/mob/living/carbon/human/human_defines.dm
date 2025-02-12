@@ -15,16 +15,16 @@
 	pressure_resistance = 25
 	mob_biotypes = MOB_ORGANIC | MOB_HUMANOID
 	blocks_emissive = EMISSIVE_BLOCK_UNIQUE
-	//Marking colour and style
-	var/list/m_colours = DEFAULT_MARKING_COLOURS //All colours set to #000000.
+	//Marking color and style
+	var/list/m_colors = DEFAULT_MARKING_COLORS //All colors set to #000000.
 	var/list/m_styles = DEFAULT_MARKING_STYLES //All markings set to None.
 
 	var/s_tone = 0	//Skin tone
 	/// Species Sub-Type - overrites the species_sheet_name when it's not "None", acts the same as a skin tone.
 	var/species_subtype = "None"
 
-	//Skin colour
-	var/skin_colour = "#000000"
+	//Skin color
+	var/skin_color = "#000000"
 
 	var/lip_style = null	//no lipstick by default- arguably misleading, as it could be used for general makeup
 	var/lip_color = "white"

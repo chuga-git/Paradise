@@ -943,7 +943,7 @@ SLIME SCANNER
 /proc/slime_scan(mob/living/simple_animal/slime/T, mob/living/user)
 	to_chat(user, "========================")
 	to_chat(user, "<b>Slime scan results:</b>")
-	to_chat(user, "<span class='notice'>[T.colour] [T.is_adult ? "adult" : "baby"] slime</span>")
+	to_chat(user, "<span class='notice'>[T.color] [T.is_adult ? "adult" : "baby"] slime</span>")
 	to_chat(user, "Nutrition: [T.nutrition]/[T.get_max_nutrition()]")
 	if(T.nutrition < T.get_starve_nutrition())
 		to_chat(user, "<span class='warning'>Warning: slime is starving!</span>")
@@ -951,7 +951,7 @@ SLIME SCANNER
 		to_chat(user, "<span class='warning'>Warning: slime is hungry</span>")
 	to_chat(user, "Electric change strength: [T.powerlevel]")
 	to_chat(user, "Health: [round(T.health/T.maxHealth,0.01)*100]%")
-	if(T.slime_mutation[4] == T.colour)
+	if(T.slime_mutation[4] == T.color)
 		to_chat(user, "This slime does not evolve any further.")
 	else
 		if(T.slime_mutation[3] == T.slime_mutation[4])

@@ -33,7 +33,7 @@
 	base_color = "#066000"
 	//Default styles for created mobs.
 	default_headacc = "Simple"
-	default_headacc_colour = "#404040"
+	default_headacc_color = "#404040"
 	butt_sprite = "unathi"
 
 	has_organ = list(

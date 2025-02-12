@@ -107,44 +107,44 @@
 					active_character.age = rand(S.min_age , S.max_age)
 				if("hair")
 					if(!(S.bodyflags & BALD))
-						active_character.h_colour = rand_hex_color()
+						active_character.h_color = rand_hex_color()
 				if("secondary_hair")
 					if(!(S.bodyflags & BALD))
-						active_character.h_sec_colour = rand_hex_color()
+						active_character.h_sec_color = rand_hex_color()
 				if("h_style")
 					active_character.h_style = random_hair_style(active_character.gender, active_character.species, robohead)
 				if("facial")
 					if(!(S.bodyflags & SHAVED))
-						active_character.f_colour = rand_hex_color()
+						active_character.f_color = rand_hex_color()
 				if("secondary_facial")
 					if(!(S.bodyflags & SHAVED))
-						active_character.f_sec_colour = rand_hex_color()
+						active_character.f_sec_color = rand_hex_color()
 				if("f_style")
 					active_character.f_style = random_facial_hair_style(active_character.gender, active_character.species, robohead)
 				if("headaccessory")
 					if(S.bodyflags & HAS_HEAD_ACCESSORY) //Species that have head accessories.
-						active_character.hacc_colour = rand_hex_color()
+						active_character.hacc_color = rand_hex_color()
 				if("ha_style")
 					if(S.bodyflags & HAS_HEAD_ACCESSORY) //Species that have head accessories.
 						active_character.ha_style = random_head_accessory(active_character.species)
 				if("m_style_head")
 					if(S.bodyflags & HAS_HEAD_MARKINGS) //Species with head markings.
 						active_character.m_styles["head"] = random_marking_style("head", active_character.species, robohead, null, active_character.alt_head)
-				if("m_head_colour")
+				if("m_head_color")
 					if(S.bodyflags & HAS_HEAD_MARKINGS) //Species with head markings.
-						active_character.m_colours["head"] = rand_hex_color()
+						active_character.m_colors["head"] = rand_hex_color()
 				if("m_style_body")
 					if(S.bodyflags & HAS_BODY_MARKINGS) //Species with body markings.
 						active_character.m_styles["body"] = random_marking_style("body", active_character.species)
-				if("m_body_colour")
+				if("m_body_color")
 					if(S.bodyflags & HAS_BODY_MARKINGS) //Species with body markings.
-						active_character.m_colours["body"] = rand_hex_color()
+						active_character.m_colors["body"] = rand_hex_color()
 				if("m_style_tail")
 					if(S.bodyflags & HAS_TAIL_MARKINGS) //Species with tail markings.
 						active_character.m_styles["tail"] = random_marking_style("tail", active_character.species, null, active_character.body_accessory)
-				if("m_tail_colour")
+				if("m_tail_color")
 					if(S.bodyflags & HAS_TAIL_MARKINGS) //Species with tail markings.
-						active_character.m_colours["tail"] = rand_hex_color()
+						active_character.m_colors["tail"] = rand_hex_color()
 				if("underwear")
 					active_character.underwear = random_underwear(active_character.body_type, active_character.species)
 					ShowChoices(user)
@@ -155,13 +155,13 @@
 					active_character.socks = random_socks(active_character.body_type, active_character.species)
 					ShowChoices(user)
 				if("eyes")
-					active_character.e_colour = rand_hex_color()
+					active_character.e_color = rand_hex_color()
 				if("s_tone")
 					if(S.bodyflags & (HAS_SKIN_TONE|HAS_ICON_SKIN_TONE))
 						active_character.s_tone = random_skin_tone()
 				if("s_color")
 					if(S.bodyflags & HAS_SKIN_COLOR)
-						active_character.s_colour = rand_hex_color()
+						active_character.s_color = rand_hex_color()
 				if("bag")
 					active_character.backbag = pick(GLOB.backbaglist)
 				if("all")
@@ -254,17 +254,17 @@
 
 				if("hair")
 					if(!(S.bodyflags & BALD))
-						var/new_hair = tgui_input_color(user, "Choose your character's hair color.", "Character Preference", active_character.h_colour)
+						var/new_hair = tgui_input_color(user, "Choose your character's hair color.", "Character Preference", active_character.h_color)
 						if(!isnull(new_hair))
-							active_character.h_colour = new_hair
+							active_character.h_color = new_hair
 
 				if("secondary_hair")
 					if(!(S.bodyflags & BALD))
 						var/datum/sprite_accessory/hair_style = GLOB.hair_styles_public_list[active_character.h_style]
-						if(hair_style.secondary_theme && !hair_style.no_sec_colour)
-							var/new_hair = tgui_input_color(user, "Choose your character's secondary hair color.", "Character Preference", active_character.h_sec_colour)
+						if(hair_style.secondary_theme && !hair_style.no_sec_color)
+							var/new_hair = tgui_input_color(user, "Choose your character's secondary hair color.", "Character Preference", active_character.h_sec_color)
 							if(!isnull(new_hair))
-								active_character.h_sec_colour = new_hair
+								active_character.h_sec_color = new_hair
 
 				if("h_style")
 					var/list/valid_hairstyles = list()
@@ -310,11 +310,11 @@
 						active_character.h_grad_offset_x = clamp(text2num(expl[1]) || 0, -16, 16)
 						active_character.h_grad_offset_y = clamp(text2num(expl[2]) || 0, -16, 16)
 
-				if("h_grad_colour")
-					var/result = tgui_input_color(user, "Choose your character's hair gradient color:", "Character Preference", active_character.h_grad_colour)
+				if("h_grad_color")
+					var/result = tgui_input_color(user, "Choose your character's hair gradient color:", "Character Preference", active_character.h_grad_color)
 					if(isnull(result))
 						return
-					active_character.h_grad_colour = result
+					active_character.h_grad_color = result
 
 				if("h_grad_alpha")
 					var/result = tgui_input_number(user, "Choose your character's hair gradient alpha (0-255):", "Character Preference", active_character.h_grad_alpha, 255)
@@ -330,10 +330,10 @@
 
 				if("headaccessory")
 					if(S.bodyflags & HAS_HEAD_ACCESSORY) //Species with head accessories.
-						var/new_head_accessory = tgui_input_color(user, "Choose the color of your your character's head accessory.", "Character Preference", active_character.hacc_colour)
+						var/new_head_accessory = tgui_input_color(user, "Choose the color of your your character's head accessory.", "Character Preference", active_character.hacc_color)
 						if(isnull(new_head_accessory))
 							return
-						active_character.hacc_colour = new_head_accessory
+						active_character.hacc_color = new_head_accessory
 
 				if("ha_style")
 					if(S.bodyflags & HAS_HEAD_ACCESSORY) //Species with head accessories.
@@ -409,12 +409,12 @@
 						if(new_marking_style)
 							active_character.m_styles["head"] = new_marking_style
 
-				if("m_head_colour")
+				if("m_head_color")
 					if(S.bodyflags & HAS_HEAD_MARKINGS) //Species with head markings.
-						var/new_markings = tgui_input_color(user, "Choose the color of your your character's head markings.", "Character Preference", active_character.m_colours["head"])
+						var/new_markings = tgui_input_color(user, "Choose the color of your your character's head markings.", "Character Preference", active_character.m_colors["head"])
 						if(isnull(new_markings))
 							return
-						active_character.m_colours["head"] = new_markings
+						active_character.m_colors["head"] = new_markings
 
 				if("m_style_body")
 					if(S.bodyflags & HAS_BODY_MARKINGS) //Species with body markings/tattoos.
@@ -432,12 +432,12 @@
 						if(new_marking_style)
 							active_character.m_styles["body"] = new_marking_style
 
-				if("m_body_colour")
+				if("m_body_color")
 					if(S.bodyflags & HAS_BODY_MARKINGS) //Species with body markings/tattoos.
-						var/new_markings = tgui_input_color(user, "Choose the color of your your character's body markings.", "Character Preference", active_character.m_colours["body"])
+						var/new_markings = tgui_input_color(user, "Choose the color of your your character's body markings.", "Character Preference", active_character.m_colors["body"])
 						if(isnull(new_markings))
 							return
-						active_character.m_colours["body"] = new_markings
+						active_character.m_colors["body"] = new_markings
 
 				if("m_style_tail")
 					if(S.bodyflags & HAS_TAIL_MARKINGS) //Species with tail markings.
@@ -461,12 +461,12 @@
 						if(new_marking_style)
 							active_character.m_styles["tail"] = new_marking_style
 
-				if("m_tail_colour")
+				if("m_tail_color")
 					if(S.bodyflags & HAS_TAIL_MARKINGS) //Species with tail markings.
-						var/new_markings = tgui_input_color(user, "Choose the color of your your character's tail markings.", "Character Preference", active_character.m_colours["tail"])
+						var/new_markings = tgui_input_color(user, "Choose the color of your your character's tail markings.", "Character Preference", active_character.m_colors["tail"])
 						if(isnull(new_markings))
 							return
-						active_character.m_colours["tail"] = new_markings
+						active_character.m_colors["tail"] = new_markings
 
 				if("body_accessory")
 					var/list/possible_body_accessories = list()
@@ -491,19 +491,19 @@
 
 				if("facial")
 					if(!(S.bodyflags & SHAVED))
-						var/new_facial = tgui_input_color(user, "Choose your character's facial-hair color:", "Character Preference", active_character.f_colour)
+						var/new_facial = tgui_input_color(user, "Choose your character's facial-hair color:", "Character Preference", active_character.f_color)
 						if(isnull(new_facial))
 							return
-						active_character.f_colour = new_facial
+						active_character.f_color = new_facial
 
 				if("secondary_facial")
 					if(!(S.bodyflags & SHAVED))
 						var/datum/sprite_accessory/facial_hair_style = GLOB.facial_hair_styles_list[active_character.f_style]
-						if(facial_hair_style.secondary_theme && !facial_hair_style.no_sec_colour)
-							var/new_facial = tgui_input_color(user, "Choose your character's secondary facial-hair color:", "Character Preference", active_character.f_sec_colour)
+						if(facial_hair_style.secondary_theme && !facial_hair_style.no_sec_color)
+							var/new_facial = tgui_input_color(user, "Choose your character's secondary facial-hair color:", "Character Preference", active_character.f_sec_color)
 							if(isnull(new_facial))
 								return
-							active_character.f_sec_colour = new_facial
+							active_character.f_sec_color = new_facial
 
 				if("f_style")
 					var/list/valid_facial_hairstyles = list()
@@ -586,10 +586,10 @@
 						active_character.socks = new_socks
 
 				if("eyes")
-					var/new_eyes = tgui_input_color(user, "Choose your character's eye color:", "Character Preference", active_character.e_colour)
+					var/new_eyes = tgui_input_color(user, "Choose your character's eye color:", "Character Preference", active_character.e_color)
 					if(isnull(new_eyes))
 						return
-					active_character.e_colour = new_eyes
+					active_character.e_color = new_eyes
 
 				if("s_tone")
 					if(S.bodyflags & HAS_SKIN_TONE)
@@ -607,10 +607,10 @@
 
 				if("skin")
 					if((S.bodyflags & HAS_SKIN_COLOR) || GLOB.body_accessory_by_species[active_character.species] || check_rights(R_ADMIN, 0, user))
-						var/new_skin = tgui_input_color(user, "Choose your character's skin color: ", "Character Preference", active_character.s_colour)
+						var/new_skin = tgui_input_color(user, "Choose your character's skin color: ", "Character Preference", active_character.s_color)
 						if(isnull(new_skin))
 							return
-						active_character.s_colour = new_skin
+						active_character.s_color = new_skin
 
 				if("ooccolor")
 					var/new_ooccolor = tgui_input_color(user, "Choose your OOC color:", "Game Preference", ooccolor)
@@ -828,10 +828,10 @@
 		else
 			switch(href_list["preference"])
 				if("cbmode")
-					var/cb_mode = tgui_input_list(user, "Select a colourblind mode\nNote this will disable special screen effects such as the cursed heart warnings!", "Colorblind mode", list(COLOURBLIND_MODE_NONE, COLOURBLIND_MODE_DEUTER, COLOURBLIND_MODE_PROT, COLOURBLIND_MODE_TRIT))
+					var/cb_mode = tgui_input_list(user, "Select a colorblind mode\nNote this will disable special screen effects such as the cursed heart warnings!", "Colorblind mode", list(COLORBLIND_MODE_NONE, COLORBLIND_MODE_DEUTER, COLORBLIND_MODE_PROT, COLORBLIND_MODE_TRIT))
 					if(cb_mode)
-						colourblind_mode = cb_mode
-						user.update_client_colour(0)
+						colorblind_mode = cb_mode
+						user.update_client_color(0)
 
 				if("publicity")
 					if(unlock_content)
@@ -1279,25 +1279,25 @@
 		active_character.ha_style = random_head_accessory(NS)
 	else
 		active_character.ha_style = "None" // No Vulp ears on Unathi
-		active_character.hacc_colour = rand_hex_color()
+		active_character.hacc_color = rand_hex_color()
 
 	if(NS.bodyflags & HAS_HEAD_MARKINGS) //Species with head markings.
 		active_character.m_styles["head"] = random_marking_style("head", NS, robohead, null, active_character.alt_head)
 	else
 		active_character.m_styles["head"] = "None"
-		active_character.m_colours["head"] = "#000000"
+		active_character.m_colors["head"] = "#000000"
 
 	if(NS.bodyflags & HAS_BODY_MARKINGS) //Species with body markings/tattoos.
 		active_character.m_styles["body"] = random_marking_style("body", NS)
 	else
 		active_character.m_styles["body"] = "None"
-		active_character.m_colours["body"] = "#000000"
+		active_character.m_colors["body"] = "#000000"
 
 	if(NS.bodyflags & HAS_TAIL_MARKINGS) //Species with tail markings.
 		active_character.m_styles["tail"] = random_marking_style("tail", NS, null, active_character.body_accessory)
 	else
 		active_character.m_styles["tail"] = "None"
-		active_character.m_colours["tail"] = "#000000"
+		active_character.m_colors["tail"] = "#000000"
 
 	// Don't wear another species' underwear!
 	var/datum/sprite_accessory/SA = GLOB.underwear_list[active_character.underwear]
@@ -1312,14 +1312,14 @@
 	if(!SA || !(NS in SA.species_allowed))
 		active_character.socks = random_socks(active_character.body_type, NS)
 
-	//reset skin tone and colour
+	//reset skin tone and color
 	if(NS.bodyflags & (HAS_SKIN_TONE|HAS_ICON_SKIN_TONE))
 		random_skin_tone(NS)
 	else
 		active_character.s_tone = 0
 
 	if(!(NS.bodyflags & HAS_SKIN_COLOR))
-		active_character.s_colour = "#000000"
+		active_character.s_color = "#000000"
 
 	active_character.alt_head = "None" //No alt heads on species that don't have them.
 	active_character.speciesprefs = 0 //My Vox tank shouldn't change how my future Grey talks.

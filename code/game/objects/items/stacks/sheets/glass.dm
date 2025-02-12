@@ -269,7 +269,7 @@ GLOBAL_LIST_INIT(titaniumglass_recipes, list(
 	. = ..()
 	. += "Titanium-silica mixes are an old but highly effective technology that produce a relatively lightweight, very strong glass that can withstand a good amount of punishment."
 	. += ""
-	. += "It is extensively used in the production of starship viewports and transparent armour, and is notably used extensively in space station construction by the USSP."
+	. += "It is extensively used in the production of starship viewports and transparent armor, and is notably used extensively in space station construction by the USSP."
 
 /obj/item/stack/sheet/titaniumglass/fifty
 	amount = 50
@@ -303,7 +303,7 @@ GLOBAL_LIST_INIT(plastitaniumglass_recipes, list(
 	. += "A mixture of silica glass, and plastitanium. It boasts similar material properties to plastitanium whilst also being optically transparent."
 	. += ""
 	. += "Unlike regular plasma glass, the production process of plastitanium glass is relatively safer and better known, as the titanium helps to control the plasma's reactivity whilst it is being mixed with the silica. \
-	It is extensively employed for military-grade transparent armour and optics."
+	It is extensively employed for military-grade transparent armor and optics."
 
 /obj/item/stack/sheet/plastitaniumglass/fifty
 	amount = 50

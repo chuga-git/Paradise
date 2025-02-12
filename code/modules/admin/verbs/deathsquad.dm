@@ -208,17 +208,17 @@ GLOBAL_VAR_INIT(deathsquad_sent, FALSE)
 	// All of this code down here too is also from ert.dm, I'm lazy don't blame me
 	new_commando.set_species(/datum/species/human, TRUE)
 	new_commando.dna.ready_dna(new_commando)
-	new_commando.cleanSE() //No fat/blind/colourblind/epileptic/whatever Deathsquad.
+	new_commando.cleanSE() //No fat/blind/colorblind/epileptic/whatever Deathsquad.
 	new_commando.overeatduration = 0
 
 	var/hair_c = pick("#8B4513","#000000","#FF4500","#FFD700") // Brown, black, red, blonde
 	var/eye_c = pick("#000000","#8B4513","1E90FF") // Black, brown, blue
 	var/skin_tone = rand(-120, 20) // A range of skin colors (This doesn't work, result is always pale white)
 
-	head_organ.facial_colour = hair_c
-	head_organ.sec_facial_colour = hair_c
-	head_organ.hair_colour = hair_c
-	head_organ.sec_hair_colour = hair_c
+	head_organ.facial_color = hair_c
+	head_organ.sec_facial_color = hair_c
+	head_organ.hair_color = hair_c
+	head_organ.sec_hair_color = hair_c
 	new_commando.change_eye_color(eye_c)
 	new_commando.s_tone = skin_tone
 	head_organ.h_style = random_hair_style(new_commando.gender, head_organ.dna.species.name)

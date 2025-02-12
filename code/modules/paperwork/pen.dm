@@ -21,7 +21,7 @@
 	throw_speed = 3
 	throw_range = 7
 	materials = list(MAT_METAL=10)
-	var/colour = "black"	//what colour the ink is!
+	var/color = "black"	//what color the ink is!
 	pressure_resistance = 2
 
 /obj/item/pen/suicide_act(mob/user)
@@ -32,57 +32,57 @@
 	name = "blue-ink pen"
 	desc = "It's a normal blue ink pen."
 	icon_state = "pen_blue"
-	colour = "blue"
+	color = "blue"
 
 /obj/item/pen/red
 	name = "red-ink pen"
 	desc = "It's a normal red ink pen."
 	icon_state = "pen_red"
-	colour = "red"
+	color = "red"
 
 /obj/item/pen/gray
 	name = "gray-ink pen"
 	desc = "It's a normal gray ink pen."
-	colour = "gray"
+	color = "gray"
 
 /obj/item/pen/invisible
 	desc = "It's an invisible pen marker."
 	icon_state = "pen"
-	colour = "white"
+	color = "white"
 
 /obj/item/pen/multi
 	name = "multicolor pen"
 	desc = "It's a cool looking pen. Lots of colors!"
 
 	// these values are for the overlay
-	var/list/colour_choices = list(
+	var/list/color_choices = list(
 		"black" = list(0.25, 0.25, 0.25),
 		"red" = list(1, 0.25, 0.25),
 		"green" = list(0, 1, 0),
 		"blue" = list(0.5, 0.5, 1),
 		"yellow" = list(1, 1, 0))
-	var/pen_colour_iconstate = "pencolor"
+	var/pen_color_iconstate = "pencolor"
 
 /obj/item/pen/multi/Initialize(mapload)
 	. = ..()
 	update_icon()
 
-/obj/item/pen/multi/proc/select_colour(mob/user as mob)
-	var/newcolour = tgui_input_list(user, "Which colour would you like to use?", name, colour_choices)
-	if(newcolour)
-		colour = newcolour
+/obj/item/pen/multi/proc/select_color(mob/user as mob)
+	var/newcolor = tgui_input_list(user, "Which color would you like to use?", name, color_choices)
+	if(newcolor)
+		color = newcolor
 		playsound(loc, 'sound/effects/pop.ogg', 50, 1)
 		update_icon()
 
 /obj/item/pen/multi/attack_self__legacy__attackchain(mob/living/user as mob)
-	select_colour(user)
+	select_color(user)
 
 /obj/item/pen/multi/update_overlays()
 	. = ..()
-	var/icon/colour_overlay = new(icon, pen_colour_iconstate)
-	var/list/colours = colour_choices[colour]
-	colour_overlay.SetIntensity(colours[1], colours[2], colours[3])
-	. += colour_overlay
+	var/icon/color_overlay = new(icon, pen_color_iconstate)
+	var/list/colors = color_choices[color]
+	color_overlay.SetIntensity(colors[1], colors[2], colors[3])
+	. += color_overlay
 
 /obj/item/pen/fancy
 	name = "fancy pen"
@@ -213,7 +213,7 @@
 	light_color = LIGHT_COLOR_RED
 	var/backstab_sound = 'sound/items/unsheath.ogg'
 	var/backstab_damage = 12
-	armour_penetration_flat = 20
+	armor_penetration_flat = 20
 	throw_speed = 4
 
 /obj/item/pen/edagger/attack__legacy__attackchain(mob/living/M, mob/living/user, def_zone)
@@ -316,7 +316,7 @@
 
 /obj/item/pen/multi/poison/attack_self__legacy__attackchain(mob/living/user)
 	. = ..()
-	switch(colour)
+	switch(color)
 		if("black")
 			current_poison = null
 		if("red")

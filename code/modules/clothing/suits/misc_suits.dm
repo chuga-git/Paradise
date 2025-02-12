@@ -10,7 +10,7 @@
  * Lasertag
  */
 /obj/item/clothing/suit/bluetag
-	name = "blue laser tag armour"
+	name = "blue laser tag armor"
 	desc = "Blue Pride, Station Wide."
 	w_class = WEIGHT_CLASS_NORMAL
 	icon_state = "bluetag"
@@ -25,7 +25,7 @@
 		)
 
 /obj/item/clothing/suit/redtag
-	name = "red laser tag armour"
+	name = "red laser tag armor"
 	desc = "Pew pew pew."
 	w_class = WEIGHT_CLASS_NORMAL
 	icon_state = "redtag"
@@ -898,13 +898,13 @@
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
 	cold_protection = UPPER_TORSO|LOWER_TORSO|ARMS
 	heat_protection = UPPER_TORSO|LOWER_TORSO|ARMS
-	//Inherited from Security armour.
+	//Inherited from Security armor.
 	allowed = list(/obj/item/gun/energy,/obj/item/reagent_containers/spray/pepper,/obj/item/gun/projectile,/obj/item/ammo_box,/obj/item/ammo_casing,/obj/item/melee/baton,/obj/item/restraints/handcuffs,/obj/item/flashlight/seclite,/obj/item/melee/classic_baton/telescopic,/obj/item/kitchen/knife/combat)
 	min_cold_protection_temperature = ARMOR_MIN_TEMP_PROTECT
 	max_heat_protection_temperature = ARMOR_MAX_TEMP_PROTECT
 	strip_delay = 60
 	put_on_delay = 40
-	//End of inheritance from Security armour.
+	//End of inheritance from Security armor.
 	armor = list(MELEE = 10, BULLET = 5, LASER = 10, ENERGY = 5, BOMB = 10, RAD = 0, FIRE = 20, ACID = 20)
 	sprite_sheets = list(
 		"Vox" = 'icons/mob/clothing/species/vox/suit.dmi',
@@ -1038,11 +1038,11 @@
 
 /obj/item/clothing/suit/jacket/bomber/sec
 	name = "security bomber jacket"
-	desc = "A stylish and worn-in armoured black bomber jacket emblazoned with a red stripe across the left. Looks rugged."
+	desc = "A stylish and worn-in armored black bomber jacket emblazoned with a red stripe across the left. Looks rugged."
 	w_class = WEIGHT_CLASS_NORMAL
 	icon_state = "bombersec"
 	item_state = "bombersec"
-	//Inherited from Security armour.
+	//Inherited from Security armor.
 	allowed = list(/obj/item/gun/energy,/obj/item/reagent_containers/spray/pepper,/obj/item/gun/projectile,/obj/item/ammo_box,/obj/item/ammo_casing,/obj/item/melee/baton,/obj/item/restraints/handcuffs,/obj/item/flashlight/seclite,/obj/item/melee/classic_baton/telescopic,/obj/item/kitchen/knife/combat)
 	heat_protection = UPPER_TORSO|LOWER_TORSO
 	min_cold_protection_temperature = ARMOR_MIN_TEMP_PROTECT
@@ -1050,7 +1050,7 @@
 	strip_delay = 60
 	put_on_delay = 40
 	armor = list(MELEE = 10, BULLET = 5, LASER = 10, ENERGY = 5, BOMB = 10, RAD = 0, FIRE = 20, ACID = 20)
-	//End of inheritance from Security armour.
+	//End of inheritance from Security armor.
 
 /obj/item/clothing/suit/jacket/bomber/engi
 	name = "engineering bomber jacket"
@@ -1077,7 +1077,7 @@
 
 /obj/item/clothing/suit/jacket/bomber/mining
 	name = "mining bomber jacket"
-	desc = "A slightly armoured and stylish jacket for shaft miners."
+	desc = "A slightly armored and stylish jacket for shaft miners."
 	icon_state = "bombermining"
 	item_state = "bombermining"
 	allowed = list(/obj/item/pickaxe, /obj/item/t_scanner/adv_mining_scanner, /obj/item/flashlight, /obj/item/tank/internals/emergency_oxygen, /obj/item/toy, /obj/item/storage/fancy/cigarettes, /obj/item/lighter, /obj/item/gun/energy/kinetic_accelerator, /obj/item/shovel, /obj/item/storage/bag/ore)

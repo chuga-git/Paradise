@@ -38,7 +38,7 @@ GLOBAL_VAR_INIT(total_runtimes_skipped, 0)
 		if(length(inner_split) >= 2)
 			var/source_half = "[inner_split[1]]: "
 			var/proc_half = inner_split[2]
-			var/proc_name = splittext(proc_half, "(")[1] // Put a ) here to stop the bracket colouriser whining
+			var/proc_name = splittext(proc_half, "(")[1] // Put a ) here to stop the bracket coloriser whining
 
 			proc_name = replacetext(proc_name, " ", "_") // Put the underscores back because BYOND removes them for some reason
 

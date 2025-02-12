@@ -64,7 +64,7 @@ GLOBAL_DATUM_INIT(canister_icon_container, /datum/canister_icons, new())
 	var/valve_open = FALSE
 	var/release_pressure = ONE_ATMOSPHERE
 
-	var/list/canister_color //variable that stores colours
+	var/list/canister_color //variable that stores colors
 	var/list/color_index // list which stores tgui color indexes for the recoloring options, to enable previously-set colors to show up right
 
 	//passed to the ui to render the color lists
@@ -134,7 +134,7 @@ GLOBAL_DATUM_INIT(canister_icon_container, /datum/canister_icons, new())
 /obj/machinery/atmospherics/portable/canister/update_icon_state()
 	// Colors has to be applied every icon update
 	if(stat & BROKEN)
-		icon_state = "[canister_color["prim"]]-1"//yes, I KNOW the colours don't reflect when the can's borked, whatever.
+		icon_state = "[canister_color["prim"]]-1"//yes, I KNOW the colors don't reflect when the can's borked, whatever.
 		return
 
 	if(icon_state != canister_color["prim"])

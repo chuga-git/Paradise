@@ -525,7 +525,7 @@
 
 /obj/item/food/sliced/mothmallow
 	name = "mothmallow"
-	desc = "Fluffy little clouds of joy- in a strangely moth-like colour."
+	desc = "Fluffy little clouds of joy- in a strangely moth-like color."
 	icon = 'icons/obj/food/bakedgoods.dmi'
 	icon_state = "mothmallow_slice"
 	filling_color = "#ece7ee"

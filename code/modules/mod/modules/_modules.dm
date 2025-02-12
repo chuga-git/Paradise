@@ -33,7 +33,7 @@
 	var/overlay_icon_file = 'icons/mob/clothing/modsuit/mod_modules.dmi'
 	/// Does the overlay use the control unit's colors?
 	var/use_mod_colors = FALSE
-	///Does the mod overide the colour in some way?
+	///Does the mod overide the color in some way?
 	var/mod_color_overide
 	/// What modules are we incompatible with?
 	var/list/incompatible_modules = list()

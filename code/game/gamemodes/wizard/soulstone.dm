@@ -358,7 +358,7 @@
 		if("CONSTRUCT")
 			var/obj/structure/constructshell/shell = target
 			var/mob/living/simple_animal/shade/shade = locate() in src
-			var/list/construct_types = list("Juggernaut" = /mob/living/simple_animal/hostile/construct/armoured,
+			var/list/construct_types = list("Juggernaut" = /mob/living/simple_animal/hostile/construct/armored,
 											"Wraith" = /mob/living/simple_animal/hostile/construct/wraith,
 											"Artificer" = /mob/living/simple_animal/hostile/construct/builder)
 			/// Custom construct icons for different cults

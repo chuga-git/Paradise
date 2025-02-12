@@ -42,7 +42,7 @@ Pipelines + Other Objects -> Pipe network
 	var/icon_connect_type = ""
 	/// Directions to initialize in to grab pipes
 	var/initialize_directions = 0
-	/// Pipe colour, not used for all subtypes
+	/// Pipe color, not used for all subtypes
 	var/pipe_color
 	/// Pipe image, not used for all subtypes
 	var/image/pipe_image

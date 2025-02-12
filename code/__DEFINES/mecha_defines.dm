@@ -11,9 +11,9 @@
 #define MECHAMOVE_TURN 			(1<<1)
 #define MECHAMOVE_STEP 			(1<<2)
 
-#define MECHA_FRONT_ARMOUR 		1
-#define MECHA_SIDE_ARMOUR 		2
-#define MECHA_BACK_ARMOUR 		3
+#define MECHA_FRONT_ARMOR 		1
+#define MECHA_SIDE_ARMOR 		2
+#define MECHA_BACK_ARMOR 		3
 
 #define MECHA_MAINT_OFF         0
 #define MECHA_MAINT_ON          1

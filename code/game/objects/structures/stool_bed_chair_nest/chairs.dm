@@ -338,7 +338,7 @@
 		return
 	if(istype(I, /obj/item/toy/crayon))
 		var/obj/item/toy/crayon/C = I
-		var/new_color = C.colour
+		var/new_color = C.color
 		var/list/hsl = rgb2hsl(hex2num(copytext(new_color, 2, 4)), hex2num(copytext(new_color, 4, 6)), hex2num(copytext(new_color, 6, 8)))
 		hsl[3] = max(hsl[3], 0.4)
 		var/list/rgb = hsl2rgb(arglist(hsl))
@@ -444,7 +444,7 @@
 /obj/structure/chair/sofa/bench/proc/GetCover()
 	if(cover)
 		cut_overlay(cover)
-	cover = mutable_appearance('icons/obj/chairs.dmi', "[icon_state]_cover", color = cover_color) //this supports colouring, but not the base bench
+	cover = mutable_appearance('icons/obj/chairs.dmi', "[icon_state]_cover", color = cover_color) //this supports coloring, but not the base bench
 	add_overlay(cover)
 
 /obj/structure/chair/sofa/bench/handle_layer()
@@ -454,7 +454,7 @@
 	. = ..()
 	if(istype(I, /obj/item/toy/crayon))
 		var/obj/item/toy/crayon/C = I
-		cover_color = C.colour
+		cover_color = C.color
 	if(cover_color)
 		GetCover()
 

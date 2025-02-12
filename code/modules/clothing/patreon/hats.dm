@@ -14,7 +14,7 @@
 		"Vox" = 'icons/mob/clothing/species/vox/head.dmi'
 		)
 
-//gold top hat and recolours
+//gold top hat and recolors
 /obj/item/clothing/head/fluff/goldtophat
 	name = "Gold-trimmed Top Hat"
 	desc = "Poshness incarnate."

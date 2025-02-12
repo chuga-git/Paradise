@@ -95,10 +95,10 @@ GLOBAL_DATUM_INIT(welding_sparks, /mutable_appearance, mutable_appearance('icons
 	var/siemens_coefficient = 1
 	/// How much clothing is slowing you down. Negative values speeds you up.
 	var/slowdown = 0
-	/// Flat armour reduction, occurs after percentage armour penetration.
-	var/armour_penetration_flat = 0
-	/// Percentage armour reduction, happens before flat armour reduction.
-	var/armour_penetration_percentage = 0
+	/// Flat armor reduction, occurs after percentage armor penetration.
+	var/armor_penetration_flat = 0
+	/// Percentage armor reduction, happens before flat armor reduction.
+	var/armor_penetration_percentage = 0
 	/// For what suits can store. IE. secuirty vest holding stunbatons, disablers, cuffs.
 	var/list/allowed = list()
 	/// All items can have an uplink hidden inside, just remember to add the triggers.
@@ -625,7 +625,7 @@ GLOBAL_DATUM_INIT(welding_sparks, /mutable_appearance, mutable_appearance('icons
 
 	user.do_attack_animation(M)
 
-	if(H.check_shields(src, force, "the [name]", MELEE_ATTACK, armour_penetration_flat, armour_penetration_percentage))
+	if(H.check_shields(src, force, "the [name]", MELEE_ATTACK, armor_penetration_flat, armor_penetration_percentage))
 		return FALSE
 
 	if(H.check_block())
@@ -945,7 +945,7 @@ GLOBAL_DATUM_INIT(welding_sparks, /mutable_appearance, mutable_appearance('icons
 	. = ..()
 	if(HAS_TRAIT(src, TRAIT_OIL_SLICKED))
 		slowdown = initial(slowdown)
-		remove_atom_colour(FIXED_COLOUR_PRIORITY)
+		remove_atom_color(FIXED_COLOR_PRIORITY)
 		REMOVE_TRAIT(src, TRAIT_OIL_SLICKED, "potion")
 		if(ishuman(loc))
 			var/mob/living/carbon/human/H = loc
@@ -955,7 +955,7 @@ GLOBAL_DATUM_INIT(welding_sparks, /mutable_appearance, mutable_appearance('icons
 	. = ..()
 	if(HAS_TRAIT(src, TRAIT_OIL_SLICKED))
 		slowdown = initial(slowdown)
-		remove_atom_colour(FIXED_COLOUR_PRIORITY)
+		remove_atom_color(FIXED_COLOR_PRIORITY)
 		REMOVE_TRAIT(src, TRAIT_OIL_SLICKED, "potion")
 		if(ishuman(loc))
 			var/mob/living/carbon/human/H = loc

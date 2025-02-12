@@ -284,7 +284,7 @@
 	required_reagents = list("blood" = 1, "sodiumchloride" = 1, "banana" = 1, "lube" = 1, "space_drugs" = 1) //Or one freshly-squeezed clown
 	min_temp = T0C + 100
 	result_amount = 5
-	mix_message = "The substance quickly shifts colour, cycling from red, to yellow, to green, to blue, and finally settles at a vibrant fuchsia."
+	mix_message = "The substance quickly shifts color, cycling from red, to yellow, to green, to blue, and finally settles at a vibrant fuchsia."
 
 /datum/chemical_reaction/jestosterone/on_reaction(datum/reagents/holder, created_volume)
 	playsound(get_turf(holder.my_atom), 'sound/items/bikehorn.ogg', 50, 1)

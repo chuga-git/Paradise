@@ -173,7 +173,7 @@
 	uplinktypes = list(UPLINK_TYPE_NUCLEAR, UPLINK_TYPE_SST)
 
 /datum/uplink_item/ammo/apsap
-	name = "Stechkin APS - 10mm Armour Piercing Magazine"
+	name = "Stechkin APS - 10mm Armor Piercing Magazine"
 	desc = "An additional 20-round 10mm magazine for use in the Stechkin APS machine pistol, loaded with rounds that are less effective at injuring the target but penetrate protective gear."
 	reference = "10MMAPSAP"
 	item = /obj/item/ammo_box/magazine/apsm10mm/ap
@@ -190,7 +190,7 @@
 
 /datum/uplink_item/ammo/apshp
 	name = "Stechkin APS - 10mm Hollow Point Magazine"
-	desc = "An additional 20-round 10mm magazine for use in the Stechkin APS machine pistol, loaded with rounds which are more damaging but ineffective against armour."
+	desc = "An additional 20-round 10mm magazine for use in the Stechkin APS machine pistol, loaded with rounds which are more damaging but ineffective against armor."
 	reference = "10MMAPSHP"
 	item = /obj/item/ammo_box/magazine/apsm10mm/hp
 	cost = 20

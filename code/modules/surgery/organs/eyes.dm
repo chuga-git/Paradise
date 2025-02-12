@@ -6,10 +6,10 @@
 	parent_organ = "head"
 	slot = "eyes"
 	var/eye_color = "#000000" // Should never be null
-	var/list/colourmatrix = null
-	var/list/colourblind_matrix = MATRIX_GREYSCALE //Special colourblindness parameters. By default, it's black-and-white.
-	var/list/replace_colours = GREYSCALE_COLOR_REPLACE
-	var/dependent_disabilities = list() //Gets set by eye-dependent disabilities such as colourblindness so the eyes can transfer the disability during transplantation.
+	var/list/colormatrix = null
+	var/list/colorblind_matrix = MATRIX_GREYSCALE //Special colorblindness parameters. By default, it's black-and-white.
+	var/list/replace_colors = GREYSCALE_COLOR_REPLACE
+	var/dependent_disabilities = list() //Gets set by eye-dependent disabilities such as colorblindness so the eyes can transfer the disability during transplantation.
 	var/weld_proof = FALSE //If set, the eyes will not take damage during welding. eg. IPC optical sensors do not take damage when they weld things while all other eyes will.
 
 	var/vision_flags = 0
@@ -19,7 +19,7 @@
 	var/see_invisible = SEE_INVISIBLE_LIVING
 	var/lighting_alpha = LIGHTING_PLANE_ALPHA_VISIBLE
 
-/obj/item/organ/internal/eyes/proc/update_colour()
+/obj/item/organ/internal/eyes/proc/update_color()
 	dna.write_eyes_attributes(src)
 
 /obj/item/organ/internal/eyes/proc/generate_icon(mob/living/carbon/human/HA)
@@ -31,11 +31,11 @@
 
 	return eyes_icon
 
-/obj/item/organ/internal/eyes/proc/get_colourmatrix() //Returns a special colour matrix if the eyes are organic and the mob is colourblind, otherwise it uses the current one.
+/obj/item/organ/internal/eyes/proc/get_colormatrix() //Returns a special color matrix if the eyes are organic and the mob is colorblind, otherwise it uses the current one.
 	if(!is_robotic() && HAS_TRAIT(owner, TRAIT_COLORBLIND))
-		return colourblind_matrix
+		return colorblind_matrix
 	else
-		return colourmatrix
+		return colormatrix
 
 /obj/item/organ/internal/eyes/proc/shine()
 	if(is_robotic() || (see_in_dark > EYE_SHINE_THRESHOLD))
@@ -44,24 +44,24 @@
 /obj/item/organ/internal/eyes/insert(mob/living/carbon/human/M, special = 0)
 	..()
 	if(istype(M) && eye_color)
-		M.update_body() //Apply our eye colour to the target.
+		M.update_body() //Apply our eye color to the target.
 
 	M.update_tint()
 	M.update_sight()
 
-	if(!HAS_TRAIT(M, TRAIT_COLORBLIND) && (TRAIT_COLORBLIND in dependent_disabilities)) //If the eyes are colourblind and we're not, carry over the gene.
+	if(!HAS_TRAIT(M, TRAIT_COLORBLIND) && (TRAIT_COLORBLIND in dependent_disabilities)) //If the eyes are colorblind and we're not, carry over the gene.
 		dependent_disabilities -= TRAIT_COLORBLIND
-		M.dna.SetSEState(GLOB.colourblindblock, TRUE)
-		singlemutcheck(M, GLOB.colourblindblock, MUTCHK_FORCED)
+		M.dna.SetSEState(GLOB.colorblindblock, TRUE)
+		singlemutcheck(M, GLOB.colorblindblock, MUTCHK_FORCED)
 	else
-		M.update_client_colour() //If we're here, that means the mob acquired the colourblindness gene while they didn't have eyes. Better handle it.
+		M.update_client_color() //If we're here, that means the mob acquired the colorblindness gene while they didn't have eyes. Better handle it.
 
 /obj/item/organ/internal/eyes/remove(mob/living/carbon/human/M, special = 0)
 	if(!special && HAS_TRAIT(M, TRAIT_COLORBLIND)) //If special is set, that means these eyes are getting deleted (i.e. during set_species())
-		if(!(TRAIT_COLORBLIND in dependent_disabilities)) //We only want to change COLOURBLINDBLOCK and such it the eyes are being surgically removed.
+		if(!(TRAIT_COLORBLIND in dependent_disabilities)) //We only want to change COLORBLINDBLOCK and such it the eyes are being surgically removed.
 			dependent_disabilities |= TRAIT_COLORBLIND
-		M.dna.SetSEState(GLOB.colourblindblock, FALSE)
-		singlemutcheck(M, GLOB.colourblindblock, MUTCHK_FORCED)
+		M.dna.SetSEState(GLOB.colorblindblock, FALSE)
+		singlemutcheck(M, GLOB.colorblindblock, MUTCHK_FORCED)
 	. = ..()
 	M.update_tint()
 	M.update_sight()
@@ -101,10 +101,10 @@
 	icon_state = "burning_eyes"
 
 /obj/item/organ/internal/eyes/robotize(make_tough)
-	colourmatrix = null
-	..() //Make sure the organ's got the robotic status indicators before updating the client colour.
+	colormatrix = null
+	..() //Make sure the organ's got the robotic status indicators before updating the client color.
 	if(owner)
-		owner.update_client_colour(0) //Since mechanical eyes give see_in_dark of 2 and full colour vision atm, just having this here is fine.
+		owner.update_client_color(0) //Since mechanical eyes give see_in_dark of 2 and full color vision atm, just having this here is fine.
 
 /obj/item/organ/internal/eyes/cybernetic
 	name = "cybernetic eyes"
@@ -362,7 +362,7 @@
 	lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_INVISIBLE
 	flash_protect = FLASH_PROTECTION_VERYVUNERABLE //Flashing is it's weakness. I don't care how many protections you have up
 	owner?.client?.color = LIGHT_COLOR_PURE_CYAN
-	colourmatrix = list(0, 0, 0,\
+	colormatrix = list(0, 0, 0,\
 						0, 1, 0,\
 						0, 0, 1)
 	owner.update_sight()
@@ -376,7 +376,7 @@
 	lighting_alpha = initial(lighting_alpha)
 	flash_protect = initial(flash_protect)
 	owner?.client?.color = null
-	colourmatrix = null
+	colormatrix = null
 	owner.update_sight()
 	owner.update_eyes_overlay_layer()
 

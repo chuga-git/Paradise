@@ -19,7 +19,7 @@
 	. = ..()
 	verbs.Cut()
 	//We avoid setting this in the base as if we do then the parent atom handling will add_atom_color it and that
-	//is totally unsuitable for this object, as we are always changing it's colour manually
+	//is totally unsuitable for this object, as we are always changing it's color manually
 	color = LIGHTING_BASE_MATRIX
 
 	myturf = loc

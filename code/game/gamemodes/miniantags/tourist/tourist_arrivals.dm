@@ -112,10 +112,10 @@
 	var/eye_c = pick("#000000", "#8B4513", "1E90FF") // Black, brown, blue
 	var/skin_tone = rand(-120, 20)
 
-	head_organ.facial_colour = hair_c
-	head_organ.sec_facial_colour = hair_c
-	head_organ.hair_colour = hair_c
-	head_organ.sec_hair_colour = hair_c
+	head_organ.facial_color = hair_c
+	head_organ.sec_facial_color = hair_c
+	head_organ.hair_color = hair_c
+	head_organ.sec_hair_color = hair_c
 	M.change_eye_color(eye_c)
 	M.s_tone = skin_tone
 	head_organ.h_style = random_hair_style(M.gender, head_organ.dna.species.sprite_sheet_name)

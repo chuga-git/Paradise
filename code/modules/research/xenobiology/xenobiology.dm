@@ -489,8 +489,8 @@
 			C.update_speed()
 
 	to_chat(user, "<span class='notice'>You slather the oily gunk over [O], making it slick and slippery.</span>")
-	O.remove_atom_colour(WASHABLE_COLOUR_PRIORITY)
-	O.add_atom_colour("#6e6e86", FIXED_COLOUR_PRIORITY)
+	O.remove_atom_color(WASHABLE_COLOR_PRIORITY)
+	O.add_atom_color("#6e6e86", FIXED_COLOR_PRIORITY)
 	ADD_TRAIT(O, TRAIT_OIL_SLICKED, "potion")
 	if(ishuman(O.loc))
 		var/mob/living/carbon/human/H = O.loc

@@ -112,8 +112,8 @@
 
 	update_icon(UPDATE_NAME)
 	throwforce = possessed_item.throwforce
-	armour_penetration_flat = possessed_item.armour_penetration_flat
-	armour_penetration_percentage = possessed_item.armour_penetration_percentage
+	armor_penetration_flat = possessed_item.armor_penetration_flat
+	armor_penetration_percentage = possessed_item.armor_penetration_percentage
 
 	visible_message("<span class='notice'>[src] rises into the air and begins to float!</span>") // Inform those around us that shit's gettin' spooky.
 	animate_ghostly_presence(src, -1, 20, 1)

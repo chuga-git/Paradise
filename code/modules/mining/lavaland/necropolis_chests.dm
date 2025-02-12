@@ -161,7 +161,7 @@
 #define CHARGE_DRAINED_PER_SECOND 5
 #define BERSERK_DAMAGE_REDUCTION 0.6
 #define BERSERK_ATTACK_SPEED_MODIFIER 0.5
-#define BERSERK_COLOUR "#950a0a"
+#define BERSERK_COLOR "#950a0a"
 
 /obj/item/clothing/suit/hooded/berserker
 	name = "berserker hardsuit"
@@ -193,7 +193,7 @@
 	desc = "Peering into the eyes of the helmet is enough to seal damnation."
 	icon_state = "hardsuit0-berserker"
 	item_color = "berserker"
-	light_color = BERSERK_COLOUR
+	light_color = BERSERK_COLOR
 	light_power = 4
 	actions_types = list(/datum/action/item_action/berserk_mode)
 	armor = list(MELEE = 30, BULLET = 15, LASER = 10, ENERGY = 10, BOMB = 150, RAD = 0, FIRE = INFINITY, ACID = INFINITY)
@@ -250,7 +250,7 @@
 	if(berserk_charge >= MAX_BERSERK_CHARGE)
 		to_chat(owner, "<span class='boldnotice'>Berserk mode is fully charged!</span>")
 
-/// Starts berserk, giving the wearer 40% brute / burn resist, doubled attacking speed, NOGUNS trait, and colours them blood red.
+/// Starts berserk, giving the wearer 40% brute / burn resist, doubled attacking speed, NOGUNS trait, and colors them blood red.
 /obj/item/clothing/head/hooded/berserker/proc/berserk_mode(mob/living/carbon/human/user)
 	to_chat(user, "<span class='warning'>You enter berserk mode.</span>")
 	playsound(user, 'sound/magic/staff_healing.ogg', 50)
@@ -258,7 +258,7 @@
 	user.physiology.burn_mod *= BERSERK_DAMAGE_REDUCTION
 	user.physiology.brute_mod *= BERSERK_DAMAGE_REDUCTION
 	user.next_move_modifier *= BERSERK_ATTACK_SPEED_MODIFIER
-	user.add_atom_colour(BERSERK_COLOUR, TEMPORARY_COLOUR_PRIORITY)
+	user.add_atom_color(BERSERK_COLOR, TEMPORARY_COLOR_PRIORITY)
 	ADD_TRAIT(user, TRAIT_CHUNKYFINGERS, BERSERK_TRAIT)
 	flags |= NODROP
 	suit.flags |= NODROP
@@ -278,7 +278,7 @@
 	user.physiology.burn_mod /= BERSERK_DAMAGE_REDUCTION
 	user.physiology.brute_mod /= BERSERK_DAMAGE_REDUCTION
 	user.next_move_modifier /= BERSERK_ATTACK_SPEED_MODIFIER
-	user.remove_atom_colour(TEMPORARY_COLOUR_PRIORITY, BERSERK_COLOUR)
+	user.remove_atom_color(TEMPORARY_COLOR_PRIORITY, BERSERK_COLOR)
 	REMOVE_TRAIT(user, TRAIT_CHUNKYFINGERS, BERSERK_TRAIT)
 	flags &= ~NODROP
 	suit.flags &= ~NODROP
@@ -307,7 +307,7 @@
 #undef CHARGE_DRAINED_PER_SECOND
 #undef BERSERK_DAMAGE_REDUCTION
 #undef BERSERK_ATTACK_SPEED_MODIFIER
-#undef BERSERK_COLOUR
+#undef BERSERK_COLOR
 
 
 //Rod of Asclepius
@@ -519,8 +519,8 @@
 	lefthand_file = 'icons/mob/inhands/weapons_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons_righthand.dmi'
 	force = 15
-	armour_penetration_percentage = 40
-	armour_penetration_flat = 10
+	armor_penetration_percentage = 40
+	armor_penetration_flat = 10
 	sharp = TRUE
 	w_class = WEIGHT_CLASS_HUGE
 	attack_verb = list("attack", "slash", "stab", "slice", "tear", "lacerate", "rip", "dice", "cut")

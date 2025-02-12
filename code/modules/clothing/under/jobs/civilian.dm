@@ -111,14 +111,14 @@
 
 /obj/item/clothing/under/rank/civilian/mime
 	name = "mime's outfit"
-	desc = "It's not very colourful."
+	desc = "It's not very colorful."
 	icon_state = "mime"
 	item_state = "mime"
 	item_color = "mime"
 
 /obj/item/clothing/under/rank/civilian/mime/skirt
 	name = "mime's skirt"
-	desc = "It's not very colourful."
+	desc = "It's not very colorful."
 	icon_state = "mime_skirt"
 	item_state = "mime_skirt"
 	item_color = "mime_skirt"

@@ -98,7 +98,7 @@
 
 /obj/item/clothing/under/rank/cargo/expedition/skirt
 	name = "expedition jumpskirt"
-	desc = "An armoured brown jumpskirt with Nanotrasen markings for identification, and a black safety harness for their space suits."
+	desc = "An armored brown jumpskirt with Nanotrasen markings for identification, and a black safety harness for their space suits."
 	icon_state = "expedition_skirt"
 	item_state = "expedition_skirt"
 	item_color = "expedition_skirt"

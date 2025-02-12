@@ -112,9 +112,9 @@
 	icon_state = "gygax_r_leg"
 	origin_tech = "programming=2;materials=4;engineering=3"
 
-/obj/item/mecha_parts/part/gygax_armour
-	name = "\improper Gygax armour plates"
-	icon_state = "gygax_armour"
+/obj/item/mecha_parts/part/gygax_armor
+	name = "\improper Gygax armor plates"
+	icon_state = "gygax_armor"
 	origin_tech = "materials=6;combat=4;engineering=4"
 
 
@@ -158,7 +158,7 @@
 	origin_tech = "programming=2;materials=3;engineering=3"
 
 /obj/item/mecha_parts/part/durand_armor
-	name = "\improper Durand armour plates"
+	name = "\improper Durand armor plates"
 	icon_state = "durand_armor"
 	origin_tech = "materials=5;combat=4;engineering=4"
 
@@ -344,9 +344,9 @@
 	desc = "A Odysseus right leg. Contains somewhat complex servodrives and balance maintaining systems."
 	icon_state = "odysseus_r_leg"
 
-/*/obj/item/mecha_parts/part/odysseus_armour
+/*/obj/item/mecha_parts/part/odysseus_armor
 	name = "\improper Odysseus carapace"
-	icon_state = "odysseus_armour"
+	icon_state = "odysseus_armor"
 	origin_tech = "materials=3;engineering=3")*/
 
 ///////// Nkarrdem

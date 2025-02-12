@@ -212,7 +212,7 @@
 				if(istype(H))
 					for(var/mob/living/carbon/human/M in step_over) //Bloody the mobs who're infront of the spray.
 						M.make_bloody_hands(H.get_blood_dna_list(), H.get_blood_color())
-						/* Uncomment when bloody_body stops randomly not transferring blood colour.
+						/* Uncomment when bloody_body stops randomly not transferring blood color.
 						M.bloody_body(H) */
 		else if(impact_effect_type && !hitscan)
 			new impact_effect_type(target_loca, hitx, hity)
@@ -234,7 +234,7 @@
 
 	var/additional_log_text
 	if(blocked)
-		additional_log_text = " [ARMOUR_VALUE_TO_PERCENTAGE(blocked)]% blocked"
+		additional_log_text = " [ARMOR_VALUE_TO_PERCENTAGE(blocked)]% blocked"
 	if(reagents && reagents.reagent_list)
 		var/reagent_note = "REAGENTS:"
 		for(var/datum/reagent/R in reagents.reagent_list)

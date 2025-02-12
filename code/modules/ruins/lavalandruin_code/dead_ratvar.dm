@@ -299,7 +299,7 @@
 	item_state = "ratvarian_spear"
 	force = 15 //Extra damage is dealt to targets in attack()
 	throwforce = 25
-	armour_penetration_percentage = 15
+	armor_penetration_percentage = 15
 	sharp = TRUE
 	attack_verb = list("stabbed", "poked", "slashed")
 	hitsound = 'sound/weapons/bladeslice.ogg'

@@ -5,14 +5,14 @@
 	var/use_database_admins = FALSE
 	/// Do we want to auto enable admin rights if you connect from localhost?
 	var/enable_localhost_autoadmin = TRUE
-	/// Do we want to allow admins to set their own OOC colour?
-	var/allow_admin_ooc_colour = TRUE
+	/// Do we want to allow admins to set their own OOC color?
+	var/allow_admin_ooc_color = TRUE
 	/// Assoc list of admin ranks and their stuff. key: rank name string | value: list of rights
 	var/list/rank_rights_map = list()
 	/// Assoc list of admin ckeys and their ranks. key: ckey | value: rank name
 	var/list/ckey_rank_map = list()
-	/// Assoc list of admin ranks and their colours. key: rank | value: rank colour
-	var/list/rank_colour_map = list()
+	/// Assoc list of admin ranks and their colors. key: rank | value: rank color
+	var/list/rank_color_map = list()
 	/// Assoc list of CIDs which shouldnt be banned due to mass collisions
 	var/list/common_cid_map = list()
 
@@ -20,7 +20,7 @@
 	// Use the load wrappers here. That way the default isnt made 'null' if you comment out the config line
 	CONFIG_LOAD_BOOL(use_database_admins, data["use_database_admins"])
 	CONFIG_LOAD_BOOL(enable_localhost_autoadmin, data["enable_localhost_autoadmin"])
-	CONFIG_LOAD_BOOL(allow_admin_ooc_colour, data["allow_admin_ooc_colour"])
+	CONFIG_LOAD_BOOL(allow_admin_ooc_color, data["allow_admin_ooc_color"])
 
 	// Load admin rank tokens
 	if(islist(data["admin_ranks"]))
@@ -34,11 +34,11 @@
 		for(var/list/kvset in data["admin_assignments"])
 			ckey_rank_map[kvset["ckey"]] = kvset["rank"]
 
-	// Load admin colours
-	if(islist(data["admin_rank_colour_map"]))
-		rank_colour_map.Cut()
-		for(var/list/kvset in data["admin_rank_colour_map"])
-			rank_colour_map[kvset["name"]] = kvset["colour"]
+	// Load admin colors
+	if(islist(data["admin_rank_color_map"]))
+		rank_color_map.Cut()
+		for(var/list/kvset in data["admin_rank_color_map"])
+			rank_color_map[kvset["name"]] = kvset["color"]
 
 	// Load common CIDs
 	if(islist(data["common_cid_map"]))

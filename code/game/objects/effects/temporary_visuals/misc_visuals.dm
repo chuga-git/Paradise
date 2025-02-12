@@ -218,12 +218,12 @@
 	icon_state = "heal"
 	duration = 15
 
-/obj/effect/temp_visual/heal/New(loc, colour)
+/obj/effect/temp_visual/heal/New(loc, color)
 	..()
 	pixel_x = rand(-12, 12)
 	pixel_y = rand(-9, 0)
-	if(colour)
-		color = colour
+	if(color)
+		color = color
 
 /obj/effect/temp_visual/kinetic_blast
 	name = "kinetic explosion"

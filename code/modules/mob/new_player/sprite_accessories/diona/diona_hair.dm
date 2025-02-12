@@ -4,7 +4,7 @@
 	icon = 'icons/mob/sprite_accessories/diona/diona_hair.dmi'
 	species_allowed = list("Diona")
 	glasses_over = 1
-	do_colouration = 0
+	do_coloration = 0
 
 /datum/sprite_accessory/hair/diona/diona_bracket
 	name = "Bracket"

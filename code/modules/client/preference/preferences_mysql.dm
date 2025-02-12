@@ -28,7 +28,7 @@
 		screentip_mode = query.item[20]
 		screentip_color = query.item[21]
 		ghost_darkness_level = query.item[22]
-		colourblind_mode = query.item[23]
+		colorblind_mode = query.item[23]
 		keybindings = init_keybindings(raw = query.item[24])
 		server_region = query.item[25]
 		raw_muted_admins = query.item[26]
@@ -57,7 +57,7 @@
 	screentip_mode = sanitize_integer(screentip_mode, 0, 20, initial(screentip_mode))
 	screentip_color = sanitize_hexcolor(screentip_color, initial(screentip_color))
 	ghost_darkness_level = sanitize_integer(ghost_darkness_level, 0, 255, initial(ghost_darkness_level))
-	colourblind_mode = sanitize_inlist(colourblind_mode, list(COLOURBLIND_MODE_NONE, COLOURBLIND_MODE_DEUTER, COLOURBLIND_MODE_PROT, COLOURBLIND_MODE_TRIT), COLOURBLIND_MODE_NONE)
+	colorblind_mode = sanitize_inlist(colorblind_mode, list(COLORBLIND_MODE_NONE, COLORBLIND_MODE_DEUTER, COLORBLIND_MODE_PROT, COLORBLIND_MODE_TRIT), COLORBLIND_MODE_NONE)
 
 	if(length(raw_muted_admins))
 		try
@@ -88,9 +88,9 @@
 		volume_mixer_saving = null
 
 	var/datum/db_query/query = SSdbcore.NewQuery({"UPDATE player SET
-		ooccolor=:ooccolour,
+		ooccolor=:ooccolor,
 		UI_style=:ui_style,
-		UI_style_color=:ui_colour,
+		UI_style_color=:ui_color,
 		UI_style_alpha=:ui_alpha,
 		be_role=:berole,
 		default_slot=:defaultslot,
@@ -109,7 +109,7 @@
 		screentip_mode=:screentip_mode,
 		screentip_color=:screentip_color,
 		ghost_darkness_level=:ghost_darkness_level,
-		colourblind_mode=:colourblind_mode,
+		colorblind_mode=:colorblind_mode,
 		keybindings=:keybindings,
 		server_region=:server_region,
 		muted_adminsounds_ckeys=:muted_adminsounds_ckeys,
@@ -117,9 +117,9 @@
 		map_vote_pref_json=:map_vote_pref_json
 		WHERE ckey=:ckey"}, list(
 			// OH GOD THE PARAMETERS
-			"ooccolour" = ooccolor,
+			"ooccolor" = ooccolor,
 			"ui_style" = UI_style,
-			"ui_colour" = UI_style_color,
+			"ui_color" = UI_style_color,
 			"ui_alpha" = UI_style_alpha,
 			"berole" = list2params(be_special),
 			"defaultslot" = default_slot,
@@ -139,7 +139,7 @@
 			"screentip_mode" = screentip_mode,
 			"screentip_color" = screentip_color,
 			"ghost_darkness_level" = ghost_darkness_level,
-			"colourblind_mode" = colourblind_mode,
+			"colorblind_mode" = colorblind_mode,
 			"keybindings" = json_encode(keybindings_overrides),
 			"ckey" = C.ckey,
 			"server_region" = server_region,

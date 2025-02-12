@@ -1939,7 +1939,7 @@
 	mind.assigned_role = "Wraith"
 	mind.special_role = SPECIAL_ROLE_CULTIST
 
-/mob/living/simple_animal/hostile/construct/armoured/mind_initialize()
+/mob/living/simple_animal/hostile/construct/armored/mind_initialize()
 	..()
 	mind.assigned_role = "Juggernaut"
 	mind.special_role = SPECIAL_ROLE_CULTIST

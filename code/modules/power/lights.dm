@@ -247,7 +247,7 @@
 	var/brightness_range = 8
 	/// Light intensity
 	var/brightness_power = 1
-	/// Light colour when on
+	/// Light color when on
 	var/brightness_color = "#FFFFFF"
 	/// Light fixture status (LIGHT_OK | LIGHT_EMPTY | LIGHT_BURNED | LIGHT_BROKEN)
 	var/status = LIGHT_OK
@@ -277,13 +277,13 @@
 	var/nightshift_light_range = 8
 	/// Light intensity when in night shift mode
 	var/nightshift_light_power = 0.45
-	/// The colour of the light while it's in night shift mode
+	/// The color of the light while it's in night shift mode
 	var/nightshift_light_color = "#e0eeff"
-	/// The colour of the light while it's in emergency mode
-	var/bulb_emergency_colour = "#FF3232"
+	/// The color of the light while it's in emergency mode
+	var/bulb_emergency_color = "#FF3232"
 
 	var/emergency_mode = FALSE	// if true, the light is in emergency mode
-	var/fire_mode = FALSE // if true, the light swaps over to emergency colour
+	var/fire_mode = FALSE // if true, the light swaps over to emergency color
 	var/no_emergency = FALSE	// if true, this light cannot ever have an emergency mode
 
 /**
@@ -514,7 +514,7 @@
   *
   * Private proc, do not call directly. Use [/obj/machinery/light/proc/update] instead.
   *
-  * Sets the light power, range, and colour based on environmental conditions such as night shift and fire alarms.
+  * Sets the light power, range, and color based on environmental conditions such as night shift and fire alarms.
   * Also handles light bulbs burning out and exploding if `trigger` is `TRUE`.
   */
 /obj/machinery/light/proc/_turn_on(trigger, play_sound = TRUE)
@@ -530,7 +530,7 @@
 	if(color)
 		CO = color
 	if(emergency_mode)
-		CO = bulb_emergency_colour
+		CO = bulb_emergency_color
 	else if(nightshift_enabled)
 		BR = nightshift_light_range
 		PO = nightshift_light_power
@@ -608,7 +608,7 @@
 		if(spraycan.capped)
 			to_chat(user, "<span class='notice'>You can't spraypaint [src] with the cap still on!</span>")
 			return ITEM_INTERACT_COMPLETE
-		var/list/hsl = rgb2hsl(hex2num(copytext(spraycan.colour, 2, 4)), hex2num(copytext(spraycan.colour, 4, 6)), hex2num(copytext(spraycan.colour, 6, 8)))
+		var/list/hsl = rgb2hsl(hex2num(copytext(spraycan.color, 2, 4)), hex2num(copytext(spraycan.color, 4, 6)), hex2num(copytext(spraycan.color, 6, 8)))
 		hsl[3] = max(hsl[3], 0.4)
 		var/list/rgb = hsl2rgb(arglist(hsl))
 		var/new_color = "#[num2hex(rgb[1], 2)][num2hex(rgb[2], 2)][num2hex(rgb[3], 2)]"
@@ -767,11 +767,11 @@
 		emergency_lights_off(current_area, current_apc)
 		return
 	if(fire_mode)
-		set_light(nightshift_light_range, nightshift_light_power, bulb_emergency_colour)
+		set_light(nightshift_light_range, nightshift_light_power, bulb_emergency_color)
 		update_icon()
 		return
 	emergency_mode = TRUE
-	set_light((fitting == "tube" ? 3 : 2), 1, bulb_emergency_colour)
+	set_light((fitting == "tube" ? 3 : 2), 1, bulb_emergency_color)
 	update_icon()
 	RegisterSignal(machine_powernet, COMSIG_POWERNET_POWER_CHANGE, PROC_REF(update), override = TRUE)
 
@@ -1001,7 +1001,7 @@
 	var/brightness_range = 2
 	/// Light intensity
 	var/brightness_power = 1
-	/// Light colour
+	/// Light color
 	var/brightness_color = null
 
 /obj/item/light/Initialize(mapload)

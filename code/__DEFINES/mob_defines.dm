@@ -79,7 +79,7 @@
 
 //Mob attribute defaults.
 #define DEFAULT_MARKING_STYLES list("head" = "None", "body" = "None", "tail" = "None") //Marking styles. Use instead of initial() for m_styles.
-#define DEFAULT_MARKING_COLOURS list("head" = "#000000", "body" = "#000000", "tail" = "#000000") //Marking colours. Use instead of initial() for m_colours.
+#define DEFAULT_MARKING_COLORS list("head" = "#000000", "body" = "#000000", "tail" = "#000000") //Marking colors. Use instead of initial() for m_colors.
 
 #define OXYCONCEN_PLASMEN_IGNITION 0.5 //Moles of oxygen in the air needed to light up a poorly clothed Plasmaman. Same as LINDA requirements for plasma burning.
 

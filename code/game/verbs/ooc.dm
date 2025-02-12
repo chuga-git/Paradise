@@ -1,10 +1,10 @@
-#define DEFAULT_PLAYER_OOC_COLOUR "#075FE5" // Can't initial() a global so we store the default in a macro instead
-GLOBAL_VAR_INIT(normal_ooc_colour, DEFAULT_PLAYER_OOC_COLOUR)
+#define DEFAULT_PLAYER_OOC_COLOR "#075FE5" // Can't initial() a global so we store the default in a macro instead
+GLOBAL_VAR_INIT(normal_ooc_color, DEFAULT_PLAYER_OOC_COLOR)
 
-GLOBAL_VAR_INIT(member_ooc_colour, "#035417")
-GLOBAL_VAR_INIT(mentor_ooc_colour, "#00B0EB")
-GLOBAL_VAR_INIT(moderator_ooc_colour, "#184880")
-GLOBAL_VAR_INIT(admin_ooc_colour, "#b82e00")
+GLOBAL_VAR_INIT(member_ooc_color, "#035417")
+GLOBAL_VAR_INIT(mentor_ooc_color, "#00B0EB")
+GLOBAL_VAR_INIT(moderator_ooc_color, "#184880")
+GLOBAL_VAR_INIT(admin_ooc_color, "#b82e00")
 
 /client/verb/ooc(msg = "" as text)
 	set name = "OOC"
@@ -53,21 +53,21 @@ GLOBAL_VAR_INIT(admin_ooc_colour, "#b82e00")
 	log_ooc(msg, src)
 	mob.create_log(OOC_LOG, msg)
 
-	var/display_colour = GLOB.normal_ooc_colour
+	var/display_color = GLOB.normal_ooc_color
 	if(holder && !holder.fakekey)
-		display_colour = GLOB.mentor_ooc_colour
+		display_color = GLOB.mentor_ooc_color
 		if(check_rights(R_MOD,0) && !check_rights(R_ADMIN,0))
-			display_colour = GLOB.moderator_ooc_colour
+			display_color = GLOB.moderator_ooc_color
 		else if(check_rights(R_ADMIN,0))
-			if(GLOB.configuration.admin.allow_admin_ooc_colour)
-				display_colour = src.prefs.ooccolor
+			if(GLOB.configuration.admin.allow_admin_ooc_color)
+				display_color = src.prefs.ooccolor
 			else
-				display_colour = GLOB.admin_ooc_colour
+				display_color = GLOB.admin_ooc_color
 
 	if(prefs.unlock_content)
-		if(display_colour == GLOB.normal_ooc_colour)
+		if(display_color == GLOB.normal_ooc_color)
 			if(prefs.toggles & PREFTOGGLE_MEMBER_PUBLIC)
-				display_colour = GLOB.member_ooc_colour
+				display_color = GLOB.member_ooc_color
 
 	for(var/client/C in GLOB.clients)
 		if(C.prefs.toggles & PREFTOGGLE_CHAT_OOC)
@@ -93,7 +93,7 @@ GLOBAL_VAR_INIT(admin_ooc_colour, "#b82e00")
 			if(GLOB.configuration.general.enable_ooc_emoji)
 				msg = emoji_parse(msg)
 
-			to_chat(C, "<font color='[display_colour]'><span class='ooc'><span class='prefix'>OOC:</span> <EM>[display_name]:</EM> <span class='message'>[msg]</span></span></font>")
+			to_chat(C, "<font color='[display_color]'><span class='ooc'><span class='prefix'>OOC:</span> <EM>[display_name]:</EM> <span class='message'>[msg]</span></span></font>")
 
 /proc/toggle_ooc()
 	GLOB.ooc_enabled = (!GLOB.ooc_enabled)
@@ -283,4 +283,4 @@ GLOBAL_VAR_INIT(admin_ooc_colour, "#b82e00")
 
 	init_verbs()
 
-#undef DEFAULT_PLAYER_OOC_COLOUR
+#undef DEFAULT_PLAYER_OOC_COLOR

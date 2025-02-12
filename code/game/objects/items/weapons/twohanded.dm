@@ -56,8 +56,8 @@
 /obj/item/fireaxe/energized
 	desc = "Someone with a love for fire axes decided to turn this one into a high-powered energy weapon. Seems excessive."
 	force_wielded = 35
-	armour_penetration_flat = 10
-	armour_penetration_percentage = 30
+	armor_penetration_flat = 10
+	armor_penetration_percentage = 30
 	var/charge = 20
 	var/max_charge = 20
 
@@ -106,8 +106,8 @@
 	throw_range = 5
 	w_class = WEIGHT_CLASS_SMALL
 	var/w_class_on = WEIGHT_CLASS_BULKY
-	armour_penetration_flat = 10
-	armour_penetration_percentage = 50
+	armor_penetration_flat = 10
+	armor_penetration_percentage = 50
 	origin_tech = "magnets=4;syndicate=5"
 	attack_verb = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
 	max_integrity = 200
@@ -272,7 +272,7 @@
 	var/force_wielded = 18
 	throwforce = 20
 	throw_speed = 4
-	armour_penetration_flat = 5
+	armor_penetration_flat = 5
 	materials = list(MAT_METAL = 1150, MAT_GLASS = 2075)
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	attack_verb = list("attacked", "poked", "jabbed", "torn", "gored")
@@ -344,7 +344,7 @@
 	force_unwielded = 11
 	force_wielded = 20					//I have no idea how to balance
 	throwforce = 22
-	armour_penetration_percentage = 15				//Enhanced armor piercing
+	armor_penetration_percentage = 15				//Enhanced armor piercing
 
 //Blatant imitation of spear, but all natural. Also not valid for explosive modification.
 /obj/item/spear/bamboo
@@ -488,7 +488,7 @@
 /obj/item/chainsaw/doomslayer
 	name = "OOOH BABY"
 	desc = "<span class='warning'>VRRRRRRR!!!</span>"
-	armour_penetration_percentage = 100
+	armor_penetration_percentage = 100
 	force_on = 30
 
 /obj/item/chainsaw/doomslayer/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
@@ -514,8 +514,8 @@
 	throw_range = 5
 	w_class = WEIGHT_CLASS_BULKY // can't fit in backpacks
 	hitsound = null // Handled in the snowflaked attack proc
-	armour_penetration_percentage = 50
-	armour_penetration_flat = 10
+	armor_penetration_percentage = 50
+	armor_penetration_flat = 10
 	origin_tech = "materials=6;syndicate=4"
 	attack_verb = list("sawed", "cut", "hacked", "carved", "cleaved", "butchered", "felled", "timbered")
 	sharp = TRUE
@@ -770,7 +770,7 @@
 	flags = ABSTRACT | NODROP | DROPDEL
 	force = 22
 	damtype = BURN
-	armour_penetration_percentage = 50
+	armor_penetration_percentage = 50
 	sharp = TRUE
 	attack_effect_override = ATTACK_EFFECT_CLAW
 	hitsound = 'sound/weapons/bladeslice.ogg'

@@ -146,7 +146,7 @@
 /**
   * # Painter Datum
   *
-  * Contains variables for updating `holder`, as well as procs for choosing a colour and painting an atom.
+  * Contains variables for updating `holder`, as well as procs for choosing a color and painting an atom.
   *
   * The `parent_painter` argument is REQUIRED when spawning this in order to link the datum to an [/obj/item/painter].
   */
@@ -161,7 +161,7 @@
 	/// The parent [/obj/item/painter] which this datum is linked to.
 	var/obj/item/painter/holder
 
-	/// The current colour or icon state setting.
+	/// The current color or icon state setting.
 	var/paint_setting = null
 
 /datum/painter/New(obj/item/painter/parent_painter)
@@ -173,7 +173,7 @@
 	return holder
 
 /**
-  * Contains code to choose a new colour or icon state for the `paint_setting` variable.
+  * Contains code to choose a new color or icon state for the `paint_setting` variable.
   *
   * Called by `attack_self()` on the `holder` object.
   */

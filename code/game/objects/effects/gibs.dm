@@ -31,7 +31,7 @@
   *
   * Arguments:
   * * location - The position to spawn the gibs on.
-  * * mob_dna - The [/datum/dna] controlling the blood DNA and colour of the gibs.
+  * * mob_dna - The [/datum/dna] controlling the blood DNA and color of the gibs.
   */
 /obj/effect/gibspawner/proc/spawn_gibs(atom/location, datum/dna/mob_dna)
 	var/obj/effect/decal/cleanable/blood/gibs/gib = null
@@ -53,7 +53,7 @@
 				gib.streak(directions)
 
 /**
-  * Assigns DNA and blood colour to mob gibs.
+  * Assigns DNA and blood color to mob gibs.
   *
   * Returns FALSE if there was no DNA data to transfer to the gibs, and TRUE if there was.
   * Arguments:

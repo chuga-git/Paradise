@@ -238,7 +238,7 @@ GLOBAL_VAR(bomb_set)
 			to_chat(user, "<span class='warning'>You try to slot in the disk, but it won't fit! This isn't the NAD! If only you'd read the label...</span>")
 			return ITEM_INTERACT_COMPLETE
 		else
-			to_chat(user, "<span class='warning'>You try to slot in the disk, but it won't fit. This isn't the NAD! It's not even the right colour...</span>")
+			to_chat(user, "<span class='warning'>You try to slot in the disk, but it won't fit. This isn't the NAD! It's not even the right color...</span>")
 			return ITEM_INTERACT_COMPLETE
 
 	return ..()

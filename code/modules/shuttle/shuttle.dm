@@ -1045,11 +1045,11 @@
 	if(T.icon != icon)
 		T.icon = icon
 	if(color)
-		if(length(atom_colours))
-			T.atom_colours = atom_colours.Copy()
-			T.update_atom_colour()
+		if(length(atom_colors))
+			T.atom_colors = atom_colors.Copy()
+			T.update_atom_color()
 		else
-			T.color = color // If you don't have atom_colours then you're working off an absolute color
+			T.color = color // If you don't have atom_colors then you're working off an absolute color
 	if(light)
 		T.set_light(light_range, light_power, light_color)
 	if(T.dir != dir)

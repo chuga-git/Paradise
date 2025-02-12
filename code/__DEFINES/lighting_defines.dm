@@ -33,7 +33,7 @@
 #define LIGHT_BROKEN 2
 #define LIGHT_BURNED 3
 
-//Some defines to generalise colours used in lighting.
+//Some defines to generalise colors used in lighting.
 //Important note on colors. Colors can end up significantly different from the basic html picture, especially when saturated
 #define LIGHT_COLOR_WHITE		"#FFFFFF"
 #define LIGHT_COLOR_RED        "#FA8282" //Warm but extremely diluted red. rgb(250, 130, 130)
@@ -64,7 +64,7 @@
 #define LIGHT_COLOR_PURE_BLUE	"#0000FF"
 #define LIGHT_COLOR_FADEDPURPLE	"#A97FAA"
 
-//These ones aren't a direct colour like the ones above, because nothing would fit
+//These ones aren't a direct color like the ones above, because nothing would fit
 #define LIGHT_COLOR_FIRE       "#FAA019" //Warm orange color, leaning strongly towards yellow. rgb(250, 160, 25)
 #define LIGHT_COLOR_LAVA       "#C48A18" //Very warm yellow, leaning slightly towards orange. rgb(196, 138, 24)
 #define LIGHT_COLOR_FLARE      "#FA644B" //Bright, non-saturated red. Leaning slightly towards pink for visibility. rgb(250, 100, 75)

@@ -278,7 +278,7 @@
 	item_state = "swat_suit"
 
 /obj/item/clothing/suit/armor/riot/knight
-	name = "plate armour"
+	name = "plate armor"
 	desc = "A full suit of steel plate armor, it looks like it came right out of a documentary about the Middle Ages. The plating offers excellent protection against melee, and the asbestos-lined padding provides excellent protection against fire and corrosive substances, but it won't be stopping any weapon designed in the last half-millennium."
 	icon_state = "knight_green"
 	item_state = "knight_green"
@@ -299,7 +299,7 @@
 	item_state = "knight_red"
 
 /obj/item/clothing/suit/armor/riot/knight/templar
-	name = "crusader armour"
+	name = "crusader armor"
 	desc = "A heavy suit of cosplay-grade armor that vaguely resembles something from a low-quality documentary about the crusades. Whilst the plating provides mediocre protection against melee attacks and little else, the asbestos-lined padding does hold up quite well to fire and corrosive substances."
 	icon_state = "knight_templar"
 	item_state = "knight_templar"
@@ -808,10 +808,10 @@
 //LAVALAND!
 
 /obj/item/clothing/suit/hooded/drake
-	name = "drake armour"
+	name = "drake armor"
 	icon_state = "dragon"
 	item_state = "dragon"
-	desc = "A suit of armour fashioned from the remains of an ash drake."
+	desc = "A suit of armor fashioned from the remains of an ash drake."
 	allowed = list(/obj/item/flashlight, /obj/item/tank/internals, /obj/item/resonator, /obj/item/mining_scanner, /obj/item/t_scanner/adv_mining_scanner, /obj/item/gun/energy/kinetic_accelerator, /obj/item/pickaxe, /obj/item/spear)
 	armor = list(MELEE = 115, BULLET = 25, LASER = 25, ENERGY = 25, BOMB = 150, RAD = 25, FIRE = INFINITY, ACID = INFINITY)
 	hoodtype = /obj/item/clothing/head/hooded/drake
