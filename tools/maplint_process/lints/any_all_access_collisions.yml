@@ -1,4 +1,0 @@
-help: "/any and /all access helper types cannot be combined."
-/obj/effect/mapping_helpers/airlock/access/any:
-  banned_neighbors:
-  - /obj/effect/mapping_helpers/airlock/access/all

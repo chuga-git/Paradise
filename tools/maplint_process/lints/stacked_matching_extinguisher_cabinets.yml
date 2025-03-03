@@ -1,4 +1,0 @@
-/obj/structure/extinguisher_cabinet:
-  banned_neighbors:
-    /obj/structure/extinguisher_cabinet:
-      identical: true
