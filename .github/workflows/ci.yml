@@ -13,7 +13,7 @@ jobs:
     name: Run Linters
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Setup Cache
         uses: actions/cache@v4
@@ -65,7 +65,7 @@ jobs:
     name: Lint with OpenDream
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Setup OD
         run: |
           bash tools/ci/setup_od.sh
@@ -85,7 +85,7 @@ jobs:
       matrix:
         byondtype: ['STABLE', 'BETA']
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Restore BYOND from Cache
         uses: ./.github/actions/restore_or_install_byond
         with:
@@ -107,7 +107,7 @@ jobs:
         station: ['boxstation', 'deltastation', 'metastation', 'cerestation', 'emeraldstation']
         byondtype: ['STABLE', 'BETA']
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Restore BYOND from Cache
         uses: ./.github/actions/restore_or_install_byond
         with:
@@ -134,7 +134,7 @@ jobs:
       matrix:
         byondtype: ['STABLE', 'BETA']
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Restore BYOND from Cache
         uses: ./.github/actions/restore_or_install_byond
         with:
@@ -162,7 +162,7 @@ jobs:
     name: Windows RUSTG Validation
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: actions/setup-python@v5
         with:
           python-version: '3.8.2' # Script was made for 3.8.2
